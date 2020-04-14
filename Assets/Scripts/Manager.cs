@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
-    //Based on a tut: https://www.studica.com/blog/create-ui-unity-tutorial
-    
+    //Based on tuts. Pause menu: https://www.studica.com/blog/create-ui-unity-tutorial
+    //                Main menu: https://www.raywenderlich.com/6570-introduction-to-unity-ui-part-1
+
 
 
     [SerializeField]    //What does this do? From research I understand it will display things in Inspector.
@@ -20,6 +21,21 @@ public class Manager : MonoBehaviour
 
     void Start()
     {
+        /*  Need a way to check what scene is currently active, and enable/disable the different scene panels. 
+         *  Could use 'GetActiveScene' static.
+         *  
+         *   if(scene with pause loaded)
+         *   {
+         *         Panel is false/disabled.
+         *   }
+         *   
+         *   else(menu scene loaded)
+         *   {
+         *          Panel is true/enabled.
+         *   }
+         *   
+         *   Could just use a separate manager script for each scene.
+        */
         UIPanel.gameObject.SetActive(false);    //Prevents panel from appearing at start of scene.
         isPaused = false;                       //Game is not paused ordinarily.
     }
@@ -27,8 +43,6 @@ public class Manager : MonoBehaviour
     
     void Update()
     {
-        //timeText.text = "Time Since Startup: " + Time.timeSinceLevelLoad;   //Time since scene start. REMOVE this feature later.
-
         if(Input.GetKeyDown(KeyCode.Escape) && !isPaused)       //While game isn't paused, the player can press esc and it will pause game.
         {
             Pause();
@@ -40,6 +54,12 @@ public class Manager : MonoBehaviour
         }
     }
 
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(0);   //Loads in the scene that has a pause menu.
+    }
+    
 
     public void Pause()
     {
@@ -57,6 +77,13 @@ public class Manager : MonoBehaviour
     }
 
 
+    public void Restart()
+    {
+        Debug.Log("Game restarted.");
+        SceneManager.LoadScene(1);   //Loads in the main menu scene.
+    }
+
+
     public void QuitGame()
     {
         Debug.Log("Game quit.");
@@ -64,11 +91,4 @@ public class Manager : MonoBehaviour
     }
 
 
-    public void Restart()
-    {
-        Debug.Log("Game restarted.");
-        SceneManager.LoadScene(0);   //Set this to whatever current scene it's on. Our game should only be one scene?
-    }
-
-    
 }
