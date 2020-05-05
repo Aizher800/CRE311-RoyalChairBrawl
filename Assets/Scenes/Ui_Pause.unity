@@ -230,7 +230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -71}
+  m_AnchoredPosition: {x: 0, y: -37.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &231282291
@@ -752,7 +752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -24}
+  m_AnchoredPosition: {x: 0, y: 9.299995}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1372415358
@@ -1583,6 +1583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIPanel: {fileID: 1671373529}
+  isPaused: 0
 --- !u!1 &1797490892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,7 +1621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 78.99999, y: 24.899994}
+  m_AnchoredPosition: {x: 79, y: 24.899994}
   m_SizeDelta: {x: 105.28, y: 18.095001}
   m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!114 &1797490894
@@ -1687,31 +1688,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   gradient:
-    serializedVersion: 2
-    key0: {r: 0.22022964, g: 0.9528302, b: 0.25859562, a: 1}
-    key1: {r: 0.9747534, g: 1, b: 0.25943398, a: 1}
-    key2: {r: 0.7725491, g: 0.07058824, b: 0.07058824, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 25058
-    ctime1: 40478
-    ctime2: 65535
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
+    key0:
+      r: 0.22022964
+      g: 0.9528302
+      b: 0.25859562
+      a: 1
+    key1:
+      r: 0.9747534
+      g: 1
+      b: 0.25943398
+      a: 1
+    key2:
+      r: 0.7725491
+      g: 0.07058824
+      b: 0.07058824
+      a: 0
+    key3:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
+    key4:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
+    key5:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
+    key6:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
+    key7:
+      r: 0
+      g: 0
+      b: 0
+      a: 0
     m_Mode: 1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
@@ -1852,7 +1868,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -116}
+  m_AnchoredPosition: {x: 0, y: -82.700005}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1946708693

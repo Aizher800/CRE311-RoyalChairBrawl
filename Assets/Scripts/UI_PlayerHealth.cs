@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class UI_PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
 
-    public HealthBar healthBar; //Ref to HealthBar script.
+    public UI_HealthBar healthBar; //Ref to HealthBar script.
 
     void Start()
     {
@@ -22,16 +22,19 @@ public class PlayerHealth : MonoBehaviour
         //Attacks - we can change the key codes to whatever is suitable.
         if(Input.GetKeyDown(KeyCode.Q)) //trigger for damage - Needs to change to collision with other players weapons etc.
         {
+            Debug.Log("Light attack");
             TakeDamage(2); //light 
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("Heavy attack");
             TakeDamage(5);  //heavy
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
+            Debug.Log("Super attack");
             TakeDamage(10); //super
         }
     }

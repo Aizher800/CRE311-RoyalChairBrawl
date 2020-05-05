@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Manager : MonoBehaviour
+public class UI_PauseManager : MonoBehaviour
 {
     //Based on tuts. Pause menu: https://www.studica.com/blog/create-ui-unity-tutorial
     //                Main menu: https://www.raywenderlich.com/6570-introduction-to-unity-ui-part-1
@@ -21,21 +21,7 @@ public class Manager : MonoBehaviour
 
     void Start()
     {
-        /*  Need a way to check what scene is currently active, and enable/disable the different scene panels. 
-         *  Could use 'GetActiveScene' static.
-         *  
-         *   if(scene with pause loaded)
-         *   {
-         *         Panel is false/disabled.
-         *   }
-         *   
-         *   else(menu scene loaded)
-         *   {
-         *          Panel is true/enabled.
-         *   }
-         *   
-         *   Could just use a separate manager script for each scene.
-        */
+        
         UIPanel.gameObject.SetActive(false);    //Prevents panel from appearing at start of scene.
         isPaused = false;                       //Game is not paused ordinarily.
     }
@@ -52,12 +38,6 @@ public class Manager : MonoBehaviour
         {
             UnPause();
         }
-    }
-
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene(0);   //Loads in the scene that has a pause menu.
     }
     
 
