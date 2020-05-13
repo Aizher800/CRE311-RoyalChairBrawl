@@ -7,6 +7,10 @@ public class UI_MainManager : MonoBehaviour
 {
     void Start()
     {
+
+        Debug.Log("Started");
+
+        
         /*  Keeping this for inspo, in case we need to combine Manager scripts. - EW 5/5/20
          *
          *  Need a way to check what scene is currently active, and enable/disable the different scene panels. 
@@ -37,6 +41,7 @@ public class UI_MainManager : MonoBehaviour
     {
         Debug.Log("Game started.");
         SceneManager.LoadScene(0);   //Loads in the scene that has a pause menu.
+
 
     }
 

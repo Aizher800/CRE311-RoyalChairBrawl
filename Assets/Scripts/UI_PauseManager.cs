@@ -24,6 +24,8 @@ public class UI_PauseManager : MonoBehaviour
         
         UIPanel.gameObject.SetActive(false);    //Prevents panel from appearing at start of scene.
         isPaused = false;                       //Game is not paused ordinarily.
+
+        Debug.Log("game started");
     }
 
     
