@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UI_MainManager : MonoBehaviour
+public class Erin_UI_MainManager : MonoBehaviour
 {
     void Start()
     {

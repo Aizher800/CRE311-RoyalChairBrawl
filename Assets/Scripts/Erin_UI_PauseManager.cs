@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UI_PauseManager : MonoBehaviour
+public class Erin_UI_PauseManager : MonoBehaviour
 {
     //Based on tuts. Pause menu: https://www.studica.com/blog/create-ui-unity-tutorial
     //                Main menu: https://www.raywenderlich.com/6570-introduction-to-unity-ui-part-1

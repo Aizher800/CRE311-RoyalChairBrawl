@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_HealthBar : MonoBehaviour
+public class Erin_UI_HealthBar : MonoBehaviour
 {
     //N.B. we will need to hide the health bar during the pause menu, but keep it's value for when unpaused.
 

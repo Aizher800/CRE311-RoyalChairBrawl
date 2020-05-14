@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI_PlayerHealth : MonoBehaviour
+public class Erin_UI_PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
 
-    public UI_HealthBar healthBar; //Ref to HealthBar script.
+    public Erin_UI_HealthBar healthBar; //Ref to HealthBar script.
 
     void Start()
     {
