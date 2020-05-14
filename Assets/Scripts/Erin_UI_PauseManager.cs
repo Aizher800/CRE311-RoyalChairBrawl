@@ -61,8 +61,9 @@ public class Erin_UI_PauseManager : MonoBehaviour
 
     public void Restart()
     {
-        Debug.Log("Game restarted.");
+        Debug.Log("Scene restarted.");
         SceneManager.LoadScene(1);   //Loads in the main menu scene.
+        //need to change the load scene, so that this script can be used across scenes
     }
 
 
