@@ -552,10 +552,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 384281631065202514, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 153552511}
+    - target: {fileID: 384281631065202514, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 384281631264206751, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_text
+      value: Restart Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 384281631425173343, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 384281631501536339, guid: e8610c2d62118964da7f95fc76daa57b,
         type: 3}
       propertyPath: m_Name
       value: pref_pausecanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 384281631501536339, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 384281631501536351, guid: e8610c2d62118964da7f95fc76daa57b,
         type: 3}
@@ -662,6 +687,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 384281631656792313, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 153552511}
+    - target: {fileID: 384281631656792313, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UnPause
+      objectReference: {fileID: 0}
     - target: {fileID: 384281632764618508, guid: e8610c2d62118964da7f95fc76daa57b,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -671,6 +706,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 384281633065804788, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 153552511}
+    - target: {fileID: 384281633065804788, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 384281633065804789, guid: e8610c2d62118964da7f95fc76daa57b,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8610c2d62118964da7f95fc76daa57b, type: 3}

@@ -25,7 +25,7 @@ public class Erin_UI_PauseManager : MonoBehaviour
         UIPanel.gameObject.SetActive(false);    //Prevents panel from appearing at start of scene.
         isPaused = false;                       //Game is not paused ordinarily.
 
-        Debug.Log("game started");
+        Debug.Log("Game started.");
     }
 
     
@@ -61,9 +61,8 @@ public class Erin_UI_PauseManager : MonoBehaviour
 
     public void Restart()
     {
-        Debug.Log("Scene restarted.");
+        Debug.Log("Game restarted.");
         SceneManager.LoadScene(1);   //Loads in the main menu scene.
-        //need to change the load scene, so that this script can be used across scenes
     }
 
 
