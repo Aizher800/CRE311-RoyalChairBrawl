@@ -11,7 +11,20 @@ public class Erin_UI_HealthBar : MonoBehaviour
     public Gradient gradient;   //GRADIENT - To change the colour of the bar according to hp remaining.
     public Image fill;          //GRADIENT
 
-    public void SetMaxHealth(int health)
+
+    void Start()
+    {
+
+    }
+
+
+    void Update()
+    {
+
+    }
+    
+
+        public void SetMaxHealth(int health)
     {
         slider.maxValue = health;
         slider.value = health;  //sets slider to start at max health
@@ -26,17 +39,4 @@ public class Erin_UI_HealthBar : MonoBehaviour
 
         fill.color = gradient.Evaluate(slider.normalizedValue); //GRADIENT = normalised, so it goes between 0 & 1.
     }
-  
-
-    void Start()
-    {
-
-    }
-
-
-    void Update()
-    {
-
-    }
-    
 }
