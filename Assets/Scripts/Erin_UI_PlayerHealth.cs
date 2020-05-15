@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Erin_UI_PlayerHealth : MonoBehaviour
 {
+    // Based on tut. : https://www.youtube.com/watch?v=BLfNP4Sc_iA
+
     public int maxHealth = 100;
     public int currentHealth;
 
