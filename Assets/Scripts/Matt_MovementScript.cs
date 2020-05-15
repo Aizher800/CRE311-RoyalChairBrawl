@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(CharacterController))]
-public class TSC_MoveTest : MonoBehaviour
+public class Matt_MovementScript : MonoBehaviour
 {
     #region variables
     //Component
