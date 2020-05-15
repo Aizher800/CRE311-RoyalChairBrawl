@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Erin_UI_HealthBar : MonoBehaviour
 {
+    // Based on tut. : https://www.youtube.com/watch?v=BLfNP4Sc_iA
     //N.B. we will need to hide the health bar during the pause menu, but keep it's value for when unpaused.
 
     public Slider slider;
@@ -24,12 +25,12 @@ public class Erin_UI_HealthBar : MonoBehaviour
     }
     
 
-        public void SetMaxHealth(int health)
+    public void SetMaxHealth(int health)
     {
         slider.maxValue = health;
         slider.value = health;  //sets slider to start at max health
 
-       fill.color = gradient.Evaluate(1f); //GRADIENT - Max health colour, green.
+        fill.color = gradient.Evaluate(1f); //GRADIENT - Max health colour, green.
     }
 
 
