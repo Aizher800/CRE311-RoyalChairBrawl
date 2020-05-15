@@ -7,6 +7,7 @@ public class Erin_UI_PauseManager : MonoBehaviour
 {
     //Based on tuts. Pause menu: https://www.studica.com/blog/create-ui-unity-tutorial
     //                Main menu: https://www.raywenderlich.com/6570-introduction-to-unity-ui-part-1
+    //              Enabling UI: https://answers.unity.com/questions/1637497/how-to-show-and-hide-an-ui-canvas-element-in-2019.html
 
 
 
