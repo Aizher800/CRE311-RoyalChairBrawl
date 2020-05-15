@@ -12,12 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Ui_Pause.unity
     guid: e01fc6ff49bccce4da23e4266259c96c
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 83d029beecfffa94eb3e32d5abaff784
-  - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: 39d8037852dc40f4bb004dcab12be958
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 83d029beecfffa94eb3e32d5abaff784
+  - enabled: 1
     path: Assets/Scenes/Arena.unity
+    guid: 8abade699734b204bbf6e3fca5a92797
+  - enabled: 1
+    path: Assets/Scenes/Level design test.unity
     guid: 2f45f6b4c77608b4c873633a72d8d7e5
   m_configObjects: {}
