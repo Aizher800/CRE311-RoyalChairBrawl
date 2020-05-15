@@ -18,12 +18,15 @@ public class Erin_UI_PauseManager : MonoBehaviour
        
     bool isPaused;
 
+    public GameObject HealthBar;    //HUD HealthBar enabling/disabling.
 
     void Start()
     {
         
         UIPanel.gameObject.SetActive(false);    //Prevents panel from appearing at start of scene.
         isPaused = false;                       //Game is not paused ordinarily.
+
+        HealthBar.gameObject.SetActive(true);   //HUD HealthBar enabled.
 
         Debug.Log("Game started.");
     }
@@ -48,6 +51,8 @@ public class Erin_UI_PauseManager : MonoBehaviour
         isPaused = true;
         UIPanel.gameObject.SetActive(true);     //Enables the panel.
         Time.timeScale = 0f;                    //Pauses game.
+
+        HealthBar.gameObject.SetActive(false);   //HUD HealthBar disabled.
     }
 
 
@@ -56,6 +61,8 @@ public class Erin_UI_PauseManager : MonoBehaviour
         isPaused = false;
         UIPanel.gameObject.SetActive(false);    //Disables the panel.
         Time.timeScale = 1f;                    //Resumes game.
+
+        HealthBar.gameObject.SetActive(true);   //HUD HealthBar enabled.
     }
 
 
