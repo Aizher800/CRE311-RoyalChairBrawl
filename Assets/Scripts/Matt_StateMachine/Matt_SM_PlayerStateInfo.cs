@@ -4,7 +4,7 @@ using UnityEngine;
 using Matt_StateSystem;
 using UnityEngine.UI;
 
-
+//NOT FINISHED
 public class Matt_SM_PlayerStateInfo : MonoBehaviour
 {
     [SerializeField] public int state;

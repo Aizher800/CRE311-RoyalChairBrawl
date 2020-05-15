@@ -6,7 +6,7 @@ using Matt_StateSystem;
 
 public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
 {
-   
+   //NOT FINISHED
 
     private static Matt_SM_FreeMoveState _instance;
 
