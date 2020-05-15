@@ -42,11 +42,18 @@ public class Erin_UI_MainManager : MonoBehaviour
     public void Tutorial()
         {
             Debug.Log("Tutorial scene loaded.");
-            SceneManager.LoadScene(2);   //Loads in the scene that has settings.
+            SceneManager.LoadScene(2);   //Loads in the tutorial scene.
         }
 
-    //public void Settings()
-    //{
-    //    SceneManager.LoadScene(x);   //Loads in the scene that has settings.
-    //}
+    public void Settings()
+    {
+        Debug.Log("Settings loaded.");
+        SceneManager.LoadScene(3);   //Loads in the scene that has settings.
+    }
+
+    public void Return()
+    {
+        Debug.Log("Main menu loaded.");
+        SceneManager.LoadScene(1);   //Returns the user back to main menu.
+    }
 }
