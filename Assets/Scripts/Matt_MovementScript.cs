@@ -26,6 +26,9 @@ public class Matt_MovementScript : MonoBehaviour
     //Vector3
     Vector3 movement; //the movement vector3
     Vector3 velocity; //basically all the gravity-based stuff affecting the player, velocity is added on top of the player movement vector3
+
+
+    float startingZPos = 0f;
     #endregion
 
     #region Initialization
@@ -33,6 +36,8 @@ public class Matt_MovementScript : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>(); //Just assigns the variable "controller" to be the CharacterController attached to this gameObject.
         anim = gameObject.GetComponent<Animator>();
+
+        startingZPos = gameObject.transform.position.z;
     }
     #endregion
 
@@ -51,6 +56,8 @@ public class Matt_MovementScript : MonoBehaviour
         }
         CharacterPhysics(); //since this is called without any if statement requirements on update, CharacterPhysics is basically a glorified Update function at this point :p
 
+        //THE POSITION PATCH???
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.y, startingZPos);
         #region Grounding
         //for some reason directly checking the controller.isGrounded variable is really unreliable, so this just sets a bool to match the variable, which somehow works better idk
         if (controller.isGrounded)
