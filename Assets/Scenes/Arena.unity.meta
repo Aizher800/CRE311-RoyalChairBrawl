@@ -1,5 +1,12 @@
 fileFormatVersion: 2
-guid: 9fc0d4010bbf28b4594072e72b8655ab
+<<<<<<< HEAD:Assets/Scenes/Level design test.unity.meta
+guid: 2f45f6b4c77608b4c873633a72d8d7e5
+timeCreated: 1587524891
+licenseType: Free
+=======
+guid: 4ebf7a821bd615544b77547b52b02df9
+folderAsset: yes
+>>>>>>> master:Assets/Images.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
