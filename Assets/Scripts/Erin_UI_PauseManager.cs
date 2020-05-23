@@ -70,7 +70,7 @@ public class Erin_UI_PauseManager : MonoBehaviour
     public void Restart()
     {
         Debug.Log("Game restarted.");
-        SceneManager.LoadScene(1);   //Loads in the main menu scene.
+        SceneManager.LoadScene(0);   //Loads in the main menu scene.
     }
 
 

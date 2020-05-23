@@ -20,7 +20,7 @@ public class Erin_UI_MainManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Game started.");
-        SceneManager.LoadScene(4);   //Loads in the scene that has a pause menu.
+        SceneManager.LoadScene(3);   //Loads in the scene that has a pause menu.
     }
 
 
@@ -34,13 +34,13 @@ public class Erin_UI_MainManager : MonoBehaviour
     public void Settings()
     {
         Debug.Log("Settings loaded.");
-        SceneManager.LoadScene(3);   //Loads in the scene that has settings.
+        SceneManager.LoadScene(1);   //Loads in the scene that has settings.
     }
 
 
     public void Return()
     {
         Debug.Log("Main menu loaded.");
-        SceneManager.LoadScene(1);   //Returns the user back to main menu.
+        SceneManager.LoadScene(0);   //Returns the user back to main menu.
     }
 }
