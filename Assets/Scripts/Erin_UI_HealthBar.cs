@@ -9,8 +9,8 @@ public class Erin_UI_HealthBar : MonoBehaviour
     //N.B. we will need to hide the health bar during the pause menu, but keep it's value for when unpaused.
 
     public Slider slider;
-    public Gradient gradient;   //GRADIENT - To change the colour of the bar according to hp remaining.
-    public Image fill;          //GRADIENT
+ //   public Gradient gradient;   //GRADIENT - To change the colour of the bar according to hp remaining.
+ //   public Image fill;          //GRADIENT
 
 
     void Start()
@@ -30,7 +30,7 @@ public class Erin_UI_HealthBar : MonoBehaviour
         slider.maxValue = health;
         slider.value = health;  //sets slider to start at max health
 
-        fill.color = gradient.Evaluate(1f); //GRADIENT - Max health colour, green.
+   //     fill.color = gradient.Evaluate(1f); //GRADIENT - Max health colour, green.
     }
 
 
@@ -38,6 +38,6 @@ public class Erin_UI_HealthBar : MonoBehaviour
     {
         slider.value = health;
 
-        fill.color = gradient.Evaluate(slider.normalizedValue); //GRADIENT = normalised, so it goes between 0 & 1.
+   //     fill.color = gradient.Evaluate(slider.normalizedValue); //GRADIENT = normalised, so it goes between 0 & 1.
     }
 }
