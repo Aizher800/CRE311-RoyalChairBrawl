@@ -37,11 +37,11 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
         //    TakeDamage(2); //light 
         //}
 
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    Debug.Log("Heavy attack");
-        //    TakeDamage(5);  //heavy
-        //}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Heavy attack");
+            TakeDamage(5);  //heavy
+        }
 
         //if (Input.GetKeyDown(KeyCode.R))
         //{
