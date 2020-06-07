@@ -6,7 +6,7 @@ using Matt_StateSystem;
 
 public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
 {
-   //NOT FINISHED
+    //NOT FINISHED
 
     private static Matt_SM_FreeMoveState _instance;
 
@@ -42,28 +42,29 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
         //  Debug.Log("Entering THIRD State");
         //playerStateInfo = _owner.GetComponent<PlayerStateInfo>();
         _owner.state = 1;
-       
+
     }
 
     public override void ExitState(Matt_SM_PlayerStateInfo _owner)
     {
-  
+
         //Debug.Log("Exiting THIRD State");
     }
 
     public override void UpdateState(Matt_SM_PlayerStateInfo _owner)
     {
-      //  Debug.Log("FREEMOVEUPDATE");
+        //  Debug.Log("FREEMOVEUPDATE");
         if (Input.GetButtonUp("AttackButton"))
         {
-            if (_owner.weaponReady == true) { 
-            _owner.ChangeStateMachineState(Matt_SM_AttackState.Instance);
+            if (_owner.weaponReady == true)
+            {
+                _owner.ChangeStateMachineState(Matt_SM_AttackState.Instance);
             }
         }
 
-            //if (!_owner.switchState)
-            // {
-            //   _owner.stateMachine.ChangeState(FirstState.Instance);
-            // }
-        }
+        //if (!_owner.switchState)
+        // {
+        //   _owner.stateMachine.ChangeState(FirstState.Instance);
+        // }
+    }
 }

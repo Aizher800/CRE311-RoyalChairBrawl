@@ -38,9 +38,9 @@ public class Matt_SM_AttackState : State<Matt_SM_PlayerStateInfo>
 
     public override void EnterState(Matt_SM_PlayerStateInfo _owner)
     {
-        
+
         //  Debug.Log("Entering THIRD State");
-       // attackTest = _owner.GetComponent<AttackTest>();
+        // attackTest = _owner.GetComponent<AttackTest>();
         //attackTest.Attack(); THIS WILL BE THE SCrIPT THAT HANDLES ATTACKING
         _owner.state = 3;
 
@@ -48,7 +48,7 @@ public class Matt_SM_AttackState : State<Matt_SM_PlayerStateInfo>
 
     public override void ExitState(Matt_SM_PlayerStateInfo _owner)
     {
-        
+
         //Debug.Log("Exiting THIRD State");
     }
 

@@ -19,7 +19,7 @@ public class Matt_MovementScript : MonoBehaviour
     //Float
     [SerializeField] float jumpStrength = 80f;
     [SerializeField] float speed = 20f; //how fast the character moves, the smoothing of the movement is handled by the "Gravity" and "Sensitivity" settings in the Unity Input manager
-    float gravity = -35f; 
+    float gravity = -35f;
     float velocityDamp = 6f; //velocityDamp is the rate at which the forces applied to the player revert to their original values
     float InputX; //Left-Right input
     float InputMagnitude;
@@ -41,11 +41,11 @@ public class Matt_MovementScript : MonoBehaviour
     }
     #endregion
 
-    
+
     // Update is called once per frame
     void Update()
     {
-       // anim.SetFloat("InputZ", InputZ, 0.0f, Time.deltaTime);
+        // anim.SetFloat("InputZ", InputZ, 0.0f, Time.deltaTime);
         anim.SetFloat("InputX", InputX, 0.0f, Time.deltaTime);
         anim.SetFloat("InputMagnitude", InputMagnitude, 0.0f, Time.deltaTime);
         InputX = Input.GetAxis("Horizontal");
@@ -57,7 +57,7 @@ public class Matt_MovementScript : MonoBehaviour
         CharacterPhysics(); //since this is called without any if statement requirements on update, CharacterPhysics is basically a glorified Update function at this point :p
 
         //THE POSITION PATCH???
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.y, startingZPos);
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, startingZPos);
         #region Grounding
         //for some reason directly checking the controller.isGrounded variable is really unreliable, so this just sets a bool to match the variable, which somehow works better idk
         if (controller.isGrounded)
@@ -75,27 +75,28 @@ public class Matt_MovementScript : MonoBehaviour
         //This section makes it so tapping and holding jump makes the player do a short hop or a much bigger jump
         if (Input.GetButton("Jump")) //the "big" jump script
         {
-            if(velocity.y < 0)
+            if (velocity.y < 0)
             {
-                velocityDamp = 4f; 
+                velocityDamp = 4f;
             }
-            else if (velocity.y > 0 ){
+            else if (velocity.y > 0)
+            {
                 velocityDamp = 3f;
-            }           
+            }
         }
         if (!Input.GetButton("Jump")) //the "hop" jump script
-        {    
+        {
             velocityDamp = 6f;
         }
         #endregion
         float singleStep = speed * Time.deltaTime;
 
-       // Vector3 targetRotation = transform.position + new Vector3(-InputX, 0f, 0f);
-      //  Vector3 newRotation = Vector3.RotateTowards(gameObject.transform.position, targetRotation , 600f, 5f);
+        // Vector3 targetRotation = transform.position + new Vector3(-InputX, 0f, 0f);
+        //  Vector3 newRotation = Vector3.RotateTowards(gameObject.transform.position, targetRotation , 600f, 5f);
 
-   
 
-       // Debug.Log(newRotation);
+
+        // Debug.Log(newRotation);
 
         //transform.rotation = Quaternion.LookRotation(newRotation);
     }
@@ -108,30 +109,31 @@ public class Matt_MovementScript : MonoBehaviour
             movement = new Vector3(-InputX, 0, 0);
             controller.Move(movement * speed * Time.deltaTime); //The left-right movement of the player is handled here.
             InputMagnitude = movement.magnitude;
-            if (movement.magnitude > 0) { 
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15F);
+            if (movement.magnitude > 0)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15F);
             }
 
             if (Input.GetButtonDown("Jump"))  //This checks if the player has pressed the jump button!
             {
-                  Jump(); //calls the Jump script which adds the jump velocity to the player 
-            }    
+                Jump(); //calls the Jump script which adds the jump velocity to the player 
+            }
         }
     }
     void CharacterPhysics()//this handles all the gravitational stuff affecting player, also jumping just adds a big burst of upwards momentum to the player
     {
-        
-        velocity = Vector3.Lerp(velocity, new Vector3(0, gravity, 0) , velocityDamp * Time.deltaTime);
-        controller.Move(velocity * Time.deltaTime); 
+
+        velocity = Vector3.Lerp(velocity, new Vector3(0, gravity, 0), velocityDamp * Time.deltaTime);
+        controller.Move(velocity * Time.deltaTime);
     }
 
     void Jump() //Jumps.
     {
         if (grounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
-        { 
-        velocity = velocity + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+        {
+            velocity = velocity + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
         }
-       
+
     }
 
 }

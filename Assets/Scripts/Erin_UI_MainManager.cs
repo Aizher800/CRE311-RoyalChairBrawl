@@ -7,13 +7,13 @@ public class Erin_UI_MainManager : MonoBehaviour
 {
     void Start()
     {
-    
+
     }
- 
+
 
     void Update()
     {
-        
+
     }
 
 
@@ -25,10 +25,10 @@ public class Erin_UI_MainManager : MonoBehaviour
 
 
     public void Tutorial()
-        {
-            Debug.Log("Tutorial loaded.");
-            SceneManager.LoadScene(2);   //Loads in the tutorial scene.
-        }
+    {
+        Debug.Log("Tutorial loaded.");
+        SceneManager.LoadScene(2);   //Loads in the tutorial scene.
+    }
 
 
     public void Settings()

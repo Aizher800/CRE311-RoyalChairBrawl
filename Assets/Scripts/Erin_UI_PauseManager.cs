@@ -16,14 +16,14 @@ public class Erin_UI_PauseManager : MonoBehaviour
 
     [SerializeField]
     Time timeText;      //Modifying the text displayed.
-       
+
     bool isPaused;
 
     public GameObject Hud;    //HUD enabling/disabling.
 
     void Start()
     {
-        
+
         UIPanel.gameObject.SetActive(false);    //Prevents panel from appearing at start of scene.
         isPaused = false;                       //Game is not paused ordinarily.
 
@@ -32,20 +32,20 @@ public class Erin_UI_PauseManager : MonoBehaviour
         Debug.Log("Game started.");
     }
 
-    
+
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && !isPaused)       //While game isn't paused, the player can press esc and it will pause game.
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)       //While game isn't paused, the player can press esc and it will pause game.
         {
             Pause();
         }
 
-        else if(Input.GetKeyDown(KeyCode.Escape) && isPaused)   //While the game is paused, the player can press esc and it will resume game.
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)   //While the game is paused, the player can press esc and it will resume game.
         {
             UnPause();
         }
     }
-    
+
 
     public void Pause()
     {

@@ -10,7 +10,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     [SerializeField] public int state;
     public Vector3 navObjective;
     // public int specialAnimNumber;
-   
+
 
     public bool weaponReady = false;
     public bool lockedOn = false;
@@ -27,7 +27,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
     private void Start()
     {
-        
+
         anim = gameObject.GetComponent<Animator>();
         stateMachine = new Matt_SM_StateMachine<Matt_SM_PlayerStateInfo>(this);
         //stateMachine.ChangeState(FirstState.Instance);
@@ -40,8 +40,9 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         state = GetStateMachineStateNumber();
         stateMachine.Update();
 
-        if (stateMachine.currentState != null) { 
-        currentState.text = stateMachine.currentState.ToString();
+        if (stateMachine.currentState != null)
+        {
+            currentState.text = stateMachine.currentState.ToString();
         }
         if (stateMachine.previousState != null)
         {
@@ -67,8 +68,8 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         if (stateMachine.previousState.restorableState == false)
         {
             Debug.Log("its NOT restorable");
-            
-            return false; 
+
+            return false;
         }
         else
         {
@@ -79,7 +80,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
     }
     public void ChangeStateMachineState(State<Matt_SM_PlayerStateInfo> _newstate)
-    
+
     {
         stateMachine.ChangeState(_newstate);
 
