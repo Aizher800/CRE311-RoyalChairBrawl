@@ -2115,7 +2115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
   healthBar: {fileID: 761402446}
 --- !u!33 &726896349
 MeshFilter:
@@ -6353,7 +6353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   grounded: 0
-  jumpStrength: 80
+  jumpStrength: 100
   speed: 20
 --- !u!143 &2067458825
 CharacterController:
@@ -6410,7 +6410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
   healthBar: {fileID: 761402446}
 --- !u!1001 &2100758363
 PrefabInstance:
