@@ -67,18 +67,18 @@ public class Erin_UI_PauseManager : MonoBehaviour
     }
 
 
-    public void Restart()
+    public void Restart()   //Renamed 'Return to Main Menu Button' in the UI 7/06/20
     {
         Debug.Log("Game restarted.");
         SceneManager.LoadScene(0);   //Loads in the main menu scene.
     }
 
-
+    /*DECIDED TO REMOVE THIS BUTTON 7/06/20
     public void QuitGame()
     {
         Debug.Log("Game quit.");
         Application.Quit();
-    }
+    }*/
 
 
 }
