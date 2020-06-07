@@ -43,4 +43,11 @@ public class Erin_UI_MainManager : MonoBehaviour
         Debug.Log("Main menu loaded.");
         SceneManager.LoadScene(0);   //Returns the user back to main menu.
     }
+
+    //DECIDED TO MOVE THIS BUTTON 7/06/20
+    public void QuitGame()
+    {
+        Debug.Log("Game quit.");
+        Application.Quit();
+    }
 }

@@ -73,12 +73,11 @@ public class Erin_UI_PauseManager : MonoBehaviour
         SceneManager.LoadScene(0);   //Loads in the main menu scene.
     }
 
-    /*DECIDED TO REMOVE THIS BUTTON 7/06/20
+    /*DECIDED TO MOVE THIS BUTTON 7/06/20
     public void QuitGame()
     {
         Debug.Log("Game quit.");
         Application.Quit();
     }*/
-
 
 }
