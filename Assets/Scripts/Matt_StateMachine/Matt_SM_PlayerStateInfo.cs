@@ -10,8 +10,14 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     [SerializeField] public int state;
     public Vector3 navObjective;
     // public int specialAnimNumber;
+<<<<<<< Updated upstream
    
 
+=======
+    public Vector3 PSI_Velocity { get; set; }
+
+    [SerializeField] public bool  PSI_Grounded;
+>>>>>>> Stashed changes
     public bool weaponReady = false;
     public bool lockedOn = false;
     Animator anim;
@@ -23,11 +29,16 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     public float gameTimer;
     public int seconds = 0;
 
+    
     private Matt_SM_StateMachine<Matt_SM_PlayerStateInfo> stateMachine { get; set; }
 
     private void Start()
     {
+<<<<<<< Updated upstream
         
+=======
+        PSI_Velocity = Vector3.zero;
+>>>>>>> Stashed changes
         anim = gameObject.GetComponent<Animator>();
         stateMachine = new Matt_SM_StateMachine<Matt_SM_PlayerStateInfo>(this);
         //stateMachine.ChangeState(FirstState.Instance);
@@ -37,6 +48,8 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
     private void Update()
     {
+
+        PSI_Grounded = GetComponent<CharacterController>().isGrounded;
         state = GetStateMachineStateNumber();
         stateMachine.Update();
 
