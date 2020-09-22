@@ -77,48 +77,10 @@ namespace Matt_StateSystem
     public abstract class State<T>
     {
         public bool restorableState = false;
-        public Command<T>[] commands = new Command<T>[5];
-        public int stateNumber;
-        public virtual int stateInt { get; set; }
+
+       public int stateNumber;
         public abstract void EnterState(T _owner);
-
-        public virtual void EnableCommands(T _owner)
-        {
-            foreach (var command in commands)
-            {
-                Debug.Log("Enabled command of " + command);
-                command.EnableCommand(_owner);
-            }
-
-        }
         public abstract void ExitState(T _owner);
         public abstract void UpdateState(T _owner);
-    }
-
-    public abstract class Command<T>
-    {
-        public GameObject commandOwner;
-        public string commandId;
-
-        public virtual void EnableCommand(T _owner)
-        {
-
-        }
-        public virtual void DisableCommand(T _owner)
-        {
-
-        }
-
-
-        public virtual void RunCommand(T _owner, Vector2 value = new Vector2())
-        {
-
-
-        }
-        public virtual void EndCommand(T _owner)
-        {
-
-        }
-
     }
 }

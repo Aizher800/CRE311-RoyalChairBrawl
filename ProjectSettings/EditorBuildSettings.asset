@@ -15,14 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: 83d029beecfffa94eb3e32d5abaff784
   - enabled: 1
-<<<<<<< Updated upstream
     path: Assets/Scenes/Settings.unity
     guid: 39d8037852dc40f4bb004dcab12be958
   m_configObjects: {}
-=======
-    path: Assets/Scenes/Arena.unity
-    guid: 8abade699734b204bbf6e3fca5a92797
-  m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 50c16384b721bbf4690439bc84bd0a0d,
-      type: 2}
->>>>>>> Stashed changes
