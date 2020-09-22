@@ -9,7 +9,7 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
    
 
     private static Matt_SM_FreeMoveState _instance;
-   
+
     private Matt_SM_FreeMoveState()
     {
         if (_instance != null)
@@ -38,18 +38,11 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
 
     public override void EnterState(Matt_SM_PlayerStateInfo _owner)
     {
-        commands[0] = new Matt_MovementCommand();
-        commands[1] = new Matt_GravityCommand();
         //playerTransform = GameObject.FindObjectOfType<PlayerMovementController>().gameObject.transform.position;
         //  Debug.Log("Entering THIRD State");
         //playerStateInfo = _owner.GetComponent<PlayerStateInfo>();
         _owner.state = 1;
-<<<<<<< Updated upstream
        
-=======
-        EnableCommands(_owner);
-        Debug.Log("Enablign Commands");
->>>>>>> Stashed changes
     }
 
     public override void ExitState(Matt_SM_PlayerStateInfo _owner)
@@ -67,25 +60,10 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
             _owner.ChangeStateMachineState(Matt_SM_AttackState.Instance);
             }
         }
-        for (int i = 0; i < commands.Length; i++)
-        {
-            if(commands[i] != null)
-            {
 
-<<<<<<< Updated upstream
             //if (!_owner.switchState)
             // {
             //   _owner.stateMachine.ChangeState(FirstState.Instance);
             // }
         }
-=======
-                commands[i].RunCommand(_owner);
-            }
-        }
-        //if (!_owner.switchState)
-        // {
-        //   _owner.stateMachine.ChangeState(FirstState.Instance);
-        // }
-    }
->>>>>>> Stashed changes
 }
