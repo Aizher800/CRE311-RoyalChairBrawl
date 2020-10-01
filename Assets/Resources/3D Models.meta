@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Assets/Resources/3D Models.meta
 guid: 4287b99cd63fc6c4aa8c4192eb054f28
+========
+<<<<<<< Updated upstream
+guid: c5cbb18e17ea81c4386c1c040cedc3e1
+=======
+guid: 7be21f0a27c93b74496259e0dad7368a
+>>>>>>> Stashed changes
+>>>>>>>> Stashed changes:Assets/Prefabs.meta
+=======
+guid: 79c41f25cb8c81d498d912110cc9c871
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
