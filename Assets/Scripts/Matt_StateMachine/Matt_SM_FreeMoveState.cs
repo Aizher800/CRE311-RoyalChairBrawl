@@ -9,7 +9,7 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
     //NOT FINISHED
 
     private static Matt_SM_FreeMoveState _instance;
-
+   
     private Matt_SM_FreeMoveState()
     {
         if (_instance != null)
@@ -38,10 +38,16 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
 
     public override void EnterState(Matt_SM_PlayerStateInfo _owner)
     {
+        commands[0] = new Matt_MovementCommand();
+        commands[1] = new Matt_GravityCommand();
         //playerTransform = GameObject.FindObjectOfType<PlayerMovementController>().gameObject.transform.position;
         //  Debug.Log("Entering THIRD State");
         //playerStateInfo = _owner.GetComponent<PlayerStateInfo>();
         _owner.state = 1;
+
+        EnableCommands(_owner);
+        Debug.Log("Enablign Commands");
+
 
     }
 
@@ -53,13 +59,29 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
 
     public override void UpdateState(Matt_SM_PlayerStateInfo _owner)
     {
-        //  Debug.Log("FREEMOVEUPDATE");
-        if (Input.GetButtonUp("AttackButton"))
+
+      //  Debug.Log("FREEMOVEUPDATE");
+       // if (Input.GetButtonUp("AttackButton"))
+       // {
+          //  if (_owner.weaponReady == true) { 
+          //  _owner.ChangeStateMachineState(Matt_SM_AttackState.Instance);
+        //   }
+      //  }
+        for (int i = 0; i < commands.Length; i++)
         {
-            if (_owner.weaponReady == true)
+            if(commands[i] != null)
             {
-                _owner.ChangeStateMachineState(Matt_SM_AttackState.Instance);
+                Debug.Log("command update for " + commands[i]);
+                //commands[i].RunCommand(_owner);
+                //if (!_owner.switchState)
+                // {
+                //   _owner.stateMachine.ChangeState(FirstState.Instance);
+                // }
+
             }
+
+             
+            
         }
 
         //if (!_owner.switchState)
@@ -67,4 +89,6 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
         //   _owner.stateMachine.ChangeState(FirstState.Instance);
         // }
     }
+
 }
+
