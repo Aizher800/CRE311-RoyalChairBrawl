@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using _InputTest.Entity.Scripts.Input.Monobehaviours;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using _InputTest.Entity.Scripts.Input.Monobehaviours;
 
-    public class PlayerInputCustom : MonoBehaviour
+public class PlayerInputCustom : MonoBehaviour
 {
 
     [SerializeField] string Horizontal, Vertical, Attack, Block, Jump;
@@ -20,7 +17,7 @@ using _InputTest.Entity.Scripts.Input.Monobehaviours;
 
         if (Input.GetButton(Horizontal))
         {
-           // charInput.OnMoveEvent(Input.GetAxis(Horizontal));
+            // charInput.OnMoveEvent(Input.GetAxis(Horizontal));
 
         }
 

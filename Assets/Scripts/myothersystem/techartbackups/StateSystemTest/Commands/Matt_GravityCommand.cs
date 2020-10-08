@@ -1,35 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Matt_StateSystem;
+using System.Collections;
 using UnityEngine;
-using Matt_StateSystem;
 
 public class Matt_GravityCommand : Command<Matt_SM_PlayerStateInfo>
 {
-   
+
     private Matt_SM_PlayerStateInfo stateInfo;
     private CharacterController controller;
 
 
-    
-    float velocityDamp = 14f; //velocityDamp is the rate at which the forces applied to the player revert to their original values
-   //basically all the gravity-based stuff affecting the player, velocity is added on top of the player movement vector3
-    float gravity = -15f;
 
+    float velocityDamp = 14f; //velocityDamp is the rate at which the forces applied to the player revert to their original values
+                              //basically all the gravity-based stuff affecting the player, velocity is added on top of the player movement vector3
+    float gravity = -15f;
+    Vector3 gravVelocity;
     private Coroutine _physicsCoroutine;
     override public void EnableCommand(Matt_SM_PlayerStateInfo _owner)
     {
-        
-        Debug.Log("Gravity Command Enabled");
-        commandOwner = _owner.gameObject;
-        //anim = enableOwner.GetComponent<Animator>();
-        
-     _owner.GetComponent<Animator>().applyRootMotion = false;
-        //stateInfo = commandOwner.GetComponent<PlayerStateInfo>();
-    
-        controller = _owner.GetComponent<CharacterController>();
-       // commandId = stateInfo.PSI_uniqueId;
 
+        commandUpdate = true;
+        Debug.Log("Gravity Command Enabled");
      
+        //anim = enableOwner.GetComponent<Animator>();
+
+        _owner.GetComponent<Animator>().applyRootMotion = false;
+        //stateInfo = commandOwner.GetComponent<PlayerStateInfo>();
+
+      //  controller = _owner.GetComponent<CharacterController>();
+        // commandId = stateInfo.PSI_uniqueId;
+
+
     }
 
     // public override void Execute(string id, Vector2 value)
@@ -44,22 +44,23 @@ public class Matt_GravityCommand : Command<Matt_SM_PlayerStateInfo>
     //   Debug.Log("Gravity Command denied, command was for" + commandId + ", but i wanted " + id);
     //  }
     // }
-    override public void RunCommand(Matt_SM_PlayerStateInfo _owner, Vector2 value)
+    override public void RunCommand(Matt_SM_PlayerStateInfo _owner, Vector2 value = new Vector2())
     {
         if (_physicsCoroutine == null)
         {
-            _physicsCoroutine = commandOwner.GetComponent<Matt_SM_PlayerStateInfo>().StartCoroutine(CharacterPhysics(_owner));
+            Debug.Log("GRAVITY ");
+            _physicsCoroutine = _owner.GetComponent<Matt_SM_PlayerStateInfo>().StartCoroutine(CharacterPhysics(_owner));
         }
     }
-    
+
 
     IEnumerator CharacterPhysics(Matt_SM_PlayerStateInfo _owner)//this handles all the gravitational stuff affecting player, also jumping just adds a big burst of upwards momentum to the player
     {
-        while (_owner.GetComponent<CharacterController>().isGrounded == false)
+        while (_owner.PSI_characterController.isGrounded == false)
         {
             Debug.Log("GRAVITYGRA");
-            _owner.PSI_Velocity = Vector3.Lerp(_owner.PSI_Velocity, new Vector3(0, gravity, 0), velocityDamp * Time.deltaTime);
-            _owner.GetComponent<CharacterController>().Move(_owner.PSI_Velocity * Time.deltaTime);
+           _owner.PSI_Velocity = Vector3.Lerp(_owner.PSI_Velocity, new Vector3(0, gravity, 0), velocityDamp * Time.deltaTime);
+            _owner.PSI_characterController.Move(_owner.PSI_Velocity * Time.deltaTime);
             yield return null;
         }
 
@@ -68,7 +69,7 @@ public class Matt_GravityCommand : Command<Matt_SM_PlayerStateInfo>
     }
     override public void EndCommand(Matt_SM_PlayerStateInfo _owner)
     {
-      //  velocity = Vector3.zero;
+        //  velocity = Vector3.zero;
         _physicsCoroutine = null;
     }
 }

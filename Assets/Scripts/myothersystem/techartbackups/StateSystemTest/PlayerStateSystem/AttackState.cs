@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
 /*  COMMENTED OUT
 public class AttackState : State<PlayerStateInfo>
 {

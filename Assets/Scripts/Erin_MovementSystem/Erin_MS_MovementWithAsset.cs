@@ -50,10 +50,10 @@
 //        var movement = new Vector3();   // Reads input value.
 //        movement.x = movementInput.x;   // Convert it into the format we want.
 //        movement.z = movementInput.y;   // Convert it into the format we want.
-        
+
 //        movement.Normalize();   //If we're moving diagonally, it won't go faster.
 
 //        transform.Translate(movement * movementSpeed * Time.deltaTime);
 //    }
-    
+
 //}

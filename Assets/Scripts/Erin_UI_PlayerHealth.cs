@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Erin_UI_PlayerHealth : MonoBehaviour
 {
@@ -20,7 +18,7 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.tag == "Weapon")
+        if (col.gameObject.tag == "Weapon")
         {
             Debug.Log("Light attack");
             TakeDamage(2); //light 

@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class IRotationInput
+public interface IRotationInput
 {
-   public Vector3 RotationDirection { get; set; } 
+     Vector3 RotationDirection { get; set; }
 
 }

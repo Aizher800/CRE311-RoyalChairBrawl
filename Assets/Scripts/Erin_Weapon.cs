@@ -1,24 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Erin_Weapon : MonoBehaviour
 {
 
     //public float range;
     //public float damage;
-   
+
 
     private void Start()
     {
-       
-    }    
-        
+
+    }
+
 
     void FixedUpdate()
     {
 
-       
+
     }
 
 
@@ -35,6 +33,6 @@ public class Erin_Weapon : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 }

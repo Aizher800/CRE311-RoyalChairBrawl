@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Matt_StateSystem;
+using System.Collections;
 using UnityEngine;
-using Matt_StateSystem;
 
 [RequireComponent(typeof(CharacterController))]
 public class Matt_MovementCommand : Command<Matt_SM_PlayerStateInfo>
@@ -31,6 +30,7 @@ public class Matt_MovementCommand : Command<Matt_SM_PlayerStateInfo>
     Vector3 movement; //the movement vector3
     Vector3 velocity; //basically all the gravity-based stuff affecting the player, velocity is added on top of the player movement vector3
 
+  [SerializeField]  Vector2 inputMovement;
 
     Coroutine _movementCoroutine;
     float startingZPos = 0f;
@@ -59,6 +59,8 @@ public class Matt_MovementCommand : Command<Matt_SM_PlayerStateInfo>
 
         // anim.SetFloat("InputZ", InputZ, 0.0f, Time.deltaTime);
         anim.SetFloat("InputX", InputX, 0.0f, Time.deltaTime);
+        InputX = value.x;
+        Debug.Log(InputX);
         anim.SetFloat("InputMagnitude", InputMagnitude, 0.0f, Time.deltaTime);
 
         // anim.SetFloat("InputZ", InputZ, 0.0f, Time.deltaTime);
@@ -118,65 +120,65 @@ public class Matt_MovementCommand : Command<Matt_SM_PlayerStateInfo>
 
                 //transform.rotation = Quaternion.LookRotation(newRotation);
             }
-        } 
-    
+        }
+
     }
-            IEnumerator Movement(Matt_SM_PlayerStateInfo _owner) //Guess what this one does.
+    IEnumerator Movement(Matt_SM_PlayerStateInfo _owner) //Guess what this one does.
+    {
+        while (movement != Vector3.zero)//make sure the script actually found a CharacterController on the gameobject
+        {
+
+            movement = new Vector3(-InputX, 0, 0);
+            _owner.GetComponent<CharacterController>().Move(movement * speed * Time.deltaTime); //The left-right movement of the player is handled here.
+            InputMagnitude = movement.magnitude;
+            Debug.Log(InputMagnitude + " magnitude" );
+            if (movement.magnitude > 0)
             {
-                while (_owner.GetComponent<CharacterController>().velocity != null)//make sure the script actually found a CharacterController on the gameobject
+                _owner.transform.rotation = Quaternion.Slerp(_owner.transform.rotation, Quaternion.LookRotation(movement), 0.15F);
+
+                if (movement.magnitude > 0)
                 {
+                    _owner.transform.rotation = Quaternion.Slerp(_owner.transform.rotation, Quaternion.LookRotation(movement), 0.15F);
 
-                    movement = new Vector3(-InputX, 0, 0);
-                    _owner.GetComponent<CharacterController>().Move(movement * speed * Time.deltaTime); //The left-right movement of the player is handled here.
-                    InputMagnitude = movement.magnitude;
-
-                    if (movement.magnitude > 0)
-                    {
-                        _owner.transform.rotation = Quaternion.Slerp(_owner.transform.rotation, Quaternion.LookRotation(movement), 0.15F);
-
-                        if (movement.magnitude > 0)
-                        {
-                            _owner.transform.rotation = Quaternion.Slerp(_owner.transform.rotation, Quaternion.LookRotation(movement), 0.15F);
-
-                        }
-                        if (ooStateRef.isGrounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
-                        {
-
-                            Jump(); //calls the Jump script which adds the jump velocity to the player 
-                        }
-                    }
                 }
-                void CharacterPhysics()//this handles all the gravitational stuff affecting player, also jumping just adds a big burst of upwards momentum to the player
+                if (ooStateRef.isGrounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
                 {
-
-                    velocity = Vector3.Lerp(velocity, new Vector3(0, gravity, 0), velocityDamp * Time.deltaTime);
-                    controller.Move(velocity * Time.deltaTime);
-
                     if (Input.GetButtonDown("Jump"))  //This checks if the player has pressed the jump button!
                     {
                         Jump(); //calls the Jump script which adds the jump velocity to the player 
                     }
                 }
-                _movementCoroutine = null;
-                yield return null;
-        
-
-        }
-
-
-        void Jump() //Jumps.
-        {
-
-            if (grounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
-            {
-                velocity = velocity + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
             }
-
-
-
-            ooStateRef.velocityCore = ooStateRef.velocityCore + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
-
-
+          
         }
+        //   void CharacterPhysics()//this handles all the gravitational stuff affecting player, also jumping just adds a big burst of upwards momentum to the player
+        //   {
+
+        //  velocity = Vector3.Lerp(velocity, new Vector3(0, gravity, 0), velocityDamp * Time.deltaTime);
+        //   controller.Move(velocity * Time.deltaTime);
+
+        Debug.Log("Ended movement");
+      //  }
+        _movementCoroutine = null;
+        yield return null;
+
 
     }
+
+
+    void Jump() //Jumps.
+    {
+
+        if (grounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
+        {
+            velocity = velocity + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+        }
+
+
+
+        ooStateRef.velocityCore = ooStateRef.velocityCore + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+
+
+    }
+
+}

@@ -1,13 +1,18 @@
-﻿
-using UnityEngine.InputSystem;
+﻿using TSC_INPUT_SYSTEM;
 using UnityEngine;
-
-using TSC_INPUT_SYSTEM;
-
+using UnityEngine.InputSystem;
 
 namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 {
-    public class CharacterInput : AbstractInput//,// IInteractInput, IRotationInput, ISkillInput, IAttackInput
+    public enum PlayerInputNum
+    {
+
+        Player1,
+        Player2,
+        Player3,
+        Player4
+    }
+    public class CharacterInput : AbstractInput, IRotationInput, IMoveinput
     {
         /*  [Header("Input Commands")] 
           public Command interactInput;
@@ -19,13 +24,17 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 
           */
 
-       // [SerializeField]  PlayerInputActions _inputActions;
+        // [SerializeField]  PlayerInputActions _inputActions;
 
         private const string LeftMouseButton = "Left Button";
-
+        [SerializeField] PlayerInputNum playerInput;
         [SerializeField] TSC_INPUT _inputSource;
         [SerializeField] float inputX;
         [SerializeField] float inputY;
+        private Vector3 moveDirection;
+        public Vector3 MoveDirection => moveDirection;
+       
+        
         private void Awake()
         {
             
@@ -34,42 +43,65 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                 _inputSource = new TSC_INPUT();
             }
         }
+       void SetInput()
+        {
+            _inputSource.Enable();
+            switch (playerInput)
+            {
+                case (PlayerInputNum.Player1):
+                    _inputSource.Player1.Move.performed += MovementConversion;
+                    break;
 
-        
+                case (PlayerInputNum.Player2):
+                    _inputSource.Player2.Move.performed += MovementConversion;
+                    break;
+
+                case (PlayerInputNum.Player3):
+
+                    break;
+
+                case (PlayerInputNum.Player4):
+
+
+
+                    break;
+            }
+        }
+
         private void OnEnable()
         {
-           _inputSource.Enable();
+            SetInput();
 
-             _inputSource.Player.Move.performed += MovementConversion;
+            
 
-           // _inputActions.Player1.AnalogAim.started += AimConversion;
+            // _inputActions.Player1.AnalogAim.started += AimConversion;
 
-          //  _inputActions.Player1.Jogging.started += JogHold;
-          //  _inputActions.Player1.Jogging.canceled += JogRelease;
-          //  _inputActions.Player1.Skill.performed += SkillConversion;
-           /* if (analogRotationInput)
-                _inputActions.Player.AnalogAim.performed += OnAnalogAimInput;
+            //  _inputActions.Player1.Jogging.started += JogHold;
+            //  _inputActions.Player1.Jogging.canceled += JogRelease;
+            //  _inputActions.Player1.Skill.performed += SkillConversion;
+            /* if (analogRotationInput)
+                 _inputActions.Player.AnalogAim.performed += OnAnalogAimInput;
 
-            if (interactInput)
-            {
-                _inputActions.Player.Interact.started += OnInteractStart;
-                _inputActions.Player.Interact.canceled += OnInteractEnded;
-            }
+             if (interactInput)
+             {
+                 _inputActions.Player.Interact.started += OnInteractStart;
+                 _inputActions.Player.Interact.canceled += OnInteractEnded;
+             }
 
-            if (skillInput)
-            {
-                _inputActions.Player.Skill.performed += OnSkillUse;
-                _inputActions.Player.Skill.canceled += OnSkillEnd;
-            }
+             if (skillInput)
+             {
+                 _inputActions.Player.Skill.performed += OnSkillUse;
+                 _inputActions.Player.Skill.canceled += OnSkillEnd;
+             }
 
-            if (attackInput)
-            {
-                _inputActions.Player.Attack.performed += OnAttackStart;
-                _inputActions.Player.Attack.canceled += OnAttackEnd;
-            }
-            */
+             if (attackInput)
+             {
+                 _inputActions.Player.Attack.performed += OnAttackStart;
+                 _inputActions.Player.Attack.canceled += OnAttackEnd;
+             }
+             */
         }
-        
+
         void AimConversion(InputAction.CallbackContext context)
         {
             var value = context.ReadValue<Vector3>();
@@ -78,17 +110,19 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         }
         void MovementConversion(InputAction.CallbackContext context)
         {
-       
+
+
             var value = context.ReadValue<Vector2>();
             Debug.Log("move input received");
-          
+            inputX = value.x;
+            inputY = value.y;
             OnMoveInput(value);
-           
-           
+
+
 
         }
 
-        void SkillConversion(InputAction.CallbackContext context) 
+        void SkillConversion(InputAction.CallbackContext context)
         {
             var value = context;
 
@@ -106,9 +140,9 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
             OnJogHold();
 
         }
-        
 
-           void JogRelease(InputAction.CallbackContext context)
+
+        void JogRelease(InputAction.CallbackContext context)
         {
 
             OnJogRelease();
@@ -116,11 +150,11 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 
         private void OnDisable()
         {
-           //FIFX _inputActions.Player1.Movement.performed -= MovementConversion;
-           // _inputActions.Player.Interact.started -= OnInteractStart;
-          //  _inputActions.Player.Interact.canceled -= OnInteractEnded;
-           // _inputActions.Player.AnalogAim.performed -= OnAnalogAimInput;
-           // _inputActions.Player.Skill.performed -= OnSkillUse;
+            //FIFX _inputActions.Player1.Movement.performed -= MovementConversion;
+            // _inputActions.Player.Interact.started -= OnInteractStart;
+            //  _inputActions.Player.Interact.canceled -= OnInteractEnded;
+            // _inputActions.Player.AnalogAim.performed -= OnAnalogAimInput;
+            // _inputActions.Player.Skill.performed -= OnSkillUse;
 
             //FIX THIS_inputActions.Disable();
         }

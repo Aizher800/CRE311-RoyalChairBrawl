@@ -17,8 +17,8 @@ namespace Matt_StateSystem
 
         public void ChangeState(State<T> _newstate)
         {
-           
-            
+
+
             if (currentState != null)
             {
                 //if (previousState != null) { 
@@ -40,11 +40,11 @@ namespace Matt_StateSystem
                 }
 
             }
-            
+
             Debug.Log("New State number for" + _newstate.ToString() + " is: " + _newstate.stateNumber);
-             currentState = _newstate;
-             currentState.EnterState(Owner);
-           
+            currentState = _newstate;
+            currentState.EnterState(Owner);
+
         }
         public void RestoreState()
         {
@@ -69,7 +69,7 @@ namespace Matt_StateSystem
         public int GetStateNumber()
         {
             int stateNum = currentState.stateNumber;
-            Debug.Log(stateNum +"is the statenum we got");
+            Debug.Log(stateNum + "is the statenum we got");
             return stateNum;
         }
     }
@@ -97,9 +97,10 @@ namespace Matt_StateSystem
 
     public abstract class Command<T>
     {
-        public GameObject commandOwner;
+       // public GameObject commandOwner;
         public string commandId;
 
+        public bool commandUpdate = false;
         public virtual void EnableCommand(T _owner)
         {
 

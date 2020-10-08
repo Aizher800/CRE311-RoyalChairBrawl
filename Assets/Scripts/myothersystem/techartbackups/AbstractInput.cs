@@ -1,10 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 //using _InputTest.Entity.Scripts.Input.Monobehaviours.Commands;
-using _InputTest.Entity.Scripts.Input;
-
-using System.Collections.Concurrent;
 namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 
 {
@@ -24,12 +19,12 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         //[SerializeField] private bool isJogging;
 
 
-            //EVENTS
+        //EVENTS
         public delegate void MoveInputEvent(Matt_SM_PlayerStateInfo _owner, Vector2 inputValue);
         public event MoveInputEvent OnMoveEvent;
 
         public delegate void AnalogAimEvent(Matt_SM_PlayerStateInfo _owner, Vector2 aimvalue);
-        public  event AnalogAimEvent OnAimEvent;
+        public event AnalogAimEvent OnAimEvent;
 
 
         public delegate void JogHoldEvent();
@@ -39,7 +34,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         public event JogReleaseEvent OnJogReleaseEvent;
 
         public delegate void UpdateEvent(GameObject owner);
-        public  event UpdateEvent OnUpdateEvent;
+        public event UpdateEvent OnUpdateEvent;
 
 
         public delegate void SkillUseEvent();
@@ -56,7 +51,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         public bool IsPressingInteract => isPressingInteract;
         public bool IsAttacking => isAttacking;
 
-       // private PlayerInput m_PlayerInput;
+        // private PlayerInput m_PlayerInput;
 
         private string _uniqueID;
 
@@ -69,14 +64,14 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         void Start()
         {
             thisOwner = GetComponent<Matt_SM_PlayerStateInfo>();
-           // _uniqueID = gameObject.GetComponent<UniqueId>().uniqueId;
+            // _uniqueID = gameObject.GetComponent<UniqueId>().uniqueId;
             Debug.Log("Set Unique id to " + _uniqueID);
         }
 
         // Update is called once per frame
         void Update()
         {
-             
+
         }
 
         protected void OnAimInput(Vector2 value)
@@ -91,14 +86,14 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         public void OnSkillUse()
         {
             OnSkillEvent?.Invoke();
-           // isUsingSkill = true;
+            // isUsingSkill = true;
             //if (skillInput != null)
-              //  skillInput.Execute();
+            //  skillInput.Execute();
         }
 
         public void OnJogHold()
         {
-           OnJogHoldEvent?.Invoke();
+            OnJogHoldEvent?.Invoke();
 
         }
 

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 
@@ -10,23 +8,23 @@ namespace ScriptableStateSystem
 
     public enum STATE
     {
-            Null,
-            FreeMove,
-            Dead,
-            Jumping,
-            Attacking
+        Null,
+        FreeMove,
+        Dead,
+        Jumping,
+        Attacking
 
     }
     public abstract class ScriptableState : ScriptableObject
     {
-        
+
         public GameObject state_Owner { get; set; } //idk what the point of get set is again lol
 
         //The Initial Runner
 
         protected void B_OnStateEnter(GameObject _owner = null)
         {
-            if(_owner != null) { state_Owner = _owner; }
+            if (_owner != null) { state_Owner = _owner; }
 
             C_StateEntry();
         }
@@ -41,7 +39,7 @@ namespace ScriptableStateSystem
         {
 
             C_StateUpdate();
-       
+
         }
 
         //The Overriden Behaviour.

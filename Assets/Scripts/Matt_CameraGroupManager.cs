@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Cinemachine;
-
 //MAKE SURE THE MAINCAMERA HAS A CINEMACHINE BRAIN BTW
 public class Matt_CameraGroupManager : MonoBehaviour
 {
@@ -20,7 +17,7 @@ public class Matt_CameraGroupManager : MonoBehaviour
         {
             cinemachineTargetGroup.AddMember(GameObject.FindObjectsOfType<Erin_UI_PlayerHealth>()[i].transform, 1f, 1f);
         }
-        
+
 
     }
 

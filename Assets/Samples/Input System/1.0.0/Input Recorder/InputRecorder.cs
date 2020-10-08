@@ -371,14 +371,14 @@ namespace UnityEngine.InputSystem
             }
         }
 
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         protected void OnValidate()
         {
             if (m_EventTrace != null)
                 m_EventTrace.recordFrameMarkers = m_RecordFrames;
         }
 
-        #endif
+#endif
 
         [SerializeField] private bool m_StartRecordingWhenEnabled = false;
 

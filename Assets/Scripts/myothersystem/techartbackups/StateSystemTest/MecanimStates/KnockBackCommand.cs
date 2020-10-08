@@ -1,16 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-//using _InputTest.Entity.Scripts.Input.Monobehaviours.Commands;
-using Matt_StateSystem;
-using UnityEngine.InputSystem;
-using _InputTest.Entity.Scripts.Input;
+﻿//using _InputTest.Entity.Scripts.Input.Monobehaviours.Commands;
 using _InputTest.Entity.Scripts.Input.Monobehaviours;
+using System.Collections;
+using UnityEngine;
 
 public class KnockBackCommand : StateMachineBehaviour
 {
 
-   private Vector3 impactDirection;
+    private Vector3 impactDirection;
     AbstractInput inputSource;
     // private IMoveInput _move;
     //private IRotationInput _rotate;
@@ -32,10 +28,10 @@ public class KnockBackCommand : StateMachineBehaviour
     {
 
         //inputSource = animator.GetComponent<AbstractInput>();
-       // inputSource.OnMoveEvent += RunCommand;
+        // inputSource.OnMoveEvent += RunCommand;
         commandOwner = animator.gameObject;
         Debug.Log("set owner to " + commandOwner);
-     //   _inputActions = new PlayerInputActions();
+        //   _inputActions = new PlayerInputActions();
         //m_PlayerInput = enableOwner.GetComponent<PlayerInput>();
         anim = animator.GetComponent<Animator>();
         anim.applyRootMotion = false;
@@ -44,33 +40,33 @@ public class KnockBackCommand : StateMachineBehaviour
 
         impact = -commandOwner.transform.forward * 33f + new Vector3(0, 60f, 0);
         //impactDirection = Vector3.zero;        // _move = _owner.GetComponent<IMoveInput>();
-       // _rotate = commandOwner.GetComponent<IRotationInput>();
+        // _rotate = commandOwner.GetComponent<IRotationInput>();
         // stateInfo = commandOwner.GetComponent<PlayerStateInfo>();
         //  commandId = stateInfo.PSI_uniqueId;
 
         //descendChecker = enableOwner.GetComponent<AscendDescendCheck>();
         //  anim = enableOwner.GetComponent<Animator>();
-       // cam = Camera.main;
+        // cam = Camera.main;
         controller = commandOwner.GetComponent<CharacterController>();
 
 
     }
 
     // Update is called once per frame
-  
-    
+
+
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-    
-    
-    if (_impactCoroutine == null)
-    {
-         _impactCoroutine = commandOwner.GetComponent<Matt_SM_PlayerStateInfo>().StartCoroutine(CharacterPhysics());
 
-    }
 
-        
+        if (_impactCoroutine == null)
+        {
+            _impactCoroutine = commandOwner.GetComponent<Matt_SM_PlayerStateInfo>().StartCoroutine(CharacterPhysics());
+
+        }
+
+
     }
     IEnumerator CharacterPhysics()//this handles all the gravitational stuff affecting player, also jumping just adds a big burst of upwards momentum to the player
     {
@@ -125,22 +121,22 @@ public class KnockBackCommand : StateMachineBehaviour
     public void AddImpact(Vector3 dir, float force)
     {
         //garbage trash code, should probably have everything as an ihneritance abstract class thingy instead.
-    //    if (commandOwner.GetComponent<PlayerStateInfo>())
-       // {
-         //   playerStateInfo = gameObject.GetComponent<PlayerStateInfo>();
-          //  Debug.Log("Player Knockdown state not yet implemented.");
+        //    if (commandOwner.GetComponent<PlayerStateInfo>())
+        // {
+        //   playerStateInfo = gameObject.GetComponent<PlayerStateInfo>();
+        //  Debug.Log("Player Knockdown state not yet implemented.");
 
-      //  }
-    //    else if (gameObject.GetComponent<AI>())
-      //  {
-         //   aiStateInfo = gameObject.GetComponent<AI>();
-            //   aiStateInfo.ChangeStateMachineState(AI_KnockDownState.Instance);
-//
-     //   }
-    //    anim.SetBool("ImpactFlying", true);
-     //   isFlying = true;
-      //  dir.Normalize();
-     //   if (dir.y < 0) dir.y = -dir.y; // reflect down force on the ground
-      //  impact += dir.normalized * force / mass;
+        //  }
+        //    else if (gameObject.GetComponent<AI>())
+        //  {
+        //   aiStateInfo = gameObject.GetComponent<AI>();
+        //   aiStateInfo.ChangeStateMachineState(AI_KnockDownState.Instance);
+        //
+        //   }
+        //    anim.SetBool("ImpactFlying", true);
+        //   isFlying = true;
+        //  dir.Normalize();
+        //   if (dir.y < 0) dir.y = -dir.y; // reflect down force on the ground
+        //  impact += dir.normalized * force / mass;
     }
 }
