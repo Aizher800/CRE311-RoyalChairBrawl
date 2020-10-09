@@ -39,7 +39,7 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
         //  Debug.Log("Entering THIRD State");
         //playerStateInfo = _owner.GetComponent<PlayerStateInfo>();
         _owner.state = 1;
-        _owner.LockMovement();
+        //wner.LockMovement();
         EnableCommands(_owner);
         Debug.Log("Enablign Commands");
 

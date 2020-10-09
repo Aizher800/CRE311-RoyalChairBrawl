@@ -6,13 +6,13 @@ public class CustomGrounder : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    [SerializeField] float groundCastStart;
-    [SerializeField] float groundCastLength;
+    [SerializeField] float groundCastStart = -1.9f;
+    [SerializeField] float groundCastLength = 0.68f;
     [SerializeField] bool newGrounded;
     
-    void Start()
+   public bool IsCustomGrounded()
     {
-        
+        return newGrounded;
     }
 
     // Update is called once per frame

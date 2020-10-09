@@ -140,6 +140,11 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
 
     }
+
+
+
+
+    #region JUMPING
     void StartJump(Matt_SM_PlayerStateInfo _owner)
     {
         Debug.Log("Jumped!");
@@ -153,6 +158,29 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
             }
         }
     }
+    IEnumerator Jump(Matt_SM_PlayerStateInfo _owner)
+    {
+
+        bool jump = true;
+            Debug.Log("Coroutine started for jump");
+
+        _owner.PSI_Velocity = _owner.PSI_Velocity + new Vector3(0, jumpStrength * 2f, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+        
+           yield return new WaitUntil(() => (_owner.PSI_Grounded == false));
+
+            Debug.Log("in air!");
+
+        
+        
+        _jumpCoroutine = null;
+        yield return null;
+        
+    }
+
+
+
+
+    #endregion
     public override void RunCommand(Matt_SM_PlayerStateInfo _owner, Vector2 value)
     {
         if (_owner.CheckMovementLock() == true) { Debug.Log("movement was locked"); return; }
@@ -301,21 +329,6 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     #endregion
 
     //PHYSICS
-    IEnumerator Jump(Matt_SM_PlayerStateInfo _owner)
-    {
-
-        Debug.Log("Coroutine started for jump");
-
-        _owner.PSI_Velocity = _owner.PSI_Velocity + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
-        if (_owner.PSI_Grounded != true)
-        {
-            Debug.Log("in air!");
-
-        }
-        
-        _jumpCoroutine = null;
-        yield return null;
-    }
 
 
 

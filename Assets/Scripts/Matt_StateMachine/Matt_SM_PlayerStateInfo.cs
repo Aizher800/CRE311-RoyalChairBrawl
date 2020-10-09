@@ -88,7 +88,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     private void Update()
     {
 
-        PSI_Grounded = GetComponent<CharacterController>().isGrounded;
+        PSI_Grounded = GetComponent<CustomGrounder>().IsCustomGrounded();
         state = GetStateMachineStateNumber();
         stateMachine.Update();
 
