@@ -26,7 +26,8 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         public delegate void AnalogAimEvent(Matt_SM_PlayerStateInfo _owner, Vector2 aimvalue);
         public event AnalogAimEvent OnAimEvent;
 
-
+        public delegate void JumpInputEvent(Matt_SM_PlayerStateInfo _owner);
+        public event JumpInputEvent OnJumpInputEvent;
         public delegate void JogHoldEvent();
         public event JogHoldEvent OnJogHoldEvent;
 
@@ -101,6 +102,13 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         {
 
             OnJogReleaseEvent?.Invoke();
+        }
+
+        public void OnJumpInput()
+        {
+
+            OnJumpInputEvent?.Invoke(thisOwner);
+
         }
         /* public void OnAnalogAimInput(InputAction.CallbackContext context)
          {

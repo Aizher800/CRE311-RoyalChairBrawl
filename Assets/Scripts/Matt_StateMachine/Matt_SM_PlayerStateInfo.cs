@@ -15,14 +15,60 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     public bool weaponReady = false;
     public bool lockedOn = false;
     Animator anim;
-  
+
+    [SerializeField] bool PSI_movementLock;
+    [SerializeField] bool PSI_gravityLock;
+    [SerializeField] bool PSI_attackLock;
 
     public State<Matt_SM_PlayerStateInfo> scheduledState = null;
     public bool switchState = false;
     public float gameTimer;
     public int seconds = 0;
 
+    #region locking and unlocking
+    public void LockAttack()
+    {
+        PSI_attackLock = true;
+    }
+    public void UnLockAttack()
+    {
+        PSI_attackLock = false;
+    }
+    public void LockGravity()
+    {
+        PSI_gravityLock = true;
 
+    }
+    public void UnLockGravity()
+    {
+
+        PSI_gravityLock = false;
+    }
+    public void LockMovement()
+    {
+        PSI_movementLock = true;
+    }
+    public void UnLockMovement()
+    {
+        PSI_movementLock = false;
+
+    }
+
+    public bool CheckMovementLock()
+    {
+        return PSI_movementLock;
+    }
+    public bool CheckGravityLock()
+    {
+
+        return PSI_gravityLock;
+    }
+    public bool CheckAttackLock()
+    {
+
+        return PSI_attackLock;
+    }
+    #endregion
     private Matt_SM_StateMachine<Matt_SM_PlayerStateInfo> stateMachine { get; set; }
 
     private void Start()

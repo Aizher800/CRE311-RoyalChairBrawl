@@ -41,6 +41,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
             if (_inputSource == null)
             {
                 _inputSource = new TSC_INPUT();
+               
             }
         }
        void SetInput()
@@ -50,10 +51,12 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
             {
                 case (PlayerInputNum.Player1):
                     _inputSource.Player1.Move.performed += MovementConversion;
+                    _inputSource.Player1.Jump.performed += JumpConversion;
                     break;
 
                 case (PlayerInputNum.Player2):
                     _inputSource.Player2.Move.performed += MovementConversion;
+                    _inputSource.Player2.Jump.performed += JumpConversion;
                     break;
 
                 case (PlayerInputNum.Player3):
@@ -139,6 +142,10 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         {
             OnJogHold();
 
+        }
+        void JumpConversion(InputAction.CallbackContext context)
+        {
+            OnJumpInput();
         }
 
 

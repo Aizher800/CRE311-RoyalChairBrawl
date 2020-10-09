@@ -92,7 +92,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         _rotate = _owner.GetComponent<IRotationInput>();
         _movement = _owner.GetComponent<IMoveinput>();
         _owner.PSI_inputSource.OnMoveEvent += RunCommand;
-        
+        _owner.PSI_inputSource.OnJumpInputEvent += StartJump;
         Debug.Log("set plkayermovemtn owner to " + _owner);
         // stateInfo = enableOwner.GetComponent<PlayerStateInfo>();
 
@@ -127,18 +127,6 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
 
 
-
-    //public override void Execute(Vector2 value)
-    //{
-
-
-
-
-
-
-
-    // }
-
     public void JogToggle(Matt_SM_PlayerStateInfo _owner)
     {
         if (_owner)
@@ -152,17 +140,22 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
 
     }
-    void StartJump(Matt_SM_PlayerStateInfo _owner, Vector2 value)
+    void StartJump(Matt_SM_PlayerStateInfo _owner)
     {
+        Debug.Log("Jumped!");
         if (_owner.PSI_Grounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
         {
-            velocity = velocity + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
-        }
+            if (_jumpCoroutine == null)
+            {
+                _jumpCoroutine = _owner.StartCoroutine(Jump(_owner));
 
+
+            }
+        }
     }
     public override void RunCommand(Matt_SM_PlayerStateInfo _owner, Vector2 value)
     {
-
+        if (_owner.CheckMovementLock() == true) { Debug.Log("movement was locked"); return; }
         var moveValue = value;
         var cam = Camera.main;
         var forward = cam.transform.forward;
@@ -310,10 +303,16 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     //PHYSICS
     IEnumerator Jump(Matt_SM_PlayerStateInfo _owner)
     {
-       
 
+        Debug.Log("Coroutine started for jump");
 
-        ooStateRef.velocityCore = ooStateRef.velocityCore + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+        _owner.PSI_Velocity = _owner.PSI_Velocity + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+        while (_owner.PSI_Grounded != true)
+        {
+            Debug.Log("in air!");
+
+        }
+        _jumpCoroutine = null;
         yield return null;
     }
 
