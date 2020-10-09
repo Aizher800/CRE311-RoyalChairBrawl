@@ -49,6 +49,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
     float startingZPos = 0f;
 
+    bool _queueJump = false;
     Vector3 movement; //the movement vector3
         private float verticalVel; //Vertical velocity -- currently work in progress
         private Vector3 moveVector; //movement vector -- currently work in progress
@@ -150,8 +151,10 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         Debug.Log("Jumped!");
         if (_owner.PSI_Grounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
         {
+            _queueJump = true;
             if (_jumpCoroutine == null)
             {
+                
                 _jumpCoroutine = _owner.StartCoroutine(Jump(_owner));
 
 
@@ -161,18 +164,22 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     IEnumerator Jump(Matt_SM_PlayerStateInfo _owner)
     {
 
-        bool jump = true;
+        Vector3 Jump = Vector3.zero;
             Debug.Log("Coroutine started for jump");
+        while (_owner.PSI_Grounded == true && Jump == Vector3.zero) {
+        Jump = _owner.PSI_Velocity + new Vector3(_owner.PSI_Velocity.x, jumpStrength * 2f, _owner.PSI_Velocity.z); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+            _owner.PSI_characterController.Move(Jump);
 
-        _owner.PSI_Velocity = _owner.PSI_Velocity + new Vector3(0, jumpStrength * 2f, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
-        
-           yield return new WaitUntil(() => (_owner.PSI_Grounded == false));
+            yield return null;
+        }
 
-            Debug.Log("in air!");
+        yield return new WaitUntil(() => (_owner.PSI_Grounded == true));
 
-        
-        
+
+        Debug.Log("finished JUmp");
+
         _jumpCoroutine = null;
+      
         yield return null;
         
     }
