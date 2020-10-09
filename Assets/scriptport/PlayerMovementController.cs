@@ -307,11 +307,12 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         Debug.Log("Coroutine started for jump");
 
         _owner.PSI_Velocity = _owner.PSI_Velocity + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
-        while (_owner.PSI_Grounded != true)
+        if (_owner.PSI_Grounded != true)
         {
             Debug.Log("in air!");
 
         }
+        
         _jumpCoroutine = null;
         yield return null;
     }
