@@ -56,14 +56,17 @@ public class Matt_GravityCommand : Command<Matt_SM_PlayerStateInfo>
 
     IEnumerator CharacterPhysics(Matt_SM_PlayerStateInfo _owner)//this handles all the gravitational stuff affecting player, also jumping just adds a big burst of upwards momentum to the player
     {
-        while (_owner.PSI_Grounded == false)
+        while (_owner.PSI_Grounded == false || _owner.PSI_jumping == true )
         {
             Debug.Log("GRAVITYGRA");
            _owner.PSI_Velocity = Vector3.Lerp(_owner.PSI_Velocity, new Vector3(0, gravity, 0), velocityDamp * Time.deltaTime);
             _owner.PSI_characterController.Move(_owner.PSI_Velocity * Time.deltaTime);
             yield return null;
         }
-
+        if(_owner.PSI_Grounded == true)
+        {
+            _owner.PSI_jumping = false;
+        }
         yield return null;
         _physicsCoroutine = null;
     }

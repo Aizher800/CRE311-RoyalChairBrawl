@@ -20,6 +20,8 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     [SerializeField] bool PSI_gravityLock;
     [SerializeField] bool PSI_attackLock;
 
+
+    [SerializeField] public bool PSI_jumping;
     public State<Matt_SM_PlayerStateInfo> scheduledState = null;
     public bool switchState = false;
     public float gameTimer;

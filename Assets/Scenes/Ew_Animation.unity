@@ -1003,6 +1003,7 @@ GameObject:
   - component: {fileID: 367319145}
   - component: {fileID: 367319151}
   - component: {fileID: 367319147}
+  - component: {fileID: 367319152}
   m_Layer: 0
   m_Name: CHARACTER
   m_TagString: Untagged
@@ -1132,9 +1133,28 @@ MonoBehaviour:
   PSI_Grounded: 0
   weaponReady: 0
   lockedOn: 0
+  PSI_movementLock: 0
+  PSI_gravityLock: 0
+  PSI_attackLock: 0
+  PSI_jumping: 0
   switchState: 0
   gameTimer: 0
   seconds: 0
+--- !u!114 &367319152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367319144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9044f8928563a6348a92c2f294483783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCastStart: -1.9
+  groundCastLength: 0.68
+  newGrounded: 0
 --- !u!1001 &410491030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2317,6 +2337,7 @@ GameObject:
   - component: {fileID: 740152702}
   - component: {fileID: 740152708}
   - component: {fileID: 740152704}
+  - component: {fileID: 740152709}
   m_Layer: 0
   m_Name: CHARACTER (1)
   m_TagString: Untagged
@@ -2439,9 +2460,28 @@ MonoBehaviour:
   PSI_Grounded: 0
   weaponReady: 0
   lockedOn: 0
+  PSI_movementLock: 0
+  PSI_gravityLock: 0
+  PSI_attackLock: 0
+  PSI_jumping: 0
   switchState: 0
   gameTimer: 0
   seconds: 0
+--- !u!114 &740152709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740152701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9044f8928563a6348a92c2f294483783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCastStart: -1.9
+  groundCastLength: 0.68
+  newGrounded: 0
 --- !u!1 &744482942
 GameObject:
   m_ObjectHideFlags: 0

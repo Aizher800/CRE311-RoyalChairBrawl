@@ -164,16 +164,9 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     IEnumerator Jump(Matt_SM_PlayerStateInfo _owner)
     {
 
-        Vector3 Jump = Vector3.zero;
-            Debug.Log("Coroutine started for jump");
-        while (_owner.PSI_Grounded == true && Jump == Vector3.zero) {
-        Jump = _owner.PSI_Velocity + new Vector3(_owner.PSI_Velocity.x, jumpStrength * 2f, _owner.PSI_Velocity.z); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
-            _owner.PSI_characterController.Move(Jump);
-
-            yield return null;
-        }
-
-        yield return new WaitUntil(() => (_owner.PSI_Grounded == true));
+    
+        _owner.PSI_Velocity = _owner.PSI_Velocity + new Vector3(_owner.PSI_Velocity.x, jumpStrength, _owner.PSI_Velocity.z); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+         
 
 
         Debug.Log("finished JUmp");
