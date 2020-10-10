@@ -59,8 +59,8 @@ public class Matt_GravityCommand : Command<Matt_SM_PlayerStateInfo>
         while (_owner.PSI_Grounded == false || _owner.PSI_jumping == true )
         {
             Debug.Log("GRAVITYGRA");
-           _owner.PSI_Velocity = Vector3.Lerp(_owner.PSI_Velocity, new Vector3(0, gravity, 0), velocityDamp * Time.deltaTime);
-            _owner.PSI_characterController.Move(_owner.PSI_Velocity * Time.deltaTime);
+           gravVelocity = Vector3.Lerp(gravVelocity, new Vector3(0, gravity, 0), velocityDamp * Time.deltaTime);
+            _owner.PSI_characterController.Move(gravVelocity * Time.deltaTime);
             yield return null;
         }
         if(_owner.PSI_Grounded == true)

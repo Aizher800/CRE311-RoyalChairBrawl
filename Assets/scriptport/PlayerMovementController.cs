@@ -23,7 +23,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         public bool slowedWalk = false;
     private static PlayerMovementController _instance;
 
-    [SerializeField] float jumpStrength = 80f;
+    [SerializeField] float jumpStrength = 8f;
     [SerializeField] float speed = 20f; //how fast the character moves, the smoothing of the movement is handled by the "Gravity" and "Sensitivity" settings in the Unity Input manager
 
     [SerializeField] bool Jogging;
@@ -49,7 +49,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
     float startingZPos = 0f;
 
-    bool _queueJump = false;
+   [SerializeField] bool _jumping = false;
     Vector3 movement; //the movement vector3
         private float verticalVel; //Vertical velocity -- currently work in progress
         private Vector3 moveVector; //movement vector -- currently work in progress
@@ -148,33 +148,56 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     #region JUMPING
     void StartJump(Matt_SM_PlayerStateInfo _owner)
     {
-        Debug.Log("Jumped!");
-        if (_owner.PSI_Grounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
+        if (_jumping != true)
         {
-            _queueJump = true;
-            if (_jumpCoroutine == null)
+            if (_owner.PSI_Grounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
             {
-                
-                _jumpCoroutine = _owner.StartCoroutine(Jump(_owner));
+
+                if (_jumpCoroutine == null)
+                {
+                    Debug.Log("Jumped!");
+              
+                    _jumpCoroutine = _owner.StartCoroutine(Jump(_owner));
 
 
+                }
+                else
+                {
+                    Debug.Log("Still got a jump coroutine");
+                }
             }
+        }
+        else
+        {
+
+            Debug.Log("still jumping");
         }
     }
     IEnumerator Jump(Matt_SM_PlayerStateInfo _owner)
     {
+       
+       
+        var jumpVelocity = _owner.PSI_Velocity + new Vector3(_owner.PSI_Velocity.x, jumpStrength, _owner.PSI_Velocity.z); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
 
-    
-        _owner.PSI_Velocity = _owner.PSI_Velocity + new Vector3(_owner.PSI_Velocity.x, jumpStrength, _owner.PSI_Velocity.z); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
-         
+        _owner.PSI_characterController.Move(jumpVelocity);
+        yield return new WaitUntil(() => (_owner.PSI_Grounded == false));
+        {
+            Debug.Log(" int the air");
+            _jumping = true;
+        }
+        
 
-
+        yield return new WaitUntil(() => (_owner.PSI_Grounded == true));
+            {
+                Debug.Log("landed");
+                _jumping = false;
+                _jumpCoroutine = null;
+                yield return null;
+            }
+        _jumpCoroutine = null;
+        yield return null;
         Debug.Log("finished JUmp");
 
-        _jumpCoroutine = null;
-      
-        yield return null;
-        
     }
 
 
@@ -197,7 +220,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
         moveDirection = forward * moveValue.y + right * moveValue.x;
         moveDirection = moveDirection.normalized;
-         Debug.Log("Executed Movement");
+       //  Debug.Log("Executed Movement");
 
 
         if (_moveCoroutine == null)
@@ -206,7 +229,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
                 Debug.Log("move was disabled e");
             
             _moveCoroutine = _owner.StartCoroutine(InputMagnitude(_owner));
-             Debug.Log("Moving!");
+            // Debug.Log("Moving!");
         }
         // InputMagnitude();
 
@@ -215,7 +238,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         if (_rotateCoroutine == null)
         {
             _rotateCoroutine = _owner.StartCoroutine(PlayerRotation(_owner));
-              Debug.Log("Rotating!");
+
         }
 
     }
@@ -341,7 +364,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         base.DisableCommand(_owner);
 
         
-        _owner.PSI_Velocity = Vector3.zero;
+      //  _owner.PSI_Velocity = Vector3.zero;
       
         anim.SetFloat("InputMagnitude", 0, 0.0f, Time.deltaTime);
         anim.SetFloat("InputX", 0f);

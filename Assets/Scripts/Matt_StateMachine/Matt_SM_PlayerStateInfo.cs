@@ -9,7 +9,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     // public int specialAnimNumber;
 
     public AbstractInput PSI_inputSource;
-   [SerializeField] public Vector3 PSI_Velocity;
+    public Vector3 PSI_Velocity { get; }
    public CharacterController PSI_characterController;
     [SerializeField] public bool PSI_Grounded;
     public bool weaponReady = false;
@@ -20,6 +20,8 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     [SerializeField] bool PSI_gravityLock;
     [SerializeField] bool PSI_attackLock;
 
+   [SerializeField] Vector3 lastPos;
+    Vector3 currentPos;
 
     [SerializeField] public bool PSI_jumping;
     public State<Matt_SM_PlayerStateInfo> scheduledState = null;
@@ -78,7 +80,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         PSI_characterController = GetComponent<CharacterController>();
 
         PSI_inputSource = GetComponent<AbstractInput>();
-        PSI_Velocity = Vector3.zero;
+      
 
         anim = gameObject.GetComponent<Animator>();
         stateMachine = new Matt_SM_StateMachine<Matt_SM_PlayerStateInfo>(this);
@@ -86,7 +88,11 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         gameTimer = Time.time;
         stateMachine.ChangeState(new Matt_SM_FreeMoveState());
     }
-
+    private void FixedUpdate()
+    {
+        currentPos = gameObject.transform.position - lastPos;
+        lastPos = currentPos;
+    }
     private void Update()
     {
 
