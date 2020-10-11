@@ -21,6 +21,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     [SerializeField] bool PSI_gravityLock;
     [SerializeField] bool PSI_attackLock;
 
+    [SerializeField] public Transform visualRotationObject;
     
 
    [SerializeField] Vector3 lastPos;
@@ -86,6 +87,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
     private void Start()
     {
+        visualRotationObject = GetComponentInChildren<Matt_VisualRotation>().transform;
         PSI_characterController = GetComponent<CharacterController>();
 
         PSI_inputSource = GetComponent<AbstractInput>();

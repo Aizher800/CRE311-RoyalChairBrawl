@@ -275,7 +275,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
             if (blockRotationPlayer == false)
             {
                 Debug.Log("Rotate");
-                _owner.transform.rotation = Quaternion.Slerp(_owner.transform.rotation, Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z)), desiredRotationSpeed);
+                _owner.visualRotationObject.localRotation = Quaternion.Slerp(_owner.visualRotationObject.localRotation, Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z)), desiredRotationSpeed);
 
             }
         }
