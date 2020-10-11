@@ -22,6 +22,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
    [SerializeField] Vector3 lastPos;
     Vector3 currentPos;
+   public float pSI_startingZ;
 
     [SerializeField] public bool PSI_jumping;
     public State<Matt_SM_PlayerStateInfo> scheduledState = null;
@@ -80,7 +81,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         PSI_characterController = GetComponent<CharacterController>();
 
         PSI_inputSource = GetComponent<AbstractInput>();
-      
+        pSI_startingZ = gameObject.transform.position.z;
 
         anim = gameObject.GetComponent<Animator>();
         stateMachine = new Matt_SM_StateMachine<Matt_SM_PlayerStateInfo>(this);
@@ -92,6 +93,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     {
         currentPos = gameObject.transform.position - lastPos;
         lastPos = currentPos;
+        gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, pSI_startingZ);
     }
     private void Update()
     {

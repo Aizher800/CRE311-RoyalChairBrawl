@@ -15,7 +15,7 @@ using _InputTest.Entity.Scripts.Input.Monobehaviours;
 [CreateAssetMenu(fileName = "PlayerMovementController", menuName = "Commands/Movement/Player Movement Command")]
 public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerStateInfo>
 {
-
+  
     Matt_SM_PlayerStateInfo stateInfo;
        // [SerializeField] public AscendDescendCheck descendChecker;
 
@@ -23,7 +23,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         public bool slowedWalk = false;
     private static PlayerMovementController _instance;
 
-    [SerializeField] float jumpStrength = 8f;
+    [SerializeField] float jumpStrength = 40f;
     [SerializeField] float speed = 20f; //how fast the character moves, the smoothing of the movement is handled by the "Gravity" and "Sensitivity" settings in the Unity Input manager
 
     [SerializeField] bool Jogging;
@@ -175,10 +175,12 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     }
     IEnumerator Jump(Matt_SM_PlayerStateInfo _owner)
     {
-       
-       
-        var jumpVelocity = _owner.PSI_Velocity + new Vector3(_owner.PSI_Velocity.x, jumpStrength, _owner.PSI_Velocity.z); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
 
+
+        var jumpVelocity = Vector3.zero;
+        if (jumpVelocity.y != jumpStrength) {
+        jumpVelocity = Vector3.Lerp(Vector3.zero, new Vector3(0,  jumpStrength, 0), 0.4f); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+        }
         _owner.PSI_characterController.Move(jumpVelocity);
         yield return new WaitUntil(() => (_owner.PSI_Grounded == false));
         {
