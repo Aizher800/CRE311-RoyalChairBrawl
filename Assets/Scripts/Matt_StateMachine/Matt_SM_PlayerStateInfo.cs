@@ -10,7 +10,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
     public AbstractInput PSI_inputSource;
     public Vector3 PSI_Velocity { get; }
-    public float PSI_jumpVelocity { get; set; }
+  
    public CharacterController PSI_characterController;
     [SerializeField] public bool PSI_Grounded;
     public bool weaponReady = false;
@@ -21,7 +21,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     [SerializeField] bool PSI_gravityLock;
     [SerializeField] bool PSI_attackLock;
 
-    [SerializeField] public bool jumpVelocitySet = false;
+    
 
    [SerializeField] Vector3 lastPos;
     Vector3 currentPos;
@@ -34,9 +34,9 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     public int seconds = 0;
 
 
-    [Header("Float test")]
-   [SerializeField] float startFloat;
-    [SerializeField] float objectiveFloat;
+    [Header("Jumping")]
+    [SerializeField] public float PSI_jumpVelocity;
+    [SerializeField] float jumpGravity;
     [SerializeField] float currentFloat;
     #region locking and unlocking
     public void LockAttack()
@@ -106,10 +106,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     private void Update()
     {
       //  currentFloat = Mathf.Lerp(startFloat, objectiveFloat, 0.1f);
-        if (currentFloat >= objectiveFloat)
-        {
-            Debug.Log("objective reached for float test");
-        }
+    
         PSI_Grounded = GetComponent<CustomGrounder>().IsCustomGrounded();
         state = GetStateMachineStateNumber();
         stateMachine.Update();
