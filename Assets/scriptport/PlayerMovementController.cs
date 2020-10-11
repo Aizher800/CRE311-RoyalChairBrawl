@@ -23,7 +23,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         public bool slowedWalk = false;
     private static PlayerMovementController _instance;
 
-    [SerializeField] float jumpStrength = 40f;
+    [SerializeField] float jumpStrength = 4f;
     [SerializeField] float speed = 20f; //how fast the character moves, the smoothing of the movement is handled by the "Gravity" and "Sensitivity" settings in the Unity Input manager
 
     [SerializeField] bool Jogging;
@@ -176,12 +176,20 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     IEnumerator Jump(Matt_SM_PlayerStateInfo _owner)
     {
 
+       
+      while (_owner.PSI_jumpVelocity < jumpStrength * 0.9f) {
+            _owner.PSI_jumpVelocity = Mathf.Lerp(_owner.PSI_jumpVelocity, jumpStrength, .1f);
+            yield return null;
+            Debug.Log("loop" + _owner.PSI_jumpVelocity);
+            Debug.Log("difference is " + (jumpStrength - _owner.PSI_jumpVelocity));
 
-        var jumpVelocity = Vector3.zero;
-        if (jumpVelocity.y != jumpStrength) {
-        jumpVelocity = Vector3.Lerp(Vector3.zero, new Vector3(0,  jumpStrength, 0), 0.4f); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+            _owner.PSI_characterController.Move(new Vector3(0, jumpStrength - _owner.PSI_jumpVelocity, 0));
+            Debug.Log("moved");
         }
-        _owner.PSI_characterController.Move(jumpVelocity);
+     
+      //  Debug.Log("jumpLerp"); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+           
+      
         yield return new WaitUntil(() => (_owner.PSI_Grounded == false));
         {
             Debug.Log(" int the air");
@@ -192,6 +200,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         yield return new WaitUntil(() => (_owner.PSI_Grounded == true));
             {
                 Debug.Log("landed");
+            _owner.PSI_jumpVelocity = 0f;
                 _jumping = false;
                 _jumpCoroutine = null;
                 yield return null;
