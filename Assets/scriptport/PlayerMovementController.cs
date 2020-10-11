@@ -210,7 +210,17 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
 
 
-
+    void CheckDirection(Matt_SM_PlayerStateInfo _owner, float value)
+    {
+        if (value > 0f)
+        {
+           _owner.PSI_direction  = Direction.RIGHT;
+        }
+        else
+        {
+            _owner.PSI_direction = Direction.LEFT;
+        }
+    }
     #endregion
     public override void RunCommand(Matt_SM_PlayerStateInfo _owner, Vector2 value)
     {
@@ -227,6 +237,9 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         right.Normalize();
 
         moveDirection = forward * moveValue.y + right * moveValue.x;
+        if (moveValue.x != 0f) { 
+        _owner.UpdateDirection(moveValue.x);
+        }
         moveDirection = moveDirection.normalized;
        //  Debug.Log("Executed Movement");
 
@@ -275,7 +288,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
             if (blockRotationPlayer == false)
             {
                 Debug.Log("Rotate");
-                _owner.visualRotationObject.localRotation = Quaternion.Slerp(_owner.visualRotationObject.localRotation, Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z)), desiredRotationSpeed);
+                _owner.visualRotationObject.rotation = Quaternion.Slerp(_owner.visualRotationObject.rotation, Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z)), desiredRotationSpeed);
 
             }
         }

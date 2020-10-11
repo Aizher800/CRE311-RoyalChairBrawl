@@ -2,12 +2,19 @@
 using Matt_StateSystem;
 using UnityEngine;
 
+public enum Direction
+{
+
+    LEFT,
+    RIGHT
+}
 public class Matt_SM_PlayerStateInfo : MonoBehaviour
 {
     [SerializeField] public int state;
     public Vector3 navObjective;
     // public int specialAnimNumber;
 
+    public Direction PSI_direction;
     public AbstractInput PSI_inputSource;
     public Vector3 PSI_Velocity { get; }
   
@@ -105,10 +112,26 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         lastPos = currentPos;
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, pSI_startingZ);
     }
+    public void UpdateDirection(float xValue)
+    {
+        if (xValue > 0f)
+        {
+            PSI_direction = Direction.RIGHT;
+            gameObject.transform.rotation = Quaternion.LookRotation(new Vector3(-1f, 0, 0));
+
+        }
+        else
+        {
+            PSI_direction = Direction.LEFT;
+            gameObject.transform.rotation = Quaternion.LookRotation(new Vector3(1f, 0, 0));
+        }
+
+    }
     private void Update()
     {
-      //  currentFloat = Mathf.Lerp(startFloat, objectiveFloat, 0.1f);
-    
+        //  currentFloat = Mathf.Lerp(startFloat, objectiveFloat, 0.1f);
+
+        Debug.DrawRay(gameObject.transform.position, transform.forward, Color.red);
         PSI_Grounded = GetComponent<CustomGrounder>().IsCustomGrounded();
         state = GetStateMachineStateNumber();
         stateMachine.Update();
