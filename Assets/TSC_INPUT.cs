@@ -51,6 +51,14 @@ namespace TSC_INPUT_SYSTEM
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""d1b9e020-e035-4392-bc42-f7b875d6d18e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -295,6 +303,17 @@ namespace TSC_INPUT_SYSTEM
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""644a6121-429a-41b8-8940-840c0ad85b85"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -330,6 +349,14 @@ namespace TSC_INPUT_SYSTEM
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""5047bd4c-1e0a-4789-9b70-c927802c783a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""d4ef72c3-8fce-4c54-a0a8-7acefd06cb62"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -533,6 +560,17 @@ namespace TSC_INPUT_SYSTEM
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""76f097b7-efa1-4453-8abf-80ae47ff946f"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -568,6 +606,14 @@ namespace TSC_INPUT_SYSTEM
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""6fd65236-b570-438e-a6df-09bc8d496c64"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""dcd86218-3beb-4748-ba7c-83ca7783cc09"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -769,6 +815,17 @@ namespace TSC_INPUT_SYSTEM
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bcfd8010-cd93-470d-8659-1297e4ca4de2"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1914,18 +1971,21 @@ namespace TSC_INPUT_SYSTEM
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
             m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
             m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+            m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
             // Player1
             m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
             m_Player1_Move = m_Player1.FindAction("Move", throwIfNotFound: true);
             m_Player1_Look = m_Player1.FindAction("Look", throwIfNotFound: true);
             m_Player1_Fire = m_Player1.FindAction("Fire", throwIfNotFound: true);
             m_Player1_Jump = m_Player1.FindAction("Jump", throwIfNotFound: true);
+            m_Player1_Interact = m_Player1.FindAction("Interact", throwIfNotFound: true);
             // Player2
             m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
             m_Player2_Move = m_Player2.FindAction("Move", throwIfNotFound: true);
             m_Player2_Look = m_Player2.FindAction("Look", throwIfNotFound: true);
             m_Player2_Fire = m_Player2.FindAction("Fire", throwIfNotFound: true);
             m_Player2_Jump = m_Player2.FindAction("Jump", throwIfNotFound: true);
+            m_Player2_Interact = m_Player2.FindAction("Interact", throwIfNotFound: true);
             // Player3
             m_Player3 = asset.FindActionMap("Player3", throwIfNotFound: true);
             m_Player3_Move = m_Player3.FindAction("Move", throwIfNotFound: true);
@@ -2003,6 +2063,7 @@ namespace TSC_INPUT_SYSTEM
         private readonly InputAction m_Player_Look;
         private readonly InputAction m_Player_Fire;
         private readonly InputAction m_Player_Jump;
+        private readonly InputAction m_Player_Interact;
         public struct PlayerActions
         {
             private @TSC_INPUT m_Wrapper;
@@ -2011,6 +2072,7 @@ namespace TSC_INPUT_SYSTEM
             public InputAction @Look => m_Wrapper.m_Player_Look;
             public InputAction @Fire => m_Wrapper.m_Player_Fire;
             public InputAction @Jump => m_Wrapper.m_Player_Jump;
+            public InputAction @Interact => m_Wrapper.m_Player_Interact;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -2032,6 +2094,9 @@ namespace TSC_INPUT_SYSTEM
                     @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                     @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                     @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                    @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                    @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -2048,6 +2113,9 @@ namespace TSC_INPUT_SYSTEM
                     @Jump.started += instance.OnJump;
                     @Jump.performed += instance.OnJump;
                     @Jump.canceled += instance.OnJump;
+                    @Interact.started += instance.OnInteract;
+                    @Interact.performed += instance.OnInteract;
+                    @Interact.canceled += instance.OnInteract;
                 }
             }
         }
@@ -2060,6 +2128,7 @@ namespace TSC_INPUT_SYSTEM
         private readonly InputAction m_Player1_Look;
         private readonly InputAction m_Player1_Fire;
         private readonly InputAction m_Player1_Jump;
+        private readonly InputAction m_Player1_Interact;
         public struct Player1Actions
         {
             private @TSC_INPUT m_Wrapper;
@@ -2068,6 +2137,7 @@ namespace TSC_INPUT_SYSTEM
             public InputAction @Look => m_Wrapper.m_Player1_Look;
             public InputAction @Fire => m_Wrapper.m_Player1_Fire;
             public InputAction @Jump => m_Wrapper.m_Player1_Jump;
+            public InputAction @Interact => m_Wrapper.m_Player1_Interact;
             public InputActionMap Get() { return m_Wrapper.m_Player1; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -2089,6 +2159,9 @@ namespace TSC_INPUT_SYSTEM
                     @Jump.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJump;
                     @Jump.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJump;
                     @Jump.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJump;
+                    @Interact.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnInteract;
+                    @Interact.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnInteract;
+                    @Interact.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnInteract;
                 }
                 m_Wrapper.m_Player1ActionsCallbackInterface = instance;
                 if (instance != null)
@@ -2105,6 +2178,9 @@ namespace TSC_INPUT_SYSTEM
                     @Jump.started += instance.OnJump;
                     @Jump.performed += instance.OnJump;
                     @Jump.canceled += instance.OnJump;
+                    @Interact.started += instance.OnInteract;
+                    @Interact.performed += instance.OnInteract;
+                    @Interact.canceled += instance.OnInteract;
                 }
             }
         }
@@ -2117,6 +2193,7 @@ namespace TSC_INPUT_SYSTEM
         private readonly InputAction m_Player2_Look;
         private readonly InputAction m_Player2_Fire;
         private readonly InputAction m_Player2_Jump;
+        private readonly InputAction m_Player2_Interact;
         public struct Player2Actions
         {
             private @TSC_INPUT m_Wrapper;
@@ -2125,6 +2202,7 @@ namespace TSC_INPUT_SYSTEM
             public InputAction @Look => m_Wrapper.m_Player2_Look;
             public InputAction @Fire => m_Wrapper.m_Player2_Fire;
             public InputAction @Jump => m_Wrapper.m_Player2_Jump;
+            public InputAction @Interact => m_Wrapper.m_Player2_Interact;
             public InputActionMap Get() { return m_Wrapper.m_Player2; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -2146,6 +2224,9 @@ namespace TSC_INPUT_SYSTEM
                     @Jump.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJump;
                     @Jump.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJump;
                     @Jump.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJump;
+                    @Interact.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnInteract;
+                    @Interact.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnInteract;
+                    @Interact.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnInteract;
                 }
                 m_Wrapper.m_Player2ActionsCallbackInterface = instance;
                 if (instance != null)
@@ -2162,6 +2243,9 @@ namespace TSC_INPUT_SYSTEM
                     @Jump.started += instance.OnJump;
                     @Jump.performed += instance.OnJump;
                     @Jump.canceled += instance.OnJump;
+                    @Interact.started += instance.OnInteract;
+                    @Interact.performed += instance.OnInteract;
+                    @Interact.canceled += instance.OnInteract;
                 }
             }
         }
@@ -2436,6 +2520,7 @@ namespace TSC_INPUT_SYSTEM
             void OnLook(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
             void OnJump(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
         }
         public interface IPlayer1Actions
         {
@@ -2443,6 +2528,7 @@ namespace TSC_INPUT_SYSTEM
             void OnLook(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
             void OnJump(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
         }
         public interface IPlayer2Actions
         {
@@ -2450,6 +2536,7 @@ namespace TSC_INPUT_SYSTEM
             void OnLook(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
             void OnJump(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
         }
         public interface IPlayer3Actions
         {

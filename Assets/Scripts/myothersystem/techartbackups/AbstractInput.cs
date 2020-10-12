@@ -23,6 +23,9 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         public delegate void MoveInputEvent(Matt_SM_PlayerStateInfo _owner, Vector2 inputValue);
         public event MoveInputEvent OnMoveEvent;
 
+        public delegate void InteractInputEvent(Matt_SM_PlayerStateInfo _owner);
+        public event InteractInputEvent OnInteractEvent;
+
         public delegate void AnalogAimEvent(Matt_SM_PlayerStateInfo _owner, Vector2 aimvalue);
         public event AnalogAimEvent OnAimEvent;
 
@@ -91,7 +94,10 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
             //if (skillInput != null)
             //  skillInput.Execute();
         }
-
+        public void OnInteractPress()
+        {
+            OnInteractEvent?.Invoke(thisOwner);
+        }
         public void OnJogHold()
         {
             OnJogHoldEvent?.Invoke();

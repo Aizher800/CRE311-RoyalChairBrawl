@@ -32,7 +32,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     
 
    [SerializeField] Vector3 lastPos;
-    Vector3 currentPos;
+   Vector3 currentPos;
    public float pSI_startingZ;
 
     [SerializeField] public bool PSI_jumping;

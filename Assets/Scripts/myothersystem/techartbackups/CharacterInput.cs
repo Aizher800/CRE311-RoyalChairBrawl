@@ -52,11 +52,13 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                 case (PlayerInputNum.Player1):
                     _inputSource.Player1.Move.performed += MovementConversion;
                     _inputSource.Player1.Jump.performed += JumpConversion;
+                    _inputSource.Player1.Interact.started += InteractConversion;
                     break;
 
                 case (PlayerInputNum.Player2):
                     _inputSource.Player2.Move.performed += MovementConversion;
                     _inputSource.Player2.Jump.performed += JumpConversion;
+                    _inputSource.Player2.Interact.started += InteractConversion;
                     break;
 
                 case (PlayerInputNum.Player3):
@@ -131,7 +133,11 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 
             OnSkillUse();
         }
+        void InteractConversion(InputAction.CallbackContext context)
+        {
 
+            OnInteractPress();
+        }
         void EndMovement(InputAction.CallbackContext context)
         {
 

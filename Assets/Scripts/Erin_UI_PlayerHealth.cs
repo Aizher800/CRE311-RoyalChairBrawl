@@ -37,8 +37,8 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Heavy attack");
-            TakeDamage(5);  //heavy
+           // Debug.Log("Heavy attack");
+         //   TakeDamage(5);  //heavy
         }
 
         //if (Input.GetKeyDown(KeyCode.R))
