@@ -18,8 +18,9 @@ public class GroundItem : MonoBehaviour, IInteractable
     {
         
     }
+   public void Interact()
     {
-        Debug.Log("interacted with");
+        Debug.Log("ya got me!");
     }
 
     // Update is called once per frame
