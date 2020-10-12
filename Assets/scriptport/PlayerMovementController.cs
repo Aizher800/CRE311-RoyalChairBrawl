@@ -172,7 +172,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     }
     IEnumerator Jump(Matt_SM_PlayerStateInfo _owner)
     {
-
+        _owner.SetJumpingStatus(true);
        
       while (_owner.PSI_jumpVelocity < jumpStrength * 0.9f) 
       {
@@ -195,6 +195,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
            _jumpCoroutine = null;
             yield return null;
            }
+        _owner.SetJumpingStatus(false);
         _jumpCoroutine = null;
         yield return null;
         Debug.Log("finished JUmp");
@@ -294,8 +295,8 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
         IEnumerator InputMagnitude(Matt_SM_PlayerStateInfo _owner)
         {
-        
-        
+
+        _owner.SetMovingStatus(true);
         CharacterController ownController = null;
         Animator ownAnimator = null;
       
@@ -355,9 +356,9 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         }
         moveDirection = Vector3.zero;
         ownAnimator.SetFloat("InputMagnitude", 0f);
+        _owner.SetMovingStatus(false);
 
-      
-       // Debug.Log("NO MOVEmENT");
+        // Debug.Log("NO MOVEmENT");
         _moveCoroutine = null;
         yield return null;
         //bool isRunning = false;

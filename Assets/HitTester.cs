@@ -5,7 +5,7 @@ namespace Matt_HitBoxSystem {
 public class HitTester : MonoBehaviour
 {
     // Start is called before the first frame update
-    bool canHit = true;
+    public bool canHit = true;
 
         public delegate void HitDeliveryEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, float forceMultiplier, hitBoxType type);
         public static event HitDeliveryEvent OnHitDelivery;

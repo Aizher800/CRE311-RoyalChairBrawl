@@ -41,6 +41,10 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     public float gameTimer;
     public int seconds = 0;
 
+   
+    public bool PSI_isAttacking { get; private set; }
+    public bool PSI_isMoving { get; private set; }
+    public bool PSI_isJumping { get; private set; }
 
     [Header("Jumping")]
     [SerializeField] public float PSI_jumpVelocity;
@@ -89,6 +93,28 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
         return PSI_attackLock;
     }
+    #endregion
+
+    #region actionNotifiers
+
+    public void SetAttackStatus(bool _status)
+    {
+        PSI_isAttacking = _status;
+        Debug.Log("attacking is " + PSI_isAttacking);
+    }
+
+    public void SetMovingStatus(bool _status)
+    {
+        PSI_isMoving = _status;
+        Debug.Log("moving is " + PSI_isMoving);
+    }
+    public void SetJumpingStatus(bool _status)
+    {
+
+        PSI_isJumping = _status;
+        Debug.Log("jumping is " + PSI_isJumping);
+    }
+
     #endregion
     private Matt_SM_StateMachine<Matt_SM_PlayerStateInfo> stateMachine { get; set; }
 
