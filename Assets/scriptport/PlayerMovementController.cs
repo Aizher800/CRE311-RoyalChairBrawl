@@ -65,7 +65,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
     //private GameObject commandOwner;
 
-    #region Initialization
+         #region Initialization
     // Initialization of variables
     //private PlayerInputActions _inputActions;
    // private static PlayerMovementController _instance;
@@ -174,34 +174,27 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     {
 
        
-      while (_owner.PSI_jumpVelocity < jumpStrength * 0.9f) {
+      while (_owner.PSI_jumpVelocity < jumpStrength * 0.9f) 
+      {
             _owner.PSI_jumpVelocity = Mathf.Lerp(_owner.PSI_jumpVelocity, jumpStrength, .1f);
             yield return null;
-           // Debug.Log("loop" + _owner.PSI_jumpVelocity);
-           // Debug.Log("difference is " + (jumpStrength - _owner.PSI_jumpVelocity));
-
             _owner.PSI_characterController.Move(new Vector3(0, jumpStrength - _owner.PSI_jumpVelocity, 0));
-            //Debug.Log("moved");
-        }
-     
-      //  Debug.Log("jumpLerp"); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
-           
-      
-        yield return new WaitUntil(() => (_owner.PSI_Grounded == false));
-        {
-           // Debug.Log(" int the air");
-            _jumping = true;
-        }
+      }
+
+      yield return new WaitUntil(() => (_owner.PSI_Grounded == false));
+      {
+             _jumping = true;
+      }
         
 
-        yield return new WaitUntil(() => (_owner.PSI_Grounded == true));
-            {
+      yield return new WaitUntil(() => (_owner.PSI_Grounded == true));
+           {
                 //Debug.Log("landed");
-            _owner.PSI_jumpVelocity = 0f;
-                _jumping = false;
-                _jumpCoroutine = null;
-                yield return null;
-            }
+           _owner.PSI_jumpVelocity = 0f;
+           _jumping = false;
+           _jumpCoroutine = null;
+            yield return null;
+           }
         _jumpCoroutine = null;
         yield return null;
         Debug.Log("finished JUmp");
