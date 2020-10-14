@@ -31,6 +31,10 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 
         public delegate void JumpInputEvent(Matt_SM_PlayerStateInfo _owner);
         public event JumpInputEvent OnJumpInputEvent;
+
+        public delegate void FireInputEvent(Matt_SM_PlayerStateInfo _owner);
+        public event FireInputEvent OnFireInputEvent;
+
         public delegate void JogHoldEvent();
         public event JogHoldEvent OnJogHoldEvent;
 
@@ -93,6 +97,12 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
             // isUsingSkill = true;
             //if (skillInput != null)
             //  skillInput.Execute();
+        }
+
+        public void OnFireUse()
+        {
+
+            OnFireInputEvent?.Invoke(thisOwner);
         }
         public void OnInteractPress()
         {

@@ -34,12 +34,5 @@ public class InteractCollider : MonoBehaviour
 
     }
 
-    void InteractWithSomething(Matt_SM_PlayerStateInfo _owner)
-    {
-        if (targetObject != null)
-        {
-            targetObject.Interact(_owner);
-        }
-      
-    }
+    
 }

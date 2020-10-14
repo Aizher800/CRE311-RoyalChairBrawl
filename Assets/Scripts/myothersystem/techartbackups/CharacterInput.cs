@@ -53,12 +53,14 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                     _inputSource.Player1.Move.performed += MovementConversion;
                     _inputSource.Player1.Jump.performed += JumpConversion;
                     _inputSource.Player1.Interact.started += InteractConversion;
+                    _inputSource.Player1.Fire.performed += FireConversion;
                     break;
 
                 case (PlayerInputNum.Player2):
                     _inputSource.Player2.Move.performed += MovementConversion;
                     _inputSource.Player2.Jump.performed += JumpConversion;
                     _inputSource.Player2.Interact.started += InteractConversion;
+                    _inputSource.Player2.Fire.performed += FireConversion;
                     break;
 
                 case (PlayerInputNum.Player3):
@@ -106,7 +108,11 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
              }
              */
         }
-
+        void FireConversion(InputAction.CallbackContext context)
+        {
+            OnFireUse();
+            
+        }
         void AimConversion(InputAction.CallbackContext context)
         {
             var value = context.ReadValue<Vector3>();

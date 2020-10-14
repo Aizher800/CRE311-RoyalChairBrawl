@@ -10,6 +10,7 @@ public class Matt_CharacterEquipment : MonoBehaviour
     [SerializeField] bool holdingItem = false;
     [SerializeField] Weapon_Parent handPos;
    [SerializeField] GroundItem currentItem;
+   [SerializeField] HeldItem currentHeldItem;
     AbstractInput _input;
     Matt_SM_PlayerStateInfo thisOwner;
 
@@ -36,8 +37,23 @@ public class Matt_CharacterEquipment : MonoBehaviour
         {
             Debug.Log("no HANDPOS");
         }
+        _input.OnFireInputEvent += UseHeldItem;
         _input.OnInteractEvent += UnequipItem;
         _input.OnInteractEvent += InteractWithSomething;
+    }
+
+    void UseHeldItem(Matt_SM_PlayerStateInfo _owner)
+    {
+        Debug.Log("use item triggered");
+        if (holdingItem)
+        {
+
+            if (currentHeldItem != null)
+            {
+                Debug.Log("yoyoyo oyo ooyo oy ooy oy oyoyoo used ITEM");
+                currentHeldItem.Use();
+            }
+        }
     }
     void InteractWithSomething(Matt_SM_PlayerStateInfo _owner)
     {
@@ -74,6 +90,7 @@ public class Matt_CharacterEquipment : MonoBehaviour
         currentItem = _weapon;
         currentItem.gameObject.transform.parent = handPos.gameObject.transform;
         currentItem.gameObject.transform.localPosition = Vector3.zero;
+            currentHeldItem = currentItem.GetComponent<HeldItem>();
         Debug.Log("moved item to hand");
             StartCoroutine(AllowUnequipBoolTimer());
             holdingItem = true;
