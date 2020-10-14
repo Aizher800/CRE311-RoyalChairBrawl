@@ -9,18 +9,36 @@ public interface IPickUpable
 }
 public interface IInteractable
 {
-     void Interact();
+     void Interact(Matt_SM_PlayerStateInfo _owner);
 }
 public class GroundItem : MonoBehaviour, IInteractable
 {
+
+    [SerializeField] bool held = false;
     // Start is called before the first frame update
     void Start()
     {
         
     }
-   public void Interact()
+   public void Interact(Matt_SM_PlayerStateInfo _owner)
     {
-        Debug.Log("ya got me!");
+        if(held == false) 
+        {
+            Debug.Log("ya got me!");
+            Matt_CharacterEquipment _charEquip = _owner.GetComponent<Matt_CharacterEquipment>();
+            if (_charEquip.CheckIfItemHeld() == true) {
+            held = true;
+            _charEquip.EquipItem(this);
+            }
+            else
+            {
+                Debug.Log("Character is already holding something");
+            }
+        }
+        else
+        {
+            Debug.Log("item is currently held");
+        }
     }
 
     // Update is called once per frame

@@ -38,7 +38,7 @@ public class InteractCollider : MonoBehaviour
     {
         if (targetObject != null)
         {
-            targetObject.Interact();
+            targetObject.Interact(_owner);
         }
       
     }
