@@ -100,19 +100,19 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     public void SetAttackStatus(bool _status)
     {
         PSI_isAttacking = _status;
-        Debug.Log("attacking is " + PSI_isAttacking);
+        //Debug.Log("attacking is " + PSI_isAttacking);
     }
 
     public void SetMovingStatus(bool _status)
     {
         PSI_isMoving = _status;
-        Debug.Log("moving is " + PSI_isMoving);
+
     }
     public void SetJumpingStatus(bool _status)
     {
 
         PSI_isJumping = _status;
-        Debug.Log("jumping is " + PSI_isJumping);
+       // Debug.Log("jumping is " + PSI_isJumping);
     }
 
     #endregion

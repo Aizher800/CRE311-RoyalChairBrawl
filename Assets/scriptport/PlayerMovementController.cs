@@ -241,7 +241,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         if (_moveCoroutine == null)
         {
             
-                Debug.Log("move was disabled e");
+
             
             _moveCoroutine = _owner.StartCoroutine(InputMagnitude(_owner));
             // Debug.Log("Moving!");
@@ -281,7 +281,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
 
             if (blockRotationPlayer == false)
             {
-                Debug.Log("Rotate");
+
                 _owner.visualRotationObject.rotation = Quaternion.Slerp(_owner.visualRotationObject.rotation, Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.z)), desiredRotationSpeed);
 
             }
@@ -329,7 +329,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
                 }  
                 else
                 {
-                    Debug.Log("moving character: " + _owner);
+
                     _owner.PSI_characterController.Move(moveDirection * speed * Time.deltaTime); //The left-right movement of the player is handled here.
                     ownAnimator.SetFloat("InputMagnitude", walkSpeed, 0.2f, Time.deltaTime);
                    

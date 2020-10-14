@@ -118,7 +118,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 
 
             var value = context.ReadValue<Vector2>();
-            Debug.Log("move input received");
+
             inputX = value.x;
             inputY = value.y;
             OnMoveInput(value);

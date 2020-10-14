@@ -22,7 +22,7 @@ public class CustomGrounder : MonoBehaviour
         if(Physics.Raycast(gameObject.transform.position + new Vector3(0, groundCastStart, 0), -Vector3.up, out hit, groundCastLength ))
         {
             Debug.DrawRay(gameObject.transform.position + new Vector3(0, groundCastStart, 0), -Vector3.up, Color.red);
-            Debug.Log(" the ground is called" + hit.transform.gameObject);
+          //  Debug.Log(" the ground is called" + hit.transform.gameObject);
             newGrounded = true;
         }
         else

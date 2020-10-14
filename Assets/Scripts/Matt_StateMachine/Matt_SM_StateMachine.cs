@@ -69,7 +69,7 @@ namespace Matt_StateSystem
         public int GetStateNumber()
         {
             int stateNum = currentState.stateNumber;
-            Debug.Log(stateNum + "is the statenum we got");
+
             return stateNum;
         }
     }

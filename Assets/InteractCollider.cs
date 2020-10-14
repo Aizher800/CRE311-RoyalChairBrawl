@@ -8,12 +8,12 @@ public class InteractCollider : MonoBehaviour
     // Start is called before the first frame update
 
     AbstractInput _input;
-    IInteractable targetObject;
+    public IInteractable targetObject;
 
     private void Start()
     {
-        _input = GetComponentInParent<AbstractInput>();
-        _input.OnInteractEvent += InteractWithSomething;
+        //_input = GetComponentInParent<AbstractInput>();
+       // _input.OnInteractEvent += InteractWithSomething;
     }
     private void OnTriggerEnter(Collider other)
     {

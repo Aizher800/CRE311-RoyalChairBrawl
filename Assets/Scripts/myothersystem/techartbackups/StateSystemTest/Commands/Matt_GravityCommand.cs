@@ -48,7 +48,7 @@ public class Matt_GravityCommand : Command<Matt_SM_PlayerStateInfo>
     {
         if (_physicsCoroutine == null)
         {
-            Debug.Log("GRAVITY ");
+
             _physicsCoroutine = _owner.GetComponent<Matt_SM_PlayerStateInfo>().StartCoroutine(CharacterPhysics(_owner));
         }
     }
