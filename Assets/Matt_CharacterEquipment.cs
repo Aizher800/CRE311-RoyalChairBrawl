@@ -11,6 +11,8 @@ public class Matt_CharacterEquipment : MonoBehaviour
     [SerializeField] Weapon_Parent handPos;
    [SerializeField] GroundItem currentItem;
    [SerializeField] HeldItem currentHeldItem;
+    [SerializeField] HeldItem defaultWeapon;
+
     AbstractInput _input;
     Matt_SM_PlayerStateInfo thisOwner;
 
@@ -27,10 +29,11 @@ public class Matt_CharacterEquipment : MonoBehaviour
         thisOwner = GetComponent<Matt_SM_PlayerStateInfo>();
         interactCollider = GetComponentInChildren<InteractCollider>();
         _input = GetComponent<AbstractInput>();
-
+      
         handPos = gameObject.GetComponentInChildren<Weapon_Parent>();
         if (handPos != null)
         {
+            defaultWeapon = handPos.GetComponent<DefaultUseWeapon>();
             Debug.Log("handpos FOUND");
         }
         else
@@ -54,6 +57,12 @@ public class Matt_CharacterEquipment : MonoBehaviour
                 Debug.Log("yoyoyo oyo ooyo oy ooy oy oyoyoo used ITEM");
                 currentHeldItem.Use();
             }
+         
+        }
+        else
+        {
+
+            defaultWeapon.Use();
         }
     }
     void InteractWithSomething(Matt_SM_PlayerStateInfo _owner)

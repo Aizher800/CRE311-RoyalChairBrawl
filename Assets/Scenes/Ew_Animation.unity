@@ -1043,6 +1043,7 @@ GameObject:
   - component: {fileID: 367319147}
   - component: {fileID: 367319153}
   - component: {fileID: 367319152}
+  - component: {fileID: 367319154}
   m_Layer: 0
   m_Name: CHARACTER
   m_TagString: Player
@@ -1171,6 +1172,8 @@ MonoBehaviour:
   navObjective: {x: 0, y: 0, z: 0}
   PSI_direction: 0
   PSI_inputSource: {fileID: 0}
+  PSI_Velocity: {x: 0, y: 0, z: 0}
+  PSI_animator: {fileID: 0}
   PSI_characterController: {fileID: 0}
   PSI_Grounded: 0
   weaponReady: 0
@@ -1218,8 +1221,23 @@ MonoBehaviour:
   holdingItem: 0
   handPos: {fileID: 0}
   currentItem: {fileID: 0}
+  currentHeldItem: {fileID: 0}
+  defaultWeapon: {fileID: 0}
   canUnequip: 0
   canEquip: 1
+--- !u!114 &367319154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367319144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4818ce2d1ffc89845a1860722f0c5541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yVelocity: 0
 --- !u!1001 &410491030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2221,6 +2239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450ecac26874cc44793460e37bb5c628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackActive: 0
   _weaponName: cane
 --- !u!65 &703158888
 BoxCollider:
@@ -2946,6 +2965,8 @@ MonoBehaviour:
   navObjective: {x: 0, y: 0, z: 0}
   PSI_direction: 0
   PSI_inputSource: {fileID: 0}
+  PSI_Velocity: {x: 0, y: 0, z: 0}
+  PSI_animator: {fileID: 0}
   PSI_characterController: {fileID: 0}
   PSI_Grounded: 0
   weaponReady: 0
@@ -3176,6 +3197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777900845}
   - component: {fileID: 777900846}
+  - component: {fileID: 777900847}
   m_Layer: 0
   m_Name: Weapon_Parent
   m_TagString: Untagged
@@ -3207,6 +3229,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da766c81627a2474c8bfa41fa8b69ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &777900847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777900844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373125dee0cb4904cb73f29db269a65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &782007883
@@ -7304,6 +7338,8 @@ MonoBehaviour:
   holdingItem: 0
   handPos: {fileID: 0}
   currentItem: {fileID: 0}
+  currentHeldItem: {fileID: 0}
+  defaultWeapon: {fileID: 0}
   canUnequip: 0
   canEquip: 1
 --- !u!114 &1826885101
@@ -7341,6 +7377,8 @@ MonoBehaviour:
   navObjective: {x: 0, y: 0, z: 0}
   PSI_direction: 0
   PSI_inputSource: {fileID: 0}
+  PSI_Velocity: {x: 0, y: 0, z: 0}
+  PSI_animator: {fileID: 0}
   PSI_characterController: {fileID: 0}
   PSI_Grounded: 0
   weaponReady: 0

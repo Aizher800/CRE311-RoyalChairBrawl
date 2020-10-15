@@ -22,7 +22,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         public bool slowedWalk = false;
     private static PlayerMovementController _instance;
 
-    [SerializeField] float jumpStrength = 2f;
+    [SerializeField] float jumpStrength = 2.8f;
     [SerializeField] float speed = 20f; //how fast the character moves, the smoothing of the movement is handled by the "Gravity" and "Sensitivity" settings in the Unity Input manager
 
     [SerializeField] bool Jogging;
