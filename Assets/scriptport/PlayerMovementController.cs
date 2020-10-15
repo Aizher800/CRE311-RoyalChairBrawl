@@ -155,7 +155,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
                     Debug.Log("Jumped!");
               
                     _jumpCoroutine = _owner.StartCoroutine(Jump(_owner));
-
+                    _owner.PSI_animator.SetBool("PlayerJumping", true);
 
                 }
                 else
@@ -191,11 +191,13 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
            {
                 //Debug.Log("landed");
            _owner.PSI_jumpVelocity = 0f;
-           _jumping = false;
+            _owner.PSI_animator.SetBool("PlayerJumping", false);
+            _jumping = false;
            _jumpCoroutine = null;
             yield return null;
            }
         _owner.SetJumpingStatus(false);
+        _owner.PSI_animator.SetBool("PlayerJumping", false);
         _jumpCoroutine = null;
         yield return null;
         Debug.Log("finished JUmp");

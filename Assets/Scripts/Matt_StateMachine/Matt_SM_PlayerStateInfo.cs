@@ -16,8 +16,10 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
     public Direction PSI_direction;
     public AbstractInput PSI_inputSource;
-    public Vector3 PSI_Velocity { get; }
-  
+    public Vector3 PSI_Velocity;
+
+    public Animator PSI_animator;
+
    public CharacterController PSI_characterController;
     [SerializeField] public bool PSI_Grounded;
     public bool weaponReady = false;
@@ -120,6 +122,8 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
     private void Start()
     {
+
+        PSI_animator = GetComponent<Animator>();
         visualRotationObject = GetComponentInChildren<Matt_VisualRotation>().transform;
         PSI_characterController = GetComponent<CharacterController>();
 
