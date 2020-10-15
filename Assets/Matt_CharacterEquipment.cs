@@ -44,6 +44,7 @@ public class Matt_CharacterEquipment : MonoBehaviour
 
     void UseHeldItem(Matt_SM_PlayerStateInfo _owner)
     {
+        if (_owner.CheckAttackLock()) { return;  }
         Debug.Log("use item triggered");
         if (holdingItem)
         {
@@ -57,7 +58,8 @@ public class Matt_CharacterEquipment : MonoBehaviour
     }
     void InteractWithSomething(Matt_SM_PlayerStateInfo _owner)
     {
-        if(canEquip == true) { 
+        if (_owner.CheckAttackLock()) { return; }
+        if (canEquip == true) { 
             if (interactCollider.targetObject != null)
             {
                 interactCollider.targetObject.Interact(_owner);

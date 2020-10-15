@@ -8,6 +8,7 @@ public class Weapon : HeldItem
 {
    GroundItem groundRef;
 
+      [SerializeField]  bool attackActive = false;
     int _weaponDamage;
     [SerializeField] string _weaponName;
 
@@ -18,14 +19,6 @@ public class Weapon : HeldItem
     }
 
 
-    public class MeleeWeapon : Weapon
-    {
-
-
-
-
-    }
-
     public class HeldItem : MonoBehaviour
     {
 
@@ -35,5 +28,10 @@ public class Weapon : HeldItem
             Debug.Log("Used default heldItem");
         }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            
+        }
     }
+
 }
