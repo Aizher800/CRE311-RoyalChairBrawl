@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+using Matt_ItemSystem;
 namespace Matt_HitBoxSystem
 {
 
@@ -24,7 +26,7 @@ public class HitReceiver : MonoBehaviour
     void Start()
     {
         thisOwner = gameObject.GetComponentInParent<Matt_SM_PlayerStateInfo>();
-        HitTester.OnHitDelivery += ReceiveHit;
+        Weapon.OnHitDelivery += ReceiveHit;
     }
 
 
@@ -35,13 +37,13 @@ public class HitReceiver : MonoBehaviour
             if (_knockbackCoroutine == null)
             {
                     Debug.Log("received hit to hitbox of type: " + _type);
-                _knockbackCoroutine = thisOwner.StartCoroutine(HitKnockback(thisOwner, forceMultiplier));
+                _knockbackCoroutine = thisOwner.StartCoroutine(HitKnockback(thisOwner, forceMultiplier, direction));
             }
         }
 
     }
     // Update is called once per frame
-    IEnumerator HitKnockback(Matt_SM_PlayerStateInfo _owner, float forceMultiply)
+    IEnumerator HitKnockback(Matt_SM_PlayerStateInfo _owner, float forceMultiply, Vector3 _direction)
     {
 
 
@@ -49,7 +51,7 @@ public class HitReceiver : MonoBehaviour
         {
             _owner.PSI_jumpVelocity = Mathf.Lerp(_owner.PSI_jumpVelocity, forceMultiply, .1f);
             yield return null;
-            _owner.PSI_characterController.Move(new Vector3(0, forceMultiply - _owner.PSI_jumpVelocity, 0));
+            _owner.PSI_characterController.Move(new Vector3(_direction.x, forceMultiply - _owner.PSI_jumpVelocity, _direction.z));
         }
 
         yield return new WaitUntil(() => (_owner.PSI_Grounded == false));
@@ -68,7 +70,7 @@ public class HitReceiver : MonoBehaviour
         }
         _knockbackCoroutine = null;
         yield return null;
-        Debug.Log("finished JUmp");
+        Debug.Log("Knockback complete");
 
     }
 }

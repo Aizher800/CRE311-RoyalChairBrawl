@@ -12,7 +12,7 @@ public class Weapon : HeldItem
         public delegate void HitDeliveryEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, float forceMultiplier, hitBoxType type);
         public static event HitDeliveryEvent OnHitDelivery;
 
-        bool attackOpen = true;
+       [SerializeField] bool attackOpen = true;
 
         Matt_SM_PlayerStateInfo _thisOwner;
        [SerializeField] Material openMat;
@@ -23,6 +23,7 @@ public class Weapon : HeldItem
         
         public override void Use(Matt_SM_PlayerStateInfo _owner)
         {
+            attackOpen = true;
             _owner.PSI_animator.Play("mixamomelee2");
             Debug.Log("WEAPON ATTACK");
             _thisOwner = _owner;
@@ -30,18 +31,22 @@ public class Weapon : HeldItem
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other != this.gameObject)
-            {
-                Matt_HitBox hitbox = other.GetComponent<Matt_HitBox>();
-                if (hitbox)
+          
+            Matt_HitBox hitbox = other.GetComponent<Matt_HitBox>();
+            if (attackOpen) { 
+                if (hitbox._hitBoxOwner != _thisOwner)
                 {
-                    OnHitDelivery?.Invoke(_thisOwner, hitbox._hitBoxOwner, Vector3.right, 1f, hitbox._hitboxType);
-                    Debug.Log("Hit delivered");
+                    if (hitbox)
+                    {
+                        OnHitDelivery?.Invoke(_thisOwner, hitbox._hitBoxOwner, (other.gameObject.transform.position - _thisOwner.gameObject.transform.position).normalized, 1f, hitbox._hitboxType);
+                        Debug.Log("Hit delivered on " + hitbox._hitBoxOwner + "from " + _thisOwner.gameObject);
+                        attackOpen = false;
+                    }
                 }
-            }
-            else
-            {
-                Debug.Log("hit yourself");
+                else
+                {
+                    Debug.Log("hit yourself");
+                }
             }
         }
         public void WindowOpen()

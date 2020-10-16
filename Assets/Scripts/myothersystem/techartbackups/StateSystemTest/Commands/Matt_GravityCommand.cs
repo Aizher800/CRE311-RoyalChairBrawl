@@ -10,9 +10,9 @@ public class Matt_GravityCommand : Command<Matt_SM_PlayerStateInfo>
 
 
 
-    float velocityDamp = 7f; //velocityDamp is the rate at which the forces applied to the player revert to their original values
+    float velocityDamp = 11f; //velocityDamp is the rate at which the forces applied to the player revert to their original values
                               //basically all the gravity-based stuff affecting the player, velocity is added on top of the player movement vector3
-    float gravity = -31f;
+    float gravity = -28f;
     Vector3 gravVelocity;
     private Coroutine _physicsCoroutine;
     override public void EnableCommand(Matt_SM_PlayerStateInfo _owner)
