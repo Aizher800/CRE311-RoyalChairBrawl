@@ -9,8 +9,14 @@ public class CustomGrounder : MonoBehaviour
     [SerializeField] float groundCastStart = -1.9f;
     [SerializeField] float groundCastLength = 0.68f;
     [SerializeField] bool newGrounded;
-    
-   public bool IsCustomGrounded()
+    CharacterYVelocity veloCheck;
+    Matt_SM_PlayerStateInfo _thisOwner;
+    private void Start()
+    {
+        veloCheck = GetComponent<CharacterYVelocity>();
+        _thisOwner = GetComponent<Matt_SM_PlayerStateInfo>();
+    }
+    public bool IsCustomGrounded()
     {
         return newGrounded;
     }
@@ -19,12 +25,13 @@ public class CustomGrounder : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if(Physics.Raycast(gameObject.transform.position + new Vector3(0, groundCastStart, 0), -Vector3.up, out hit, groundCastLength ))
+        if(Physics.SphereCast(gameObject.transform.position + new Vector3(0, groundCastStart, 0), 2f, -Vector3.up, out hit, groundCastLength ))
         {
             Debug.DrawRay(gameObject.transform.position + new Vector3(0, groundCastStart, 0), -Vector3.up, Color.red);
           //  Debug.Log(" the ground is called" + hit.transform.gameObject);
             newGrounded = true;
         }
+     
         else
         {
             newGrounded = false;
