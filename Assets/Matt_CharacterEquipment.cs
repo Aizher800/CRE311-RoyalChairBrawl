@@ -55,14 +55,14 @@ public class Matt_CharacterEquipment : MonoBehaviour
             if (currentHeldItem != null)
             {
                 Debug.Log("yoyoyo oyo ooyo oy ooy oy oyoyoo used ITEM");
-                currentHeldItem.Use();
+                currentHeldItem.Use(_owner);
             }
          
         }
         else
         {
 
-            defaultWeapon.Use();
+            defaultWeapon.Use(_owner);
         }
     }
     void InteractWithSomething(Matt_SM_PlayerStateInfo _owner)

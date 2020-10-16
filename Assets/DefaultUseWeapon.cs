@@ -7,7 +7,7 @@ namespace Matt_ItemSystem
     public class DefaultUseWeapon : HeldItem
     {
         // Start is called before the first frame update
-        public override void Use()
+        public override void Use(Matt_SM_PlayerStateInfo _owner)
         {
             Debug.Log("FIST ATTACK");
         }
