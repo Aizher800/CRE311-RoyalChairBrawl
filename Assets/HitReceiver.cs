@@ -19,8 +19,9 @@ public class HitReceiver : MonoBehaviour
     public delegate void HitReceiverEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, float forceMultiplier, hitBoxType type);
     public static event HitReceiverEvent OnHitReceived;
 
-    Coroutine _knockbackCoroutine;
 
+    Coroutine _knockbackCoroutine;
+    public bool knockedBack = false;
   [SerializeField]  Matt_SM_PlayerStateInfo thisOwner;
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class HitReceiver : MonoBehaviour
         {
             if (_knockbackCoroutine == null)
             {
+                    knockedBack = true;
                     Debug.Log("received hit to hitbox of type: " + _type);
                 _knockbackCoroutine = thisOwner.StartCoroutine(HitKnockback(thisOwner, forceMultiplier, direction));
             }
@@ -68,10 +70,23 @@ public class HitReceiver : MonoBehaviour
             _knockbackCoroutine = null;
             yield return null;
         }
+            knockedBack = false;
         _knockbackCoroutine = null;
         yield return null;
         Debug.Log("Knockback complete");
 
     }
-}
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (knockedBack == true)
+            {
+              //  RaycastHit hit
+           // if (Physics.Raycast(thisOwner.transform.position))
+                Debug.Log("HIT AGAINST A WAAAALLL");
+            // _knockbackCoroutine = thisOwner.StartCoroutine( HitKnockback(thisOwner, 1f, -collision.contacts[0].normal * 1f));
+                Debug.DrawLine(thisOwner.transform.position, -collision.contacts[0].normal);
+            }
+        }
+    }
 }
