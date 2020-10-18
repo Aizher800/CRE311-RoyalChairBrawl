@@ -47,6 +47,7 @@ public class Matt_CharacterEquipment : MonoBehaviour
 
     void UseHeldItem(Matt_SM_PlayerStateInfo _owner)
     {
+        if (_owner.PSI_isBlocking) { return; }
         if (_owner.CheckAttackLock()) { return;  }
         Debug.Log("use item triggered");
         if (holdingItem)

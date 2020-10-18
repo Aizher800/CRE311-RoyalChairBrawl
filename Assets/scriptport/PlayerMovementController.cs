@@ -220,6 +220,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     #endregion
     public override void RunCommand(Matt_SM_PlayerStateInfo _owner, Vector2 value)
     {
+       
         if (_owner.CheckMovementLock() == true) { Debug.Log("movement was locked"); return; }
         var moveValue = value;
         var cam = Camera.main;
@@ -238,7 +239,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         }
         moveDirection = moveDirection.normalized;
        //  Debug.Log("Executed Movement");
-
+     
 
         if (_moveCoroutine == null)
         {
