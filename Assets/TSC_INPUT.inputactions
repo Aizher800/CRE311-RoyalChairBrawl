@@ -226,7 +226,7 @@
                 {
                     "name": "",
                     "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -292,7 +292,7 @@
                 {
                     "name": "",
                     "id": "644a6121-429a-41b8-8940-840c0ad85b85",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/slash",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -740,7 +740,7 @@
                 {
                     "name": "",
                     "id": "5d243597-a78d-4257-8112-6dcee0dbcf49",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -784,7 +784,7 @@
                 {
                     "name": "",
                     "id": "2449ce11-33d2-4992-af32-119af1476066",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/numpad0",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse;Gamepad",
@@ -806,7 +806,7 @@
                 {
                     "name": "",
                     "id": "bcfd8010-cd93-470d-8659-1297e4ca4de2",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/slash",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",

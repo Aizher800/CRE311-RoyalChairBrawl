@@ -16,7 +16,11 @@ public class CharacterYVelocity : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        
     }
+
+  
+
     void Update()
     {
         currentY_Position = transform.position.y;
