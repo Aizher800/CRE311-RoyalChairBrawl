@@ -38,6 +38,13 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         public delegate void JogHoldEvent();
         public event JogHoldEvent OnJogHoldEvent;
 
+        public delegate void BlockHoldEvent();
+        public event BlockHoldEvent OnBlockHoldEvent;
+
+        public delegate void BlockReleaseEvent();
+        public event BlockReleaseEvent OnBlockReleaseEvent;
+
+
         public delegate void JogReleaseEvent();
         public event JogReleaseEvent OnJogReleaseEvent;
 
@@ -112,6 +119,16 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         {
             OnJogHoldEvent?.Invoke();
 
+        }
+        public void OnBlockHold()
+        {
+
+            OnBlockHoldEvent?.Invoke();
+        }
+        public void OnBlockRelease()
+        {
+
+            OnBlockReleaseEvent?.Invoke();
         }
 
         public void OnJogRelease()

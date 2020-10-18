@@ -54,6 +54,8 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                     _inputSource.Player1.Jump.performed += JumpConversion;
                     _inputSource.Player1.Interact.started += InteractConversion;
                     _inputSource.Player1.Fire.performed += FireConversion;
+                    _inputSource.Player1.Block.started += BlockHold;
+                    _inputSource.Player1.Block.canceled += BlockRelease;
                     break;
 
                 case (PlayerInputNum.Player2):
@@ -61,6 +63,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                     _inputSource.Player2.Jump.performed += JumpConversion;
                     _inputSource.Player2.Interact.started += InteractConversion;
                     _inputSource.Player2.Fire.performed += FireConversion;
+                    _inputSource.Player2.Block.started += BlockHold;
                     break;
 
                 case (PlayerInputNum.Player3):
@@ -79,40 +82,14 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         {
             SetInput();
 
-            
-
-            // _inputActions.Player1.AnalogAim.started += AimConversion;
-
-            //  _inputActions.Player1.Jogging.started += JogHold;
-            //  _inputActions.Player1.Jogging.canceled += JogRelease;
-            //  _inputActions.Player1.Skill.performed += SkillConversion;
-            /* if (analogRotationInput)
-                 _inputActions.Player.AnalogAim.performed += OnAnalogAimInput;
-
-             if (interactInput)
-             {
-                 _inputActions.Player.Interact.started += OnInteractStart;
-                 _inputActions.Player.Interact.canceled += OnInteractEnded;
-             }
-
-             if (skillInput)
-             {
-                 _inputActions.Player.Skill.performed += OnSkillUse;
-                 _inputActions.Player.Skill.canceled += OnSkillEnd;
-             }
-
-             if (attackInput)
-             {
-                 _inputActions.Player.Attack.performed += OnAttackStart;
-                 _inputActions.Player.Attack.canceled += OnAttackEnd;
-             }
-             */
+           
         }
         void FireConversion(InputAction.CallbackContext context)
         {
             OnFireUse();
             
         }
+
         void AimConversion(InputAction.CallbackContext context)
         {
             var value = context.ReadValue<Vector3>();
@@ -149,7 +126,14 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 
 
         }
-
+        void BlockHold(InputAction.CallbackContext context)
+        {
+            OnBlockHold();
+        }
+        void BlockRelease(InputAction.CallbackContext context)
+        {
+            OnBlockRelease();
+        }
         void JogHold(InputAction.CallbackContext context)
         {
             OnJogHold();

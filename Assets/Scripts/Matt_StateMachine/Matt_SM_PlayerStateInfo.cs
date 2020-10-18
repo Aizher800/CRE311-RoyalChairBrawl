@@ -49,6 +49,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     public bool PSI_isAttacking { get; private set; }
     public bool PSI_isMoving { get; private set; }
     public bool PSI_isJumping { get; private set; }
+    public bool PSI_isBlocking;
 
     [Header("Jumping")]
     [SerializeField] public float PSI_jumpVelocity;
