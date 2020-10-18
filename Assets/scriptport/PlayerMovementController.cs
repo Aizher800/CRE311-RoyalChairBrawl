@@ -99,7 +99,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
        // _owner.PSI_inputSource.OnJogReleaseEvent += JogFinish;
        //  _inputActions = new PlayerinputActions();
         //m_PlayerInput = enableOwner.GetComponent<PlayerInput>();
-        anim = _owner.GetComponent<Animator>();
+        anim = _owner.PSI_animator;
        // anim.applyRootMotion = false;
         anim.SetFloat("InputMagnitude", 0, 0.0f, Time.deltaTime);
         anim.SetFloat("InputX", 0f);
@@ -299,13 +299,13 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         {
 
         _owner.SetMovingStatus(true);
-        CharacterController ownController = null;
+       
         Animator ownAnimator = null;
       
         if (ownAnimator == null)
         {
 
-            ownAnimator = _owner.GetComponent<Animator>();
+            ownAnimator = _owner.PSI_animator;
         }
         while (moveDirection.x != 0 && moveDirection.z != 0)
         {

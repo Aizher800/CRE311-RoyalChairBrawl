@@ -14,6 +14,8 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     public Vector3 navObjective;
     // public int specialAnimNumber;
 
+    public Matt_CharacterInfo PSI_CharacterInfo;
+    GameObject psi_InstantiatedObject;
     public Direction PSI_direction;
     public AbstractInput PSI_inputSource;
     public Vector3 PSI_Velocity;
@@ -119,12 +121,19 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
     #endregion
     private Matt_SM_StateMachine<Matt_SM_PlayerStateInfo> stateMachine { get; set; }
-
+    private void Awake()
+    {
+        if (PSI_CharacterInfo != null)
+        {
+            LoadCharacterInfo();
+        }
+    }
     private void Start()
     {
+   
 
-        PSI_animator = GetComponent<Animator>();
-        visualRotationObject = GetComponentInChildren<Matt_VisualRotation>().transform;
+     //   PSI_animator = GetComponent<Animator>();
+        
         PSI_characterController = GetComponent<CharacterController>();
 
         PSI_inputSource = GetComponent<AbstractInput>();
@@ -135,6 +144,13 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         //stateMachine.ChangeState(FirstState.Instance);
         gameTimer = Time.time;
         stateMachine.ChangeState(new Matt_SM_FreeMoveState());
+    }
+
+    public void LoadCharacterInfo()
+    {
+       psi_InstantiatedObject = Instantiate(PSI_CharacterInfo.characterVisual, this.transform);
+        PSI_animator = psi_InstantiatedObject.GetComponent<Animator>();
+        visualRotationObject = psi_InstantiatedObject.GetComponent<Matt_VisualRotation>().transform;
     }
     private void FixedUpdate()
     {
