@@ -326,13 +326,13 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
                 {
                     // Speed = Mathf.Lerp(Speed, 1f, 2f);
                     ownAnimator.SetFloat("InputMagnitude", JogSpeed, .2f, Time.deltaTime);
-                    _owner.PSI_characterController.Move(moveDirection * speed * Time.deltaTime); //The left-right movement of the player is handled here.
+                    _owner.PSI_characterController.Move(moveDirection * (speed * _owner.PSI_CharacterInfo.speedMultiplier) * Time.deltaTime); //The left-right movement of the player is handled here.
                                                                                    // descendChecker.AscendDescendChecker();
                 }  
                 else
                 {
 
-                    _owner.PSI_characterController.Move(moveDirection * speed * Time.deltaTime); //The left-right movement of the player is handled here.
+                    _owner.PSI_characterController.Move(moveDirection * (speed * _owner.PSI_CharacterInfo.speedMultiplier) * Time.deltaTime); //The left-right movement of the player is handled here.
                     ownAnimator.SetFloat("InputMagnitude", walkSpeed, 0.2f, Time.deltaTime);
                    
                 }

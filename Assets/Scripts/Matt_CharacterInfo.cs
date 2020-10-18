@@ -5,7 +5,7 @@ using UnityEngine;
 public class Matt_CharacterInfo : ScriptableObject
 {
     public string characterName;
-   [SerializeField] public float runSpeed;
+   [SerializeField] public float speedMultiplier;
     public float jumpMultiplier;
     public float gravityMultiplier;
     public float attackMultiplier;
