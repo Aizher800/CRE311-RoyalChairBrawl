@@ -23,7 +23,7 @@ public class Matt_GravityCommand : Command<Matt_SM_PlayerStateInfo>
      
         //anim = enableOwner.GetComponent<Animator>();
 
-        _owner.GetComponent<Animator>().applyRootMotion = false;
+        _owner.PSI_animator.applyRootMotion = false;
         //stateInfo = commandOwner.GetComponent<PlayerStateInfo>();
 
       //  controller = _owner.GetComponent<CharacterController>();

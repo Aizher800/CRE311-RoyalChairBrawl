@@ -383,8 +383,8 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         
       //  _owner.PSI_Velocity = Vector3.zero;
       
-        anim.SetFloat("InputMagnitude", 0, 0.0f, Time.deltaTime);
-        anim.SetFloat("InputX", 0f);
+        _owner.PSI_animator.SetFloat("InputMagnitude", 0, 0.0f, Time.deltaTime);
+        _owner.PSI_animator.SetFloat("InputX", 0f);
         if (_moveCoroutine != null)
         {
           _moveCoroutine = null;

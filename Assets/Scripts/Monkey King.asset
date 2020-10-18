@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69ec8bac89b961e4cbc8d7e348d09ff9, type: 3}
-  m_Name: PlagueDoc
+  m_Name: Monkey King
   m_EditorClassIdentifier: 
-  characterName: Plague Doc
-  runSpeed: 1
-  jumpMultiplier: 1
-  gravityMultiplier: 0.9
-  attackMultiplier: 1.04
-  characterVisual: {fileID: 4500287491373275148, guid: 6359f5a6e6a32b944bd09934aa2cfe5c,
+  characterName: Monkey King
+  runSpeed: 1.03
+  jumpMultiplier: 1.1
+  gravityMultiplier: 1
+  attackMultiplier: 1
+  characterVisual: {fileID: 4101288927637050504, guid: 6286ad6d63b3a6d4285afe0f716bf837,
     type: 3}
-  characterAvatar: {fileID: 9000000, guid: aff976f89b4061b4d95edc348d226e77, type: 3}
+  characterAvatar: {fileID: 9000000, guid: bc491cf8a09983e4495428b958622dc1, type: 3}
   testBool: 0
