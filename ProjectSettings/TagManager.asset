@@ -8,6 +8,7 @@ TagManager:
   - upperbodyHitbox
   - lowerbodyHitbox
   - interactCollider
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - AttackLayer
   - InteractLayer
   - KnockBackCollider
-  - 
+  - SpawnPoint
   - 
   - 
   - 

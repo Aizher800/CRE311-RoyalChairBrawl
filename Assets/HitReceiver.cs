@@ -35,13 +35,20 @@ public class HitReceiver : MonoBehaviour
     {
        if (_receiver == thisOwner)
         {
-            if (_knockbackCoroutine == null)
-            {
-                    knockedBack = true;
-                    Debug.Log("received hit to hitbox of type: " + _type);
-                _knockbackCoroutine = thisOwner.StartCoroutine(HitKnockback(thisOwner, forceMultiplier, direction));
-            }
-        }
+          if(thisOwner.PSI_isBlocking == false) 
+          { 
+                    if (_knockbackCoroutine == null)
+                    {
+                            knockedBack = true;
+                            Debug.Log("received hit to hitbox of type: " + _type);
+                        _knockbackCoroutine = thisOwner.StartCoroutine(HitKnockback(thisOwner, forceMultiplier, direction));
+                    }
+          }
+         else
+         {
+                    thisOwner.PSI_animator.Play("mixamo_block");
+         }
+       }
 
     }
     // Update is called once per frame

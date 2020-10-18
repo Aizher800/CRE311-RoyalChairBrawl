@@ -38,10 +38,10 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         public delegate void JogHoldEvent();
         public event JogHoldEvent OnJogHoldEvent;
 
-        public delegate void BlockHoldEvent();
+        public delegate void BlockHoldEvent(Matt_SM_PlayerStateInfo _owner, bool trueFalse);
         public event BlockHoldEvent OnBlockHoldEvent;
 
-        public delegate void BlockReleaseEvent();
+        public delegate void BlockReleaseEvent(Matt_SM_PlayerStateInfo _owner);
         public event BlockReleaseEvent OnBlockReleaseEvent;
 
 
@@ -120,15 +120,16 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
             OnJogHoldEvent?.Invoke();
 
         }
-        public void OnBlockHold()
+        public void OnBlockHold(bool trueFalse)
         {
-
-            OnBlockHoldEvent?.Invoke();
+           
+            OnBlockHoldEvent?.Invoke(thisOwner, trueFalse);
+            Debug.Log("blockhold onblockhold");
         }
         public void OnBlockRelease()
         {
 
-            OnBlockReleaseEvent?.Invoke();
+            OnBlockReleaseEvent?.Invoke(thisOwner);
         }
 
         public void OnJogRelease()

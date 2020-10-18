@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Monkey King
   m_EditorClassIdentifier: 
   characterName: Monkey King
-  runSpeed: 1.03
+  speedMultiplier: 1
   jumpMultiplier: 1.1
   gravityMultiplier: 1
   attackMultiplier: 1

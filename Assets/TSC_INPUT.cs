@@ -62,9 +62,9 @@ namespace TSC_INPUT_SYSTEM
                 },
                 {
                     ""name"": ""Block"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""e0198808-203e-4b80-b2ab-85422c0d1250"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""DiscreteButton"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -338,7 +338,7 @@ namespace TSC_INPUT_SYSTEM
                 },
                 {
                     ""name"": ""Block"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""87c0c99c-609f-4d6e-885d-b6e53da43a45"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -558,7 +558,7 @@ namespace TSC_INPUT_SYSTEM
                 {
                     ""name"": """",
                     ""id"": ""9b063fae-80fb-4b1b-a2d2-78de06f40aee"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/numpad5"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",

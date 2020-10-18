@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlagueDoc
   m_EditorClassIdentifier: 
   characterName: Plague Doc
-  runSpeed: 1
+  speedMultiplier: 1
   jumpMultiplier: 1
   gravityMultiplier: 0.9
   attackMultiplier: 1.04

@@ -54,8 +54,8 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                     _inputSource.Player1.Jump.performed += JumpConversion;
                     _inputSource.Player1.Interact.started += InteractConversion;
                     _inputSource.Player1.Fire.performed += FireConversion;
-                    _inputSource.Player1.Block.started += BlockHold;
-                    _inputSource.Player1.Block.canceled += BlockRelease;
+                    _inputSource.Player1.Block.performed += BlockHold;
+                    //_inputSource.Player1.Block.performed += BlockRelease;
                     break;
 
                 case (PlayerInputNum.Player2):
@@ -63,7 +63,8 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                     _inputSource.Player2.Jump.performed += JumpConversion;
                     _inputSource.Player2.Interact.started += InteractConversion;
                     _inputSource.Player2.Fire.performed += FireConversion;
-                    _inputSource.Player2.Block.started += BlockHold;
+                    _inputSource.Player2.Block.performed += BlockHold;
+                  //  _inputSource.Player2.Block.performed += BlockRelease;
                     break;
 
                 case (PlayerInputNum.Player3):
@@ -87,7 +88,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         void FireConversion(InputAction.CallbackContext context)
         {
             OnFireUse();
-            
+           
         }
 
         void AimConversion(InputAction.CallbackContext context)
@@ -128,7 +129,9 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         }
         void BlockHold(InputAction.CallbackContext context)
         {
-            OnBlockHold();
+            var value = context.ReadValueAsButton();
+            OnBlockHold(value);
+            Debug.Log("blockhold input");
         }
         void BlockRelease(InputAction.CallbackContext context)
         {

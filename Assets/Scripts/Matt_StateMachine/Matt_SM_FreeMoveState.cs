@@ -35,6 +35,7 @@ public class Matt_SM_FreeMoveState : State<Matt_SM_PlayerStateInfo>
     {
         commands[0] = new PlayerMovementController();
         commands[1] = new Matt_GravityCommand();
+        commands[2] = new Matt_BlockCommand();
         //playerTransform = GameObject.FindObjectOfType<PlayerMovementController>().gameObject.transform.position;
         //  Debug.Log("Entering THIRD State");
         //playerStateInfo = _owner.GetComponent<PlayerStateInfo>();

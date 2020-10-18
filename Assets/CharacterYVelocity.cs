@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterYVelocity : MonoBehaviour
 {
-
+    Matt_SM_PlayerStateInfo _thisOwner;
     Animator anim;
 
     float currentY_Position;
@@ -15,7 +15,8 @@ public class CharacterYVelocity : MonoBehaviour
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        _thisOwner = GetComponent<Matt_SM_PlayerStateInfo>();
+        anim = _thisOwner.PSI_animator;
         
     }
 
