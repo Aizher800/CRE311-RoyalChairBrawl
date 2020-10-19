@@ -27,7 +27,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         // [SerializeField]  PlayerInputActions _inputActions;
 
         private const string LeftMouseButton = "Left Button";
-        [SerializeField] PlayerInputNum playerInput;
+        [SerializeField] public PlayerInputNum playerInput;
         [SerializeField] TSC_INPUT _inputSource;
         [SerializeField] float inputX;
         [SerializeField] float inputY;

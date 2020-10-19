@@ -126,9 +126,11 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     {
         if (PSI_CharacterInfo != null)
         {
-            LoadCharacterInfo();
+            LoadCharacterInfo(PSI_CharacterInfo);
         }
     }
+
+   
     private void Start()
     {
    
@@ -146,8 +148,8 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         gameTimer = Time.time;
         stateMachine.ChangeState(new Matt_SM_FreeMoveState());
     }
-
-    public void LoadCharacterInfo()
+   
+    public void LoadCharacterInfo(Matt_CharacterInfo _charInfo)
     {
        psi_InstantiatedObject = Instantiate(PSI_CharacterInfo.characterVisual, this.transform);
         PSI_animator = psi_InstantiatedObject.GetComponent<Animator>();
