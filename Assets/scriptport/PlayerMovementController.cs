@@ -299,10 +299,12 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
         IEnumerator InputMagnitude(Matt_SM_PlayerStateInfo _owner)
         {
 
+        var speedMultiplier = _owner.PSI_CharacterInfo.speedMultiplier;
         _owner.SetMovingStatus(true);
        
         Animator ownAnimator = null;
       
+        if(_owner.PSI_isBlocking) { speedMultiplier = 0; }
         if (ownAnimator == null)
         {
 
@@ -327,13 +329,13 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
                 {
                     // Speed = Mathf.Lerp(Speed, 1f, 2f);
                     ownAnimator.SetFloat("InputMagnitude", JogSpeed, .2f, Time.deltaTime);
-                    _owner.PSI_characterController.Move(moveDirection * (speed * _owner.PSI_CharacterInfo.speedMultiplier) * Time.deltaTime); //The left-right movement of the player is handled here.
+                    _owner.PSI_characterController.Move(moveDirection * (speed * speedMultiplier) * Time.deltaTime); //The left-right movement of the player is handled here.
                                                                                    // descendChecker.AscendDescendChecker();
                 }  
                 else
                 {
 
-                    _owner.PSI_characterController.Move(moveDirection * (speed * _owner.PSI_CharacterInfo.speedMultiplier) * Time.deltaTime); //The left-right movement of the player is handled here.
+                    _owner.PSI_characterController.Move(moveDirection * (speed * speedMultiplier) * Time.deltaTime); //The left-right movement of the player is handled here.
                     ownAnimator.SetFloat("InputMagnitude", walkSpeed, 0.2f, Time.deltaTime);
                    
                 }
