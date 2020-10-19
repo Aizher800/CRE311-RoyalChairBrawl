@@ -126,7 +126,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     {
         if (PSI_CharacterInfo != null)
         {
-            LoadCharacterInfo(PSI_CharacterInfo);
+         //   LoadCharacterInfo(PSI_CharacterInfo);
         }
     }
 
@@ -151,9 +151,12 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
    
     public void LoadCharacterInfo(Matt_CharacterInfo _charInfo)
     {
-       psi_InstantiatedObject = Instantiate(PSI_CharacterInfo.characterVisual, this.transform);
+        if (_charInfo != null) {
+            PSI_CharacterInfo = _charInfo;
+       psi_InstantiatedObject = Instantiate(_charInfo.characterVisual, this.transform);
         PSI_animator = psi_InstantiatedObject.GetComponent<Animator>();
         visualRotationObject = psi_InstantiatedObject.GetComponent<Matt_VisualRotation>().transform;
+        }
     }
     private void FixedUpdate()
     {

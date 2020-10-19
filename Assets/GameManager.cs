@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 
     //public List<GameObject> spawnPoints = new List<GameObject>();
     [SerializeField] private GameObject[] spawnsArray = new GameObject[4];
-    [SerializeField] private GameObject[] characterChoice = new GameObject[4];
+    [SerializeField] private Matt_CharacterInfo[] characterChoice = new Matt_CharacterInfo[4];
+    [SerializeField] GameObject characterPrefab;
 
     //  private GameObject[] tempList = new GameObject[4];
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
     }
     void FindSpawns()
     {
-        spawnsArray = GameObject.FindGameObjectsWithTag("Spawnpoint");
+        spawnsArray = GameObject.FindGameObjectsWithTag("SpawnPoint");
 
 
     }
@@ -34,8 +35,9 @@ public class GameManager : MonoBehaviour
             if (spawnsArray[i] != null && characterChoice[i] != null)
             {
                 Debug.Log("Spawned " + characterChoice[i] + "!");
-                var spawnedChar = Instantiate(characterChoice[i], spawnsArray[i].transform.position, Quaternion.identity);
-                AssignCharacters(spawnedChar);
+                var spawnedChar = Instantiate(characterPrefab, spawnsArray[i].transform.position, Quaternion.identity);
+                spawnedChar.GetComponent<Matt_SM_PlayerStateInfo>().LoadCharacterInfo(characterChoice[i]);
+                
             }
 
 
@@ -43,8 +45,5 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void AssignCharacters(GameObject _spawnedChar)
-    {
 
-    }
 }
