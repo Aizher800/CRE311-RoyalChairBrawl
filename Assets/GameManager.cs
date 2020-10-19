@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
-
+using _InputTest.Entity.Scripts.Input.Monobehaviours;
 public class GameManager : MonoBehaviour
 {
 
 
     //public List<GameObject> spawnPoints = new List<GameObject>();
     [SerializeField] private GameObject[] spawnsArray = new GameObject[4];
+    [SerializeField] PlayerInputNum[] inputChoices = new PlayerInputNum[4];
     [SerializeField] private Matt_CharacterInfo[] characterChoice = new Matt_CharacterInfo[4];
     [SerializeField] GameObject characterPrefab;
 
@@ -36,6 +37,9 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("Spawned " + characterChoice[i] + "!");
                 var spawnedChar = Instantiate(characterPrefab, spawnsArray[i].transform.position, Quaternion.identity);
+                var charInput = spawnedChar.GetComponent<CharacterInput>();
+                charInput.playerInput = inputChoices[i];
+                charInput.SetInput();
                 spawnedChar.GetComponent<Matt_SM_PlayerStateInfo>().LoadCharacterInfo(characterChoice[i]);
                 
             }

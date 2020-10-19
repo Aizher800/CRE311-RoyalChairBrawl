@@ -44,7 +44,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                
             }
         }
-       void SetInput()
+      public void SetInput()
         {
             _inputSource.Enable();
             switch (playerInput)
@@ -81,7 +81,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 
         private void OnEnable()
         {
-            SetInput();
+            //SetInput();
 
            
         }
