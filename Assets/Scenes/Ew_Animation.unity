@@ -637,12 +637,8 @@ MonoBehaviour:
   spawnsArray:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  inputChoices: 00000000010000000200000003000000
+  inputChoices: 0000000001000000
   characterChoice:
-  - {fileID: 11400000, guid: c63ce6b94cf9fdb46a763e3217b30130, type: 2}
-  - {fileID: 11400000, guid: d6e60737a8c0c194ca505a3e32146f7f, type: 2}
   - {fileID: 11400000, guid: c63ce6b94cf9fdb46a763e3217b30130, type: 2}
   - {fileID: 11400000, guid: d6e60737a8c0c194ca505a3e32146f7f, type: 2}
   characterPrefab: {fileID: 7691584872415322918, guid: c77d83caec3dc3645b5d7430f12a4079,
@@ -4364,6 +4360,16 @@ PrefabInstance:
         type: 3}
       propertyPath: field of view
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682569259881153203, guid: b2a52e7d5ef03ab41a755e8247a6f57a,
+        type: 3}
+      propertyPath: m_GroupFramingSize
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682569259881153203, guid: b2a52e7d5ef03ab41a755e8247a6f57a,
+        type: 3}
+      propertyPath: m_MaximumFOV
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 7682569260175011220, guid: b2a52e7d5ef03ab41a755e8247a6f57a,
         type: 3}

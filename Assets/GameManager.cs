@@ -5,9 +5,9 @@ public class GameManager : MonoBehaviour
 
 
     //public List<GameObject> spawnPoints = new List<GameObject>();
-    [SerializeField] private GameObject[] spawnsArray = new GameObject[4];
-    [SerializeField] PlayerInputNum[] inputChoices = new PlayerInputNum[4];
-    [SerializeField] private Matt_CharacterInfo[] characterChoice = new Matt_CharacterInfo[4];
+    [SerializeField] private GameObject[] spawnsArray;
+    [SerializeField] PlayerInputNum[] inputChoices;
+    [SerializeField] private Matt_CharacterInfo[] characterChoice;
     [SerializeField] GameObject characterPrefab;
 
     Matt_CameraGroupManager camComposerManager;
@@ -28,7 +28,11 @@ public class GameManager : MonoBehaviour
     }
     void FindSpawns()
     {
-        spawnsArray = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        for (int i = 0; i < spawnsArray.Length; i++)
+        {
+            spawnsArray[i] = GameObject.FindGameObjectsWithTag("SpawnPoint")[i];
+        }
+       
 
 
     }
