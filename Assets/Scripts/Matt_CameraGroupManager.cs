@@ -13,11 +13,18 @@ public class Matt_CameraGroupManager : MonoBehaviour
 
 
         //gets every player in the scene and adds them to the target group on awake ghfsggkjsfhwrguifdsikoa
+      
+
+
+    }
+
+   public  void FindTargets()
+    {
+
         for (int i = 0; i < FindObjectsOfType<Erin_UI_PlayerHealth>().Length; i++)
         {
             cinemachineTargetGroup.AddMember(GameObject.FindObjectsOfType<Erin_UI_PlayerHealth>()[i].transform, 1f, 1f);
         }
-
 
     }
 

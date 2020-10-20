@@ -10,10 +10,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Matt_CharacterInfo[] characterChoice = new Matt_CharacterInfo[4];
     [SerializeField] GameObject characterPrefab;
 
+    Matt_CameraGroupManager camComposerManager;
+
     //  private GameObject[] tempList = new GameObject[4];
     // Start is called before the first frame update
     void Start()
     {
+        camComposerManager = FindObjectOfType<Matt_CameraGroupManager>();
         FindSpawns();
         SpawnCharacters();
     }
@@ -46,6 +49,9 @@ public class GameManager : MonoBehaviour
 
 
         }
+        camComposerManager.FindTargets();
+
+        
 
     }
 
