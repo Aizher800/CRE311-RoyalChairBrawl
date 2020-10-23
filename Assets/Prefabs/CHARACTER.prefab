@@ -164,6 +164,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   healthBar: {fileID: 0}
+  healthPrefab: {fileID: 0}
+  containerPanel: {fileID: 0}
 --- !u!114 &7691584872415322913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,9 +306,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b64ad6b915e6d489f8f1367c7db5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
+  maxHealth: 6
+  currentHealth: 6
   healthBar: {fileID: 0}
+  healthPrefab: {fileID: 8213358076436023741, guid: 033f02dd4de84b9429dbb75521ee7cc3,
+    type: 3}
+  containerPanel: {fileID: 0}
 --- !u!1 &7691584872736927636
 GameObject:
   m_ObjectHideFlags: 0

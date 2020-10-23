@@ -14,6 +14,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     public Vector3 navObjective;
     // public int specialAnimNumber;
 
+    public Erin_UI_PlayerHealth playerHealth;
     public Matt_CharacterInfo PSI_CharacterInfo;
     GameObject psi_InstantiatedObject;
     public Direction PSI_direction;
@@ -133,8 +134,8 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
    
     private void Start()
     {
-   
 
+        playerHealth = GetComponent<Erin_UI_PlayerHealth>();
      //   PSI_animator = GetComponent<Animator>();
         
         PSI_characterController = GetComponent<CharacterController>();

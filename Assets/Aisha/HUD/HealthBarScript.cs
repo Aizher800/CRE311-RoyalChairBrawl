@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using _InputTest.Entity.Scripts.Input.Monobehaviours;
 
-public class MKHealth : MonoBehaviour
+public class HealthBarScript : MonoBehaviour
 {
+
 
     public int health;
     public int maxHealth;
@@ -16,9 +18,10 @@ public class MKHealth : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        UpdateHealth();
     }
 
-    void Update()
+    void UpdateHealth()
     {
 
         // Health system
@@ -53,15 +56,19 @@ public class MKHealth : MonoBehaviour
         {
             health = maxHealth;
         }
+        UpdateHealth();
     }
     public void loseHealth(int loss)
     {
         health -= loss;
+        UpdateHealth();
     }
 
     public void gainHealth(int gain)
     {
         health += gain;
         healthOverheal();
+        UpdateHealth(); //i probably dont need to update health twice 
+
     }
 }

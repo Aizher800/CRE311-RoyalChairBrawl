@@ -7,58 +7,38 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-    public Erin_UI_HealthBar healthBar; //Ref to HealthBar script.
+   // public Erin_UI_HealthBar healthBar; //Ref to HealthBar script.
 
+    public GameObject healthPrefab;
+   public HealthBarScript characterHealth;
+    public HealthContainerPanel containerPanel;
     void Start()
     {
-        currentHealth = maxHealth;
-
-        healthBar.SetMaxHealth(maxHealth);  //Setting up health bar.
+        containerPanel = FindObjectOfType<HealthContainerPanel>();
+        characterHealth = Instantiate(healthPrefab, containerPanel.transform).GetComponent<HealthBarScript>();
+        
     }
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Weapon")
-        {
-            Debug.Log("Light attack");
-            TakeDamage(2); //light 
-        }
+     
     }
 
 
     void Update()
     {
-        //Trigger for damage - Needs to change to collision with other players weapons etc.
-        //if(Input.GetKeyDown(KeyCode.Q))  
-        //{
-        //    Debug.Log("Light attack");
-        //    TakeDamage(2); //light 
-        //}
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-           // Debug.Log("Heavy attack");
-         //   TakeDamage(5);  //heavy
-        }
-
-        //if (Input.GetKeyDown(KeyCode.R))
-        //{
-        //    Debug.Log("Super attack");
-        //    TakeDamage(10); //super
-        //}
-
-        if (currentHealth == 0)
-        {
-            //run the death animation
-            //despawn after x seconds of animation
-        }
+      
     }
 
-
-    void TakeDamage(int damage)
+    public void AddHealth(int amount)
     {
-        currentHealth -= damage;
+        characterHealth.gainHealth(amount);
+    }
+    public void RemoveHealth(int damage)
+    {
+        characterHealth.loseHealth(damage);
 
-        healthBar.SetHealth(currentHealth); //Adjusting health bar according to health.
+    
+        //  healthBar.SetHealth(currentHealth); //Adjusting health bar according to health.
     }
 }
