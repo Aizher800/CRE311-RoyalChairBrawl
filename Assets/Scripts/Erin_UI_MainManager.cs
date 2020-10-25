@@ -25,7 +25,7 @@ public class Erin_UI_MainManager : MonoBehaviour
     public void Tutorial()
     {
         Debug.Log("Tutorial loaded.");
-        SceneManager.LoadScene(2);   //Loads in the tutorial scene.
+        //SceneManager.LoadScene(2);   //Loads in the tutorial scene.
     }
 
 
