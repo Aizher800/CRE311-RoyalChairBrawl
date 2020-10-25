@@ -16,7 +16,7 @@ public enum hitBoxType
 
 public class HitReceiver : MonoBehaviour
 {
-    public delegate void HitReceiverEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, float forceMultiplier, hitBoxType type);
+    public delegate void HitReceiverEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, int damage, float forceMultiplier, hitBoxType type);
     public static event HitReceiverEvent OnHitReceived;
 
 
@@ -31,7 +31,7 @@ public class HitReceiver : MonoBehaviour
     }
 
 
-    void ReceiveHit(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, float forceMultiplier, hitBoxType _type)
+    void ReceiveHit(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, int damage, float forceMultiplier, hitBoxType _type)
     {
        if (_receiver == thisOwner)
         {
@@ -41,6 +41,7 @@ public class HitReceiver : MonoBehaviour
                     {
                             knockedBack = true;
                             Debug.Log("received hit to hitbox of type: " + _type);
+                        thisOwner.playerHealth.RemoveHealth(1);
                         _knockbackCoroutine = thisOwner.StartCoroutine(HitKnockback(thisOwner, forceMultiplier, direction));
                     }
           }

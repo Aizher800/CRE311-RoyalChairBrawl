@@ -9,7 +9,7 @@ public class Weapon : HeldItem
 {
    GroundItem groundRef;
 
-        public delegate void HitDeliveryEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, float forceMultiplier, hitBoxType type);
+        public delegate void HitDeliveryEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, int damage, float forceMultiplier, hitBoxType type);
         public static event HitDeliveryEvent OnHitDelivery;
 
        [SerializeField] bool attackOpen = true;
@@ -18,7 +18,7 @@ public class Weapon : HeldItem
        [SerializeField] Material openMat;
         [SerializeField] Material closedMat;
         [SerializeField]  bool attackActive = false;
-    int _weaponDamage;
+   [SerializeField] int _weaponDamage;
     [SerializeField] string _weaponName;
         
         public override void Use(Matt_SM_PlayerStateInfo _owner)
@@ -38,7 +38,7 @@ public class Weapon : HeldItem
                 {
                     if (hitbox)
                     {
-                        OnHitDelivery?.Invoke(_thisOwner, hitbox._hitBoxOwner, (other.gameObject.transform.position - _thisOwner.gameObject.transform.position).normalized, 1f, hitbox._hitboxType);
+                        OnHitDelivery?.Invoke(_thisOwner, hitbox._hitBoxOwner, (other.gameObject.transform.position - _thisOwner.gameObject.transform.position).normalized, _weaponDamage, 1f, hitbox._hitboxType);
                         Debug.Log("Hit delivered on " + hitbox._hitBoxOwner + "from " + _thisOwner.gameObject);
                         attackOpen = false;
                     }

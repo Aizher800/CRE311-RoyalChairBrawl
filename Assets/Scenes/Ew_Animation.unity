@@ -1772,6 +1772,7 @@ MonoBehaviour:
   openMat: {fileID: 2100000, guid: 53d3dd027060e9e44b82df288ae3b954, type: 2}
   closedMat: {fileID: 2100000, guid: e5f31d94df7d493498fbd77f8ae201b1, type: 2}
   attackActive: 0
+  _weaponDamage: 0
   _weaponName: cane
 --- !u!65 &703158888
 BoxCollider:
@@ -4319,6 +4320,7 @@ MonoBehaviour:
   openMat: {fileID: 0}
   closedMat: {fileID: 0}
   attackActive: 0
+  _weaponDamage: 1
   _weaponName: chair
 --- !u!114 &1191348707
 MonoBehaviour:

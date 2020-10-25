@@ -7,10 +7,12 @@ using _InputTest.Entity.Scripts.Input.Monobehaviours;
 public class HealthBarScript : MonoBehaviour
 {
 
+   
 
     public int health;
     public int maxHealth;
     public int abilityP;
+    public PlayerInputNum playerNum;
 
     public Image[] healthbar;
     public Image[] apBar;
@@ -19,6 +21,7 @@ public class HealthBarScript : MonoBehaviour
     {
         health = maxHealth;
         UpdateHealth();
+       Erin_UI_PlayerHealth.OnHealthUpdate += SetHealth;
     }
 
     void UpdateHealth()
@@ -50,6 +53,13 @@ public class HealthBarScript : MonoBehaviour
             }
         }
     }
+
+    public void SetHealth(PlayerInputNum _num, int _newHealth, int _newEnergy)
+    {
+        if (_num != playerNum) { return; }
+        health = _newHealth;
+        UpdateHealth();
+    }
     public void healthOverheal()
     {
         if (health > maxHealth)
@@ -60,7 +70,9 @@ public class HealthBarScript : MonoBehaviour
     }
     public void loseHealth(int loss)
     {
+        Debug.Log("char health loss run damage was" + loss);
         health -= loss;
+        Debug.Log("health is now" + health);
         UpdateHealth();
     }
 

@@ -1,22 +1,40 @@
 ﻿using UnityEngine;
-
+using _InputTest.Entity.Scripts.Input.Monobehaviours;
 public class Erin_UI_PlayerHealth : MonoBehaviour
 {
     // Based on tut. : https://www.youtube.com/watch?v=BLfNP4Sc_iA
 
-    public int maxHealth = 100;
-    public int currentHealth;
+    public delegate void UpdateHealthEvent(PlayerInputNum num, int newHealth, int newEnergy);
+    public static event UpdateHealthEvent OnHealthUpdate;
 
+
+    public int maxHealth = 100;
+    public int currentHealth = 6;
+
+    [SerializeField] public PlayerInputNum associatedPlayerNum;
    // public Erin_UI_HealthBar healthBar; //Ref to HealthBar script.
 
-    public GameObject healthPrefab;
+    [SerializeField] public GameObject healthPrefab;
    public HealthBarScript characterHealth;
     public HealthContainerPanel containerPanel;
-    void Start()
+
+    GameObject associatedUIObject;
+    public void OnSpawn()
     {
+       
         containerPanel = FindObjectOfType<HealthContainerPanel>();
-        characterHealth = Instantiate(healthPrefab, containerPanel.transform).GetComponent<HealthBarScript>();
-        
+      var instance =  Instantiate(healthPrefab, containerPanel.transform);
+        if (instance != null) { Debug.Log("health instance exists"); }
+        characterHealth = instance.GetComponent<HealthBarScript>();
+        characterHealth.playerNum = associatedPlayerNum;
+        if (characterHealth == null)
+        {
+            Debug.Log("couldnt get refernececeec");
+        }
+        else
+        {
+            Debug.Log("have a reference i do");
+        }
     }
 
     void OnCollisionEnter(Collision col)
@@ -32,13 +50,26 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
 
     public void AddHealth(int amount)
     {
-        characterHealth.gainHealth(amount);
+        currentHealth += amount;
+       
     }
-    public void RemoveHealth(int damage)
+    public void RemoveHealth(int amount)
     {
-        characterHealth.loseHealth(damage);
+        Debug.Log("erin health loss run damage was" + amount);
+        currentHealth -= amount;
+        if (characterHealth != null) {
+            Debug.Log("setting char health which is not null");
+           OnHealthUpdate(associatedPlayerNum, amount, 1);
+        }
+        else
+        {
+            if (associatedUIObject == null)
+            {
+                Debug.Log("AAAAAAAAYEEEEEEEE");
+            }
+        }
 
-    
+
         //  healthBar.SetHealth(currentHealth); //Adjusting health bar according to health.
     }
 }
