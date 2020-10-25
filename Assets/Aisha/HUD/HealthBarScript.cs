@@ -17,11 +17,13 @@ public class HealthBarScript : MonoBehaviour
     public Image[] healthbar;
     public Image[] apBar;
 
+    public GameObject instancedCharacter;
+
     void Start()
     {
         health = maxHealth;
         UpdateHealth();
-       GameManager.OnHealthUpdate += SetHealth;
+       Erin_UI_PlayerHealth.OnHealthUpdate += SetHealth;
     }
 
     void UpdateHealth()
@@ -58,6 +60,11 @@ public class HealthBarScript : MonoBehaviour
     {
         if (_num != playerNum) { return; }
         health = _newHealth;
+
+        if (health <= 0)
+        {
+            Debug.Log(instancedCharacter + " has died");
+        }
         UpdateHealth();
     }
     public void healthOverheal()

@@ -4,8 +4,8 @@ using Matt_HitBoxSystem;
 public class GameManager : MonoBehaviour
 {
 
-    public delegate void UpdateHealthEvent(PlayerInputNum num, int newHealth, int newEnergy);
-    public static event UpdateHealthEvent OnHealthUpdate;
+    public HealthContainerPanel containerPanel;
+
     //public List<GameObject> spawnPoints = new List<GameObject>();
     [SerializeField] private GameObject[] spawnsArray = new GameObject[4];
     [SerializeField] PlayerInputNum[] inputChoices = new PlayerInputNum[4];
@@ -13,22 +13,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject characterPrefab;
     [SerializeField] GameObject healthPrefabBackup;
 
-    //RIPPED FROM ERIN'S HEALTH SCRIPT
-    public int maxHealth = 6;
-    public int currentHealth = 6;
 
-    [SerializeField] public GameObject healthPrefab;
-    public HealthBarScript characterHealth;
-    public HealthContainerPanel containerPanel;
-
-    GameObject associatedUIObject;
     //  private GameObject[] tempList = new GameObject[4];
     // Start is called before the first frame update
     void Start()
     {
         FindSpawns();
         SpawnCharacters();
-        HitReceiver.OnHealthChange += RemoveHealth;
+       
 
     }
 
@@ -43,22 +35,7 @@ public class GameManager : MonoBehaviour
 
 
     }
-    public void OnSpawn()
-    {
-
-      
-        //if (instance != null) { Debug.Log("health instance exists"); }
-        
-    
-        if (characterHealth == null)
-        {
-            Debug.Log("couldnt get refernececeec");
-        }
-        else
-        {
-            Debug.Log("have a reference i do");
-        }
-    }
+ 
     void SpawnCharacters()
     {
         for (int i = 0; i < spawnsArray.Length; i++)
@@ -73,42 +50,18 @@ public class GameManager : MonoBehaviour
 
                 charInput.playerInput = inputChoices[i];
                 charInput.SetInput();
-                var healthInstance = Instantiate(healthPrefab, containerPanel.transform);
-
-                characterHealth = healthInstance.GetComponent<HealthBarScript>();
-                characterHealth.playerNum = inputChoices[i];
-
+                var healthInstance = Instantiate(healthPrefabBackup, containerPanel.transform);
+                Erin_UI_PlayerHealth health = spawnedChar.GetComponent<Erin_UI_PlayerHealth>();
+                health.characterHealth = healthInstance.GetComponent<HealthBarScript>();
+                health.characterHealth.playerNum = inputChoices[i];
+                health.associatedPlayerNum = inputChoices[i];
+                health.OnSpawn();
             }
 
 
         }
 
     }
-    public void AddHealth(int amount)
-    {
-        currentHealth += amount;
 
-    }
-    public void RemoveHealth(int amount, PlayerInputNum _num)
-    {
-        //Debug.Log("erin health loss run damage was" + amount);
-      //  Debug.Log("current health WAS " + currentHealth);
-        currentHealth = currentHealth + amount;
-        if (characterHealth != null)
-        {
-            Debug.Log("setting char health which is not null, current health is " + currentHealth);
-            OnHealthUpdate(_num, currentHealth, 1);
-        }
-        else
-        {
-            if (associatedUIObject == null)
-            {
-                Debug.Log("AAAAAAAAYEEEEEEEE");
-            }
-        }
-
-
-        //  healthBar.SetHealth(currentHealth); //Adjusting health bar according to health.
-    }
 
 }

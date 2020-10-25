@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7691584872415322940}
   - component: {fileID: 7691584872415322916}
   - component: {fileID: -6520184238423656643}
+  - component: {fileID: 3487660801424756922}
   m_Layer: 0
   m_Name: CHARACTER
   m_TagString: Player
@@ -159,6 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b64ad6b915e6d489f8f1367c7db5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 6
+  currentHealth: 6
+  healthPrefab: {fileID: 0}
+  characterHealth: {fileID: 0}
   associatedPlayerNum: 0
 --- !u!114 &7691584872415322913
 MonoBehaviour:
@@ -290,6 +295,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachineTargetGroup: {fileID: 0}
+--- !u!114 &3487660801424756922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7691584872415322918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96b64ad6b915e6d489f8f1367c7db5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 6
+  currentHealth: 6
+  healthPrefab: {fileID: 8213358076436023741, guid: 033f02dd4de84b9429dbb75521ee7cc3,
+    type: 3}
+  characterHealth: {fileID: 0}
+  associatedPlayerNum: 0
 --- !u!1 &7691584872736927636
 GameObject:
   m_ObjectHideFlags: 0

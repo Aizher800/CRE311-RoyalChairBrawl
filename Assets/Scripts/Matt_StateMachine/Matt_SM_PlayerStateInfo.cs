@@ -155,6 +155,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     {
         if (_charInfo != null) {
             PSI_CharacterInfo = _charInfo;
+            gameObject.name = _charInfo.characterName;
        psi_InstantiatedObject = Instantiate(_charInfo.characterVisual, this.transform);
         PSI_animator = psi_InstantiatedObject.GetComponent<Animator>();
         visualRotationObject = psi_InstantiatedObject.GetComponent<Matt_VisualRotation>().transform;

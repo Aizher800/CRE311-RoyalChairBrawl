@@ -14,7 +14,7 @@ public class Weapon : HeldItem
 
        [SerializeField] bool attackOpen = true;
 
-        Matt_SM_PlayerStateInfo _thisOwner;
+     [SerializeField]   Matt_SM_PlayerStateInfo _thisOwner;
        [SerializeField] Material openMat;
         [SerializeField] Material closedMat;
         [SerializeField]  bool attackActive = false;
