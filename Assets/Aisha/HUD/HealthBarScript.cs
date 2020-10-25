@@ -21,7 +21,7 @@ public class HealthBarScript : MonoBehaviour
     {
         health = maxHealth;
         UpdateHealth();
-       Erin_UI_PlayerHealth.OnHealthUpdate += SetHealth;
+       GameManager.OnHealthUpdate += SetHealth;
     }
 
     void UpdateHealth()

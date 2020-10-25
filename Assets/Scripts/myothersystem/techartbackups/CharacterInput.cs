@@ -2,16 +2,17 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum PlayerInputNum
+{
+
+    Player1,
+    Player2,
+    Player3,
+    Player4
+}
 namespace _InputTest.Entity.Scripts.Input.Monobehaviours
 {
-    public enum PlayerInputNum
-    {
-
-        Player1,
-        Player2,
-        Player3,
-        Player4
-    }
+ 
     public class CharacterInput : AbstractInput, IRotationInput, IMoveinput
     {
         /*  [Header("Input Commands")] 

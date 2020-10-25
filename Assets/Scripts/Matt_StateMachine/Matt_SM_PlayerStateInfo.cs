@@ -52,6 +52,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     public bool PSI_isJumping { get; private set; }
     public bool PSI_isBlocking;
 
+    public PlayerInputNum PSI_inputNum;
     [Header("Jumping")]
     [SerializeField] public float PSI_jumpVelocity;
     [SerializeField] float jumpGravity;
@@ -142,7 +143,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
         PSI_inputSource = GetComponent<AbstractInput>();
         pSI_startingZ = gameObject.transform.position.z;
-
+        PSI_inputNum = GetComponent<CharacterInput>().playerInput;
         anim = gameObject.GetComponent<Animator>();
         stateMachine = new Matt_SM_StateMachine<Matt_SM_PlayerStateInfo>(this);
         //stateMachine.ChangeState(FirstState.Instance);

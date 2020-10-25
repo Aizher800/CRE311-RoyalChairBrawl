@@ -19,6 +19,8 @@ public class HitReceiver : MonoBehaviour
     public delegate void HitReceiverEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, int damage, float forceMultiplier, hitBoxType type);
     public static event HitReceiverEvent OnHitReceived;
 
+        public delegate void HealthBarEvent(int _amount, PlayerInputNum _num);
+        public static event HealthBarEvent OnHealthChange;
 
     Coroutine _knockbackCoroutine;
     public bool knockedBack = false;
@@ -41,7 +43,8 @@ public class HitReceiver : MonoBehaviour
                     {
                             knockedBack = true;
                             Debug.Log("received hit to hitbox of type: " + _type);
-                        thisOwner.playerHealth.RemoveHealth(1);
+                        //   thisOwner.playerHealth.RemoveHealth(1);
+                        OnHealthChange(-1, thisOwner.PSI_inputNum);
                         _knockbackCoroutine = thisOwner.StartCoroutine(HitKnockback(thisOwner, forceMultiplier, direction));
                     }
           }

@@ -760,6 +760,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e7bbfffc2b08d774b9c51c7e2c449e91, type: 2}
   characterPrefab: {fileID: 7691584872415322918, guid: c77d83caec3dc3645b5d7430f12a4079,
     type: 3}
+  healthPrefabBackup: {fileID: 8213358076436023741, guid: 033f02dd4de84b9429dbb75521ee7cc3,
+    type: 3}
+  maxHealth: 100
+  currentHealth: 6
+  healthPrefab: {fileID: 8213358076436023741, guid: 033f02dd4de84b9429dbb75521ee7cc3,
+    type: 3}
+  characterHealth: {fileID: 0}
+  containerPanel: {fileID: 0}
 --- !u!1 &281365175
 GameObject:
   m_ObjectHideFlags: 0
