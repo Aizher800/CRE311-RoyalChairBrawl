@@ -27,6 +27,7 @@ public class Weapon : HeldItem
             _owner.PSI_animator.Play("mixamomelee2");
             Debug.Log("WEAPON ATTACK");
             _thisOwner = _owner;
+            StartCoroutine(HitReset());
         }
 
         private void OnTriggerEnter(Collider other)
@@ -58,9 +59,17 @@ public class Weapon : HeldItem
         {
             gameObject.GetComponent<MeshRenderer>().material = closedMat;
         }
+
+        IEnumerator HitReset()
+        {
+
+            yield return new WaitForSeconds(1);
+            attackOpen = false;
+            yield return null;
+        }
     }
 
- 
+    
     public class HeldItem : MonoBehaviour
     {
 
