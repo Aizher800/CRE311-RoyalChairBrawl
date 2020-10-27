@@ -53,6 +53,10 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
 
         if (_num == associatedPlayerNum) { 
             currentHealth = currentHealth + amount;
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
             if (characterHealth != null)
             {
                 Debug.Log("setting char health which is not null, current health is " + currentHealth);

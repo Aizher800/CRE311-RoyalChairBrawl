@@ -18,7 +18,7 @@ public class GroundItem : MonoBehaviour, IInteractable
     {
         rb = GetComponent<Rigidbody>();
     }
-   public void Interact(Matt_SM_PlayerStateInfo _owner)
+   public virtual void Interact(Matt_SM_PlayerStateInfo _owner)
     {
         if(held == false) 
         {

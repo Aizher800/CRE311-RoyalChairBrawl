@@ -12,13 +12,13 @@ public class Weapon : HeldItem
         public delegate void HitDeliveryEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, int damage, float forceMultiplier, hitBoxType type);
         public static event HitDeliveryEvent OnHitDelivery;
 
-       [SerializeField] bool attackOpen = true;
+       [SerializeField] protected bool attackOpen = true;
 
-     [SerializeField]   Matt_SM_PlayerStateInfo _thisOwner;
+     [SerializeField] public  Matt_SM_PlayerStateInfo _thisOwner;
        [SerializeField] Material openMat;
         [SerializeField] Material closedMat;
         [SerializeField]  bool attackActive = false;
-   [SerializeField] int _weaponDamage;
+   [SerializeField] protected int _weaponDamage;
     [SerializeField] string _weaponName;
         
         public override void Use(Matt_SM_PlayerStateInfo _owner)
@@ -29,7 +29,11 @@ public class Weapon : HeldItem
             _thisOwner = _owner;
             StartCoroutine(HitReset());
         }
+       public void InvokeEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, int damage, float forceMultiplier, hitBoxType type)
+        {
+           OnHitDelivery?.Invoke(_deliverer, _receiver, direction,damage, forceMultiplier, type);
 
+        }
         private void OnTriggerEnter(Collider other)
         {
           
@@ -50,17 +54,9 @@ public class Weapon : HeldItem
                 }
             }
         }
-        public void WindowOpen()
-        {
-            gameObject.GetComponent<MeshRenderer>().material = openMat;
-        }
+ 
 
-        public void WindowClose()
-        {
-            gameObject.GetComponent<MeshRenderer>().material = closedMat;
-        }
-
-        IEnumerator HitReset()
+       public  IEnumerator HitReset()
         {
 
             yield return new WaitForSeconds(1);

@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
                 health.characterHealth.playerNum = inputChoices[i];
                 health.associatedPlayerNum = inputChoices[i];
                 health.OnSpawn();
+
             }
 
 
