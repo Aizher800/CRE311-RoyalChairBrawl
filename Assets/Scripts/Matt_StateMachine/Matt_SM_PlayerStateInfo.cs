@@ -10,6 +10,8 @@ public enum Direction
 }
 public class Matt_SM_PlayerStateInfo : MonoBehaviour
 {
+    float victoryPercent;
+
     [SerializeField] public int state;
     public Vector3 navObjective;
     // public int specialAnimNumber;

@@ -36,6 +36,18 @@ public class GameManager : MonoBehaviour
 
     }
  
+
+    public void RespawnCharacter(GameObject _killedChar)
+    {
+
+        for (int i = 0; i < 1; i++)
+        {
+            FindSpawns();
+            _killedChar.transform.position = spawnsArray[0].transform.position;
+        }
+      
+
+    }
     void SpawnCharacters()
     {
         for (int i = 0; i < spawnsArray.Length; i++)

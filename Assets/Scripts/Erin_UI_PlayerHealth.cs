@@ -71,6 +71,17 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
             }
         }
 
+        if(currentHealth <= 0)
+        {
+
+            FindObjectOfType<GameManager>().RespawnCharacter(gameObject);
+            GetComponent<Matt_CharacterEquipment>().UnequipItem(GetComponent<Matt_SM_PlayerStateInfo>());
+            currentHealth = maxHealth;
+            OnHealthUpdate(_num, currentHealth, 1);
+          
+            //Destroy(gameObject);
+        }
+
         //  healthBar.SetHealth(currentHealth); //Adjusting health bar according to health.
     }
 

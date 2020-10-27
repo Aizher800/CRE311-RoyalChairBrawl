@@ -46,6 +46,7 @@ public class HitReceiver : MonoBehaviour
                         //   thisOwner.playerHealth.RemoveHealth(1);
                         OnHealthChange(-1, thisOwner.PSI_inputNum);
                         _knockbackCoroutine = thisOwner.StartCoroutine(HitKnockback(thisOwner, forceMultiplier, direction));
+                       thisOwner.GetComponent<Matt_CharacterEquipment>().UnequipItem(thisOwner);
                     }
           }
          else
