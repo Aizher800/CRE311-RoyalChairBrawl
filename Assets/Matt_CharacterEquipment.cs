@@ -15,7 +15,7 @@ public class Matt_CharacterEquipment : MonoBehaviour
 
     AbstractInput _input;
     Matt_SM_PlayerStateInfo thisOwner;
-
+    PlayerScore score;
     InteractCollider interactCollider;
     [SerializeField] bool canUnequip = false;
     [SerializeField] bool canEquip = true;
@@ -23,9 +23,11 @@ public class Matt_CharacterEquipment : MonoBehaviour
     {
 
         return holdingItem;
+       
     }
     void Start()
     {
+        score = GetComponent<PlayerScore>();
         thisOwner = GetComponent<Matt_SM_PlayerStateInfo>();
         interactCollider = GetComponentInChildren<InteractCollider>();
         _input = GetComponent<AbstractInput>();
@@ -97,12 +99,18 @@ public class Matt_CharacterEquipment : MonoBehaviour
     }
     public void EquipItem(GroundItem _weapon)
     {
+
         if(holdingItem == false) {
           canEquip = false;
         currentItem = _weapon;
         currentItem.gameObject.transform.parent = handPos.gameObject.transform;
         currentItem.gameObject.transform.localPosition = Vector3.zero;
             currentHeldItem = currentItem.GetComponent<HeldItem>();
+            if (currentHeldItem.isChair == true)
+            {
+                score.hasChair = true;
+
+            }
         Debug.Log("moved item to hand");
             StartCoroutine(AllowUnequipBoolTimer());
             holdingItem = true;
@@ -117,8 +125,15 @@ public class Matt_CharacterEquipment : MonoBehaviour
             return;
         }
         if (currentItem != null) {
+
             if (CheckIfItemHeld() == true)
             {
+                if(currentItem.GetComponent<HeldItem>().isChair == true)
+                {
+                    score.hasChair = false;
+
+
+                }
                 Debug.Log("DROPDROP");
                currentItem.transform.parent = null;
                 currentItem.transform.position = gameObject.transform.position;

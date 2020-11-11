@@ -20,7 +20,8 @@ public class Weapon : HeldItem
         [SerializeField]  bool attackActive = false;
    [SerializeField] protected int _weaponDamage;
     [SerializeField] string _weaponName;
-        
+
+      
         public override void Use(Matt_SM_PlayerStateInfo _owner)
         {
             attackOpen = true;
@@ -68,7 +69,7 @@ public class Weapon : HeldItem
     
     public class HeldItem : MonoBehaviour
     {
-
+        public bool isChair = false;
         public virtual void Use(Matt_SM_PlayerStateInfo _owner)
         {
 

@@ -740,6 +740,7 @@ GameObject:
   - component: {fileID: 273149657}
   - component: {fileID: 273149658}
   - component: {fileID: 273149656}
+  - component: {fileID: 273149659}
   m_Layer: 0
   m_Name: TSC_GameManager
   m_TagString: Untagged
@@ -759,10 +760,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b95827d7271472a47a40699d1be79996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinScore: 0
+  WinScore: 100
   currentScore: 0
-  text: {fileID: 0}
-  WinObject: {fileID: 0}
+  text: {fileID: 1209833938424798845}
+  WinObject: {fileID: 8398919404303841772}
 --- !u!4 &273149657
 Transform:
   m_ObjectHideFlags: 0
@@ -801,6 +802,21 @@ MonoBehaviour:
     type: 3}
   healthPrefabBackup: {fileID: 8213358076436023741, guid: 033f02dd4de84b9429dbb75521ee7cc3,
     type: 3}
+--- !u!114 &273149659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273149655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 300aae8a990e2764aa55edf89f2da3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 300
+  timerIsRunning: 0
+  timeText: {fileID: 1876200402408843064}
 --- !u!1 &281365175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +1859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450ecac26874cc44793460e37bb5c628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isChair: 0
   attackOpen: 1
   _thisOwner: {fileID: 0}
   openMat: {fileID: 2100000, guid: 53d3dd027060e9e44b82df288ae3b954, type: 2}
@@ -4530,6 +4547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450ecac26874cc44793460e37bb5c628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isChair: 1
   attackOpen: 1
   _thisOwner: {fileID: 0}
   openMat: {fileID: 0}
@@ -7378,7 +7396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -64}
+  m_AnchoredPosition: {x: 0, y: -179.5}
   m_SizeDelta: {x: 202.4, y: 90.323}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5504881323621198190
