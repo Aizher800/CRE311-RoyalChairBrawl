@@ -18,6 +18,7 @@ public class GameTimer : MonoBehaviour
     }
 
     void Update()
+    {
         if (timerIsRunning)
         {
             if (timeRemaining > 0)
