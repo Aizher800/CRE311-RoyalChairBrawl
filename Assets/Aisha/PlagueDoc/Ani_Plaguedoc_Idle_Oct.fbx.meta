@@ -1,0 +1,1348 @@
+fileFormatVersion: 2
+guid: 0b9394a4ba5d67840ae1bf183415078c
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -1145676531799947523
+    second: Plague Idle
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Plague Idle' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'PlagueDoc_RightForeArm' has translation
+      animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Plague Idle
+      takeName: Plague Idle
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: PlagueDoc_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PlagueDoc_Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Ani_Plaguedoc_Idle_Oct(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Char_Plaguedoc_V2
+      parentName: Ani_Plaguedoc_Idle_Oct(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Reference
+      parentName: Ani_Plaguedoc_Idle_Oct(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Hips
+      parentName: PlagueDoc_Reference
+      position: {x: -0, y: 1, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_LeftUpLeg
+      parentName: PlagueDoc_Hips
+      position: {x: -0.0891, y: -0.04270004, z: 0}
+      rotation: {x: 1.820652e-23, y: -6.2557136e-15, z: -0.0000000029103826, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: PlagueDoc_LeftLeg
+      parentName: PlagueDoc_LeftUpLeg
+      position: {x: 3.4714093e-10, y: -0.37878662, z: -0.00000030312532}
+      rotation: {x: -8.984813e-10, y: 0.0000000058207723, z: 0.0000000032736476, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: PlagueDoc_LeftFoot
+      parentName: PlagueDoc_LeftLeg
+      position: {x: 0.00000001874446, y: -0.49701023, z: 0.000000039778413}
+      rotation: {x: 0.000000001626077, y: -0.0000000174623, z: 0.000000007276491,
+        w: 1}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: PlagueDoc_LeftToeBase
+      parentName: PlagueDoc_LeftFoot
+      position: {x: -0.00000007448483, y: -0.062623255, z: 0.1295474}
+      rotation: {x: -0, y: -0, z: 2.8395046e-17, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: PlagueDoc_RightUpLeg
+      parentName: PlagueDoc_Hips
+      position: {x: 0.0891, y: -0.04270004, z: 0}
+      rotation: {x: -4.5474735e-11, y: 7.287296e-12, z: 8.656377e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_RightLeg
+      parentName: PlagueDoc_RightUpLeg
+      position: {x: 0.000000103834736, y: -0.37878627, z: -0.000002957512}
+      rotation: {x: -2.2737362e-10, y: -0.0000000116488215, z: 0.0000000020918294,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_RightFoot
+      parentName: PlagueDoc_RightLeg
+      position: {x: 0.000000022808237, y: -0.4970098, z: -0.000000034337273}
+      rotation: {x: -0.0000000011823436, y: 0.000000011641534, z: -0.0000000122781785,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_RightToeBase
+      parentName: PlagueDoc_RightFoot
+      position: {x: 0.000000062199, y: -0.06262322, z: 0.12954733}
+      rotation: {x: 0.0000000014547957, y: -0.00004187459, z: 0.000000018189834, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: PlagueDoc_Spine
+      parentName: PlagueDoc_Hips
+      position: {x: -0, y: 0.07, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Spine1
+      parentName: PlagueDoc_Spine
+      position: {x: -0, y: 0.12666664, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Spine2
+      parentName: PlagueDoc_Spine1
+      position: {x: -0, y: 0.12666664, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_LeftShoulder
+      parentName: PlagueDoc_Spine2
+      position: {x: -0.07100319, y: 0.14967026, z: 0}
+      rotation: {x: 1.3552527e-16, y: 0.000000023283064, z: 0.000000023283064, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: PlagueDoc_LeftArm
+      parentName: PlagueDoc_LeftShoulder
+      position: {x: -0.077072434, y: 0.0000016703334, z: 0.000000019176667}
+      rotation: {x: 0.000000003864805, y: 0.0000014250467, z: -0.6038656, w: 0.7970862}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_LeftForeArm
+      parentName: PlagueDoc_LeftArm
+      position: {x: -0.050455406, y: -0.19535746, z: -0.00000046311814}
+      rotation: {x: 0.000009238582, y: 0.038842715, z: -0.00038721293, w: 0.9992453}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_LeftHand
+      parentName: PlagueDoc_LeftForeArm
+      position: {x: -0.052196354, y: -0.22372498, z: -0.0037121805}
+      rotation: {x: -0.008598403, y: -0.03682419, z: -0.00043110867, w: 0.99928474}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: PlagueDoc_LeftHandThumb1
+      parentName: PlagueDoc_LeftHand
+      position: {x: 0.0039744866, y: -0.07065904, z: 0.053342383}
+      rotation: {x: -0.28030816, y: -0.00094477076, z: -0.07227783, w: 0.9571847}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_LeftHandThumb2
+      parentName: PlagueDoc_LeftHandThumb1
+      position: {x: -0.0010055745, y: -0.02627923, z: 0.0043003256}
+      rotation: {x: -0.10373055, y: 0.017676907, z: 0.08392747, w: 0.99090046}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: PlagueDoc_LeftHandThumb3
+      parentName: PlagueDoc_LeftHandThumb2
+      position: {x: -0.00629836, y: -0.024498966, z: -0.002624212}
+      rotation: {x: 0.00000006425382, y: 0.000000037260275, z: -0.00036195386, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: PlagueDoc_LeftHandThumb4
+      parentName: PlagueDoc_LeftHandThumb3
+      position: {x: -0.006586089, y: -0.025694417, z: -0.0027519548}
+      rotation: {x: -0.000000019562316, y: 0.000000011176153, z: 0.00020047429, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: PlagueDoc_LeftHandIndex1
+      parentName: PlagueDoc_LeftHand
+      position: {x: -0.03377833, y: -0.11962561, z: 0.03038578}
+      rotation: {x: -0.00000002235174, y: -0.00000003352761, z: -0.00035931723, w: 1}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1.0000002}
+    - name: PlagueDoc_LeftHandIndex2
+      parentName: PlagueDoc_LeftHandIndex1
+      position: {x: -0.006557602, y: -0.0417152, z: 0.0014720176}
+      rotation: {x: 0.000007920322, y: -0.017452374, z: 0.00044648082, w: 0.9998476}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000005}
+    - name: PlagueDoc_LeftHandIndex3
+      parentName: PlagueDoc_LeftHandIndex2
+      position: {x: -0.0041073672, y: -0.026197853, z: 0.0010685385}
+      rotation: {x: 0.000024745232, y: 0.121869326, z: -0.00034009592, w: 0.9925461}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.99999994}
+    - name: PlagueDoc_LeftHandIndex4
+      parentName: PlagueDoc_LeftHandIndex3
+      position: {x: -0.003118465, y: -0.0193323, z: 0.000034401}
+      rotation: {x: 0.000028292694, y: -0.35836795, z: 0.00012316088, w: 0.9335804}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_LeftHandMiddle1
+      parentName: PlagueDoc_LeftHand
+      position: {x: -0.03666664, y: -0.12000045, z: 0.008715934}
+      rotation: {x: -0.00000003073364, y: 0.000000014901159, z: -0.00035929919, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: PlagueDoc_LeftHandMiddle2
+      parentName: PlagueDoc_LeftHandMiddle1
+      position: {x: -0.007552433, y: -0.04804252, z: 0.0000030249107}
+      rotation: {x: 0.00000005308994, y: -0.00003113597, z: 0.00044912356, w: 0.9999999}
+      scale: {x: 1.0000004, y: 1, z: 1.0000005}
+    - name: PlagueDoc_LeftHandMiddle3
+      parentName: PlagueDoc_LeftHandMiddle2
+      position: {x: -0.004318799, y: -0.027313065, z: 0.0000019918218}
+      rotation: {x: 0.0000000037164258, y: 0.00021770221, z: -0.00035930434, w: 1}
+      scale: {x: 0.9999998, y: 1, z: 0.9999998}
+    - name: PlagueDoc_LeftHandMiddle4
+      parentName: PlagueDoc_LeftHandMiddle3
+      position: {x: -0.0031182289, y: -0.0198124, z: 0.000000075796166}
+      rotation: {x: 0.000000073539745, y: -0.0006530283, z: 0.00017965595, w: 0.99999976}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: PlagueDoc_LeftHandRing1
+      parentName: PlagueDoc_LeftHand
+      position: {x: -0.035701748, y: -0.11956578, z: -0.012881253}
+      rotation: {x: 0.00000004936009, y: -0.000000055879347, z: -0.00035933522, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: PlagueDoc_LeftHandRing2
+      parentName: PlagueDoc_LeftHandRing1
+      position: {x: -0.007046913, y: -0.04482711, z: 0.000000024678215}
+      rotation: {x: -0.000000037256907, y: -0.00003102048, z: 0.00044918657, w: 0.9999999}
+      scale: {x: 1.0000004, y: 1, z: 1.0000005}
+    - name: PlagueDoc_LeftHandRing3
+      parentName: PlagueDoc_LeftHandRing2
+      position: {x: -0.0035993003, y: -0.022762414, z: 0.00000024349416}
+      rotation: {x: 0.00000006520238, y: 0.00021767987, z: -0.00035934526, w: 1}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999994}
+    - name: PlagueDoc_LeftHandRing4
+      parentName: PlagueDoc_LeftHandRing3
+      position: {x: -0.0029902926, y: -0.018999606, z: -0.0000011286382}
+      rotation: {x: -0.000000014922353, y: -0.0006530731, z: 0.00017967529, w: 0.99999976}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: PlagueDoc_LeftHandPinky1
+      parentName: PlagueDoc_LeftHand
+      position: {x: -0.028959963, y: -0.123025656, z: -0.03263734}
+      rotation: {x: 0.0000000027939675, y: -0.00000001862645, z: -0.0003592999, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_LeftHandPinky2
+      parentName: PlagueDoc_LeftHandPinky1
+      position: {x: -0.0047277603, y: -0.030071562, z: 0.0000000066583787}
+      rotation: {x: -0.00000004469632, y: 0.0000000037105012, z: 0.00045580798, w: 0.9999999}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: PlagueDoc_LeftHandPinky3
+      parentName: PlagueDoc_LeftHandPinky2
+      position: {x: -0.003084344, y: -0.019502664, z: 0.000000001393687}
+      rotation: {x: 0.000000053077894, y: -0.000000014889274, z: -0.0004059489, w: 1}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1}
+    - name: PlagueDoc_LeftHandPinky4
+      parentName: PlagueDoc_LeftHandPinky3
+      position: {x: -0.0025900505, y: -0.016463589, z: 0.000000033587977}
+      rotation: {x: -0.000000022341068, y: -0.000000003728633, z: 0.0003194855, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: PlagueDoc_RightShoulder
+      parentName: PlagueDoc_Spine2
+      position: {x: 0.07100319, y: 0.14967026, z: 0}
+      rotation: {x: 1.8189894e-10, y: -1.1704604e-18, z: -0.000000006434674, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: PlagueDoc_RightArm
+      parentName: PlagueDoc_RightShoulder
+      position: {x: 0.077072516, y: 0.0000017023991, z: 0.0000000036551908}
+      rotation: {x: 0.00000001716471, y: -0.00006607079, z: 0.6040392, w: 0.7969546}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_RightForeArm
+      parentName: PlagueDoc_RightArm
+      position: {x: 0.050374646, y: -0.19537827, z: -0.00002137303}
+      rotation: {x: 0.0000061097194, y: -0.03884346, z: 0.00049730163, w: 0.9992452}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: PlagueDoc_RightHand
+      parentName: PlagueDoc_RightForeArm
+      position: {x: 0.05215295, y: -0.22373503, z: -0.0037117922}
+      rotation: {x: -0.008605557, y: 0.036823213, z: 0.00004486789, w: 0.99928474}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000004}
+    - name: PlagueDoc_RightHandThumb1
+      parentName: PlagueDoc_RightHand
+      position: {x: -0.00393345, y: -0.07066135, z: 0.053342376}
+      rotation: {x: -0.2803135, y: 0.001003489, z: 0.073048115, w: 0.95712453}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: PlagueDoc_RightHandThumb2
+      parentName: PlagueDoc_RightHandThumb1
+      position: {x: 0.0009802048, y: -0.026280193, z: 0.0043003513}
+      rotation: {x: -0.10373293, y: -0.017677044, z: -0.08488414, w: 0.99081874}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: PlagueDoc_RightHandThumb3
+      parentName: PlagueDoc_RightHandThumb2
+      position: {x: 0.0063220374, y: -0.024492847, z: -0.0026242414}
+      rotation: {x: -0.000000008401817, y: -0.000000033550975, z: 0.0011277079, w: 0.99999934}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: PlagueDoc_RightHandThumb4
+      parentName: PlagueDoc_RightHandThumb3
+      position: {x: 0.00657153, y: -0.025698148, z: -0.0027519946}
+      rotation: {x: -0.0000000121205534, y: -0.000000011151386, z: -0.0005278479,
+        w: 0.9999999}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: PlagueDoc_RightHandIndex1
+      parentName: PlagueDoc_RightHand
+      position: {x: 0.033847824, y: -0.119605996, z: 0.030385785}
+      rotation: {x: -0.00000007171183, y: 0.00000004097819, z: 0.0011329725, w: 0.99999934}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: PlagueDoc_RightHandIndex2
+      parentName: PlagueDoc_RightHandIndex1
+      position: {x: 0.006517223, y: -0.041721538, z: 0.0014719832}
+      rotation: {x: -0.000024689198, y: -0.017452948, z: -0.0014159844, w: 0.9998467}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: PlagueDoc_RightHandIndex3
+      parentName: PlagueDoc_RightHandIndex2
+      position: {x: 0.004197369, y: -0.026193807, z: 0.00077853375}
+      rotation: {x: -0.000079040416, y: 0.12187322, z: 0.0011298513, w: 0.99254507}
+      scale: {x: 1, y: 0.9999999, z: 0.99999976}
+    - name: PlagueDoc_RightHandIndex4
+      parentName: PlagueDoc_RightHandIndex3
+      position: {x: 0.0028231293, y: -0.019334141, z: 0.0012983026}
+      rotation: {x: -0.000086258544, y: -0.35837898, z: -0.0005574302, w: 0.93357605}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_RightHandMiddle1
+      parentName: PlagueDoc_RightHand
+      position: {x: 0.036736324, y: -0.11997919, z: 0.0087159015}
+      rotation: {x: -0.00000006053596, y: 0.00000004097819, z: 0.0011329725, w: 0.99999934}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: PlagueDoc_RightHandMiddle2
+      parentName: PlagueDoc_RightHandMiddle1
+      position: {x: 0.0075059896, y: -0.048049744, z: 0.0000030629299}
+      rotation: {x: -0.000024712479, y: -0.017452948, z: -0.0014159495, w: 0.9998467}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: PlagueDoc_RightHandMiddle3
+      parentName: PlagueDoc_RightHandMiddle2
+      position: {x: 0.004342613, y: -0.027308868, z: -0.00014992814}
+      rotation: {x: -0.00007894849, y: 0.12187321, z: 0.0011298115, w: 0.99254507}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: PlagueDoc_RightHandMiddle4
+      parentName: PlagueDoc_RightHandMiddle3
+      position: {x: 0.0030384546, y: -0.019814208, z: 0.0006479203}
+      rotation: {x: -0.0000863425, y: -0.358379, z: -0.0005574657, w: 0.93357605}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1.0000005}
+    - name: PlagueDoc_RightHandRing1
+      parentName: PlagueDoc_RightHand
+      position: {x: 0.035771176, y: -0.11954505, z: -0.012881253}
+      rotation: {x: -0.000000051222734, y: 0.000000014901159, z: 0.001133019, w: 0.99999934}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: PlagueDoc_RightHandRing2
+      parentName: PlagueDoc_RightHandRing1
+      position: {x: 0.007003597, y: -0.04483383, z: 0.000000017784425}
+      rotation: {x: -0.000024745876, y: -0.017452907, z: -0.0014160193, w: 0.9998467}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: PlagueDoc_RightHandRing3
+      parentName: PlagueDoc_RightHandRing2
+      position: {x: 0.003619084, y: -0.022758968, z: -0.00012639223}
+      rotation: {x: -0.000078971585, y: 0.1218732, z: 0.001129837, w: 0.99254507}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_RightHandRing4
+      parentName: PlagueDoc_RightHandRing3
+      position: {x: 0.002913999, y: -0.01900134, z: 0.00062016596}
+      rotation: {x: -0.00008629207, y: -0.35837907, z: -0.0005574359, w: 0.933576}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1.0000004}
+    - name: PlagueDoc_RightHandPinky1
+      parentName: PlagueDoc_RightHand
+      position: {x: 0.029031388, y: -0.12300885, z: -0.032637384}
+      rotation: {x: -0.000000027008351, y: 0.000000026077029, z: 0.0011329727, w: 0.99999934}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: PlagueDoc_RightHandPinky2
+      parentName: PlagueDoc_RightHandPinky1
+      position: {x: 0.004698661, y: -0.030076131, z: -0.000000006927483}
+      rotation: {x: -0.000024907135, y: -0.01745294, z: -0.0014050871, w: 0.9998467}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+    - name: PlagueDoc_RightHandPinky3
+      parentName: PlagueDoc_RightHandPinky2
+      position: {x: 0.003100688, y: -0.01949976, z: -0.0001082563}
+      rotation: {x: -0.00007770672, y: 0.12187321, z: 0.0010541445, w: 0.9925452}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: PlagueDoc_RightHandPinky4
+      parentName: PlagueDoc_RightHandPinky3
+      position: {x: 0.0025273394, y: -0.016464585, z: 0.00053771096}
+      rotation: {x: -0.00009018435, y: -0.35837904, z: -0.00033502476, w: 0.9335761}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: PlagueDoc_Neck
+      parentName: PlagueDoc_Spine2
+      position: {x: -0, y: 0.12666671, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Head
+      parentName: PlagueDoc_Neck
+      position: {x: -0, y: 0.19999999, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_Reference
+      parentName: Ani_Plaguedoc_Idle_Oct(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_HipsEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0, y: 0.95729995, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftAnkleEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.13461776, y: 0.08268707, z: 0.00000016613456}
+      rotation: {x: -6.892034e-10, y: -0.14929771, z: -0.07217057, w: 0.986155}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightAnkleEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.13794836, y: 0.082867466, z: -0.000000048056243}
+      rotation: {x: 0.0000000011983767, y: 0.19776843, z: 0.09560136, w: 0.97557575}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftWristEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.07557065, y: 1.1657033, z: 0.31076854}
+      rotation: {x: 0.65384823, y: -0.58834857, z: 0.0446783, w: -0.47363734}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightWristEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.051907167, y: 1.1495522, z: 0.27606356}
+      rotation: {x: -0.61229944, y: -0.54428077, z: 0.19512682, w: 0.5392341}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftKneeEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.108786635, y: 0.57902527, z: 0.0000035741325}
+      rotation: {x: -0.002332508, y: -0.08983134, z: -0.025890417, w: 0.9956177}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightKneeEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.1102268, y: 0.5791034, z: 0.00048595303}
+      rotation: {x: -0.0028464883, y: 0.11938752, z: 0.027757896, w: 0.99245554}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftElbowEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.15313566, y: 1.2689707, z: 0.120740734}
+      rotation: {x: -0.49032888, y: 0.38366482, z: 0.089925066, w: 0.7773625}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightElbowEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.1404977, y: 1.2985815, z: 0.12528859}
+      rotation: {x: -0.38167015, y: -0.31229833, z: -0.19688304, w: 0.8473693}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_ChestOriginEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0, y: 1.0699999, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_ChestEndEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0, y: 1.4730035, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftFootEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.18167852, y: 0.023507923, z: 0.12242285}
+      rotation: {x: -0.0000000045334487, y: -0.14929773, z: -0.07217052, w: 0.986155}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightFootEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.19961888, y: 0.026287684, z: 0.117045365}
+      rotation: {x: -0.000000004170691, y: 0.19776846, z: 0.0956013, w: 0.97557575}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftShoulderEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.1371431, y: 1.4493207, z: 0.03169882}
+      rotation: {x: -0.17437634, y: 0.27911836, z: 0.02044588, w: 0.94406986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightShoulderEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.14693311, y: 1.4634135, z: 0.009102332}
+      rotation: {x: -0.29682812, y: -0.06262431, z: -0.12913702, w: 0.94408417}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_HeadEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0, y: 1.65, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHipEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.0891, y: 0.95729995, z: 0}
+      rotation: {x: -0.0000035971561, y: -0.00000009027985, z: -0.02599528, w: 0.9996621}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHipEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.0891, y: 0.95729995, z: 0}
+      rotation: {x: -0.0006433216, y: -0.000017878161, z: 0.027898397, w: 0.99961054}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandThumbEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.060577624, y: 1.1826259, z: 0.38596645}
+      rotation: {x: 0.65384823, y: -0.5883485, z: 0.044678427, w: -0.47363737}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandIndexEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.081208915, y: 1.1374462, z: 0.39932418}
+      rotation: {x: -0.05358889, y: 0.8887355, z: 0.28100783, w: 0.35820693}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandMiddleEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.07744644, y: 1.1318481, z: 0.4319202}
+      rotation: {x: -0.28059718, y: 0.8336417, z: 0.19367686, w: 0.43450665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandRingEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.059681546, y: 1.1367707, z: 0.4564984}
+      rotation: {x: -0.40290815, y: 0.78187996, z: 0.12607318, w: 0.45873114}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandPinkyEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.033096164, y: 1.1307209, z: 0.4564199}
+      rotation: {x: -0.36552998, y: 0.80003697, z: 0.14759846, w: 0.4522647}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandThumbEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.05508462, y: 1.1560451, z: 0.39002874}
+      rotation: {x: -0.6122994, y: -0.54428077, z: 0.1951268, w: 0.5392341}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandIndexEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.06690923, y: 1.1168234, z: 0.42489433}
+      rotation: {x: -0.22093558, y: -0.7966388, z: -0.110741824, w: 0.5516252}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandMiddleEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.050975412, y: 1.1083279, z: 0.44488573}
+      rotation: {x: -0.27449378, y: -0.7718964, z: -0.08865659, w: 0.5665413}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandRingEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0.02756251, y: 1.1122813, z: 0.45667323}
+      rotation: {x: -0.3689477, y: -0.7314573, z: -0.017073624, w: 0.5731983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandPinkyEffector
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: 0.0016995209, y: 1.1268692, z: 0.46287188}
+      rotation: {x: 0.592314, y: -0.5659651, z: 0.5533273, w: -0.15058722}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_Hips
+      parentName: PlagueDoc_Ctrl_Reference
+      position: {x: -0, y: 1, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftUpLeg
+      parentName: PlagueDoc_Ctrl_Hips
+      position: {x: -0.0891, y: -0.04270004, z: 0}
+      rotation: {x: -0.000003592379, y: 0.00000009341646, z: -0.025995279, w: 0.9996621}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftLeg
+      parentName: PlagueDoc_Ctrl_LeftUpLeg
+      position: {x: -0, y: -0.37878639, z: 0}
+      rotation: {x: 0.000007049664, y: -0.089861624, z: -0.0000006334637, w: 0.9959543}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftFoot
+      parentName: PlagueDoc_Ctrl_LeftLeg
+      position: {x: -0, y: -0.49700958, z: 0}
+      rotation: {x: -0.000317584, y: -0.05988749, z: -0.04667052, w: 0.99711347}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftToeBase
+      parentName: PlagueDoc_Ctrl_LeftFoot
+      position: {x: -0.000000085830685, y: -0.06262317, z: 0.12954721}
+      rotation: {x: 2.2365468e-32, y: -0, z: -1.2246467e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightUpLeg
+      parentName: PlagueDoc_Ctrl_Hips
+      position: {x: 0.0891, y: -0.04270004, z: 0}
+      rotation: {x: -0.0006433216, y: -0.000017878161, z: 0.027898395, w: 0.99961054}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightLeg
+      parentName: PlagueDoc_Ctrl_RightUpLeg
+      position: {x: -0, y: -0.37878639, z: 0}
+      rotation: {x: 0.0011243054, y: 0.11942032, z: 0.00013602212, w: 0.99284315}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightFoot
+      parentName: PlagueDoc_Ctrl_RightLeg
+      position: {x: -0, y: -0.49700958, z: 0}
+      rotation: {x: -0.003147007, y: 0.079532705, z: 0.068363056, w: 0.9944804}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightToeBase
+      parentName: PlagueDoc_Ctrl_RightFoot
+      position: {x: 0.000000085830685, y: -0.06262317, z: 0.12954721}
+      rotation: {x: 1.6476133e-24, y: -0.000000013453784, z: -1.2246467e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_Spine
+      parentName: PlagueDoc_Ctrl_Hips
+      position: {x: -0, y: 0.07, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_Spine1
+      parentName: PlagueDoc_Ctrl_Spine
+      position: {x: -0, y: 0.12666664, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_Spine2
+      parentName: PlagueDoc_Ctrl_Spine1
+      position: {x: -0, y: 0.12666664, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftShoulder
+      parentName: PlagueDoc_Ctrl_Spine2
+      position: {x: -0.07100319, y: 0.14967026, z: 0}
+      rotation: {x: 0.04299706, y: 0.2202447, z: 0.14973208, w: 0.9629246}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftArm
+      parentName: PlagueDoc_Ctrl_LeftShoulder
+      position: {x: -0.07707251, y: 0.0000016784668, z: 0}
+      rotation: {x: -0.17121364, y: 0.08783235, z: -0.17207645, w: 0.9661061}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftForeArm
+      parentName: PlagueDoc_Ctrl_LeftArm
+      position: {x: -0.050453976, y: -0.19535774, z: 0}
+      rotation: {x: -0.3446065, y: 0.13957465, z: -0.0009560249, w: 0.92831266}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHand
+      parentName: PlagueDoc_Ctrl_LeftForeArm
+      position: {x: -0.052216396, y: -0.22372024, z: -0.0037122397}
+      rotation: {x: -0.20599015, y: 0.3563466, z: -0.03969736, w: 0.91049945}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandThumb1
+      parentName: PlagueDoc_Ctrl_LeftHand
+      position: {x: 0.003993492, y: -0.07065796, z: 0.05334235}
+      rotation: {x: -0.000000011636432, y: -0.00000035242962, z: -3.2267229e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandThumb2
+      parentName: PlagueDoc_Ctrl_LeftHandThumb1
+      position: {x: -0.0010173988, y: -0.026278762, z: 0.004300337}
+      rotation: {x: -0.00000012000193, y: 0.00000052166683, z: -0.00000007729485,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandThumb3
+      parentName: PlagueDoc_Ctrl_LeftHandThumb2
+      position: {x: -0.0062873648, y: -0.0245018, z: -0.0026242493}
+      rotation: {x: 0.00000011942203, y: -0.00000018466947, z: -0.00000007154166,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandThumb4
+      parentName: PlagueDoc_Ctrl_LeftHandThumb3
+      position: {x: -0.006593113, y: -0.025692595, z: -0.002751975}
+      rotation: {x: 0.000000031880486, y: 0.00000046079433, z: 0.00000025720263, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandIndex1
+      parentName: PlagueDoc_Ctrl_LeftHand
+      position: {x: -0.033746146, y: -0.1196347, z: 0.030385746}
+      rotation: {x: 0.0018128706, y: 0.0114975665, z: 0.33391264, w: 0.9425322}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandIndex2
+      parentName: PlagueDoc_Ctrl_LeftHandIndex1
+      position: {x: -0.00657629, y: -0.041712265, z: 0.0014719915}
+      rotation: {x: 0.0008366681, y: 0.005305117, z: 0.15407506, w: 0.98804456}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandIndex3
+      parentName: PlagueDoc_Ctrl_LeftHandIndex2
+      position: {x: -0.004130573, y: -0.026199646, z: 0.0009245586}
+      rotation: {x: 0.0014927296, y: 0.009466056, z: 0.27491602, w: 0.9614205}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandIndex4
+      parentName: PlagueDoc_Ctrl_LeftHandIndex3
+      position: {x: -0.0030477713, y: -0.019331587, z: 0.0006821894}
+      rotation: {x: 0.000000093914146, y: -0.00000025264023, z: -0.00000011495093,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandMiddle1
+      parentName: PlagueDoc_Ctrl_LeftHand
+      position: {x: -0.036634367, y: -0.120010294, z: 0.008715897}
+      rotation: {x: 0.0000026519333, y: 0.000012960478, z: 0.21882132, w: 0.975765}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandMiddle2
+      parentName: PlagueDoc_Ctrl_LeftHandMiddle1
+      position: {x: -0.007574005, y: -0.048039094, z: 0.0000030249357}
+      rotation: {x: 0.0000029521193, y: 0.000018666551, z: 0.2886171, w: 0.9574446}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandMiddle3
+      parentName: PlagueDoc_Ctrl_LeftHandMiddle2
+      position: {x: -0.004306545, y: -0.027314987, z: 0.0000017178058}
+      rotation: {x: -0.00000009206528, y: 0.00000017520637, z: 0.00000007703111, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandMiddle4
+      parentName: PlagueDoc_Ctrl_LeftHandMiddle3
+      position: {x: -0.0031235695, y: -0.019811554, z: 0.0000012356043}
+      rotation: {x: -0.00000017856105, y: 0.00000007370945, z: 0.00000016812635, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandRing1
+      parentName: PlagueDoc_Ctrl_LeftHand
+      position: {x: -0.03566959, y: -0.119575344, z: -0.012881243}
+      rotation: {x: 0.0000000040623642, y: -0.00000034393372, z: 0.13054204, w: 0.9914428}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandRing2
+      parentName: PlagueDoc_Ctrl_LeftHandRing1
+      position: {x: -0.00706707, y: -0.04482391, z: 0.0000000011920929}
+      rotation: {x: 0.000000041179373, y: 0.00000011092092, z: 0.22928664, w: 0.9733589}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandRing3
+      parentName: PlagueDoc_Ctrl_LeftHandRing2
+      position: {x: -0.0035890578, y: -0.022764053, z: -0.0000000011920929}
+      rotation: {x: 0.00000012437941, y: -0.000000048215067, z: -0.00000015240471,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandRing4
+      parentName: PlagueDoc_Ctrl_LeftHandRing3
+      position: {x: -0.0029954147, y: -0.018998794, z: -0.00000000834465}
+      rotation: {x: -0.00000006612694, y: 0.0000003629235, z: 0.000000012693913, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandPinky1
+      parentName: PlagueDoc_Ctrl_LeftHand
+      position: {x: -0.02892685, y: -0.12303344, z: -0.0326374}
+      rotation: {x: 0.00000007400163, y: -0.00000026970937, z: -0.000000066359306,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandPinky2
+      parentName: PlagueDoc_Ctrl_LeftHandPinky1
+      position: {x: -0.004741268, y: -0.030069428, z: -8.881784e-18}
+      rotation: {x: 0.00000020822253, y: 0.00000023436193, z: 0.39815837, w: 0.91731673}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandPinky3
+      parentName: PlagueDoc_Ctrl_LeftHandPinky2
+      position: {x: -0.0030753326, y: -0.019504089, z: -0.0000000023841857}
+      rotation: {x: -0.000000079801794, y: -0.00000004587722, z: -0.00000005352364,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_LeftHandPinky4
+      parentName: PlagueDoc_Ctrl_LeftHandPinky3
+      position: {x: -0.002595787, y: -0.016462708, z: 0.000000009536743}
+      rotation: {x: -0.00000048582376, y: 0.00000010483319, z: -0.00000042620027,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightShoulder
+      parentName: PlagueDoc_Ctrl_Spine2
+      position: {x: 0.07100319, y: 0.14967026, z: 0}
+      rotation: {x: -0.0052770725, y: -0.05893892, z: -0.06277008, w: 0.9962722}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightArm
+      parentName: PlagueDoc_Ctrl_RightShoulder
+      position: {x: 0.07707251, y: 0.0000016784668, z: 0}
+      rotation: {x: -0.29441988, y: -0.024698028, z: -0.052231133, w: 0.9539281}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightForeArm
+      parentName: PlagueDoc_Ctrl_RightArm
+      position: {x: 0.050453976, y: -0.19535774, z: 0}
+      rotation: {x: -0.08080607, y: -0.2326173, z: -0.14524451, w: 0.9582607}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHand
+      parentName: PlagueDoc_Ctrl_RightForeArm
+      position: {x: 0.052216396, y: -0.22372024, z: -0.0037122397}
+      rotation: {x: -0.14493676, y: -0.48783037, z: 0.25499496, w: 0.82218766}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandThumb1
+      parentName: PlagueDoc_Ctrl_RightHand
+      position: {x: -0.003993492, y: -0.07065796, z: 0.05334235}
+      rotation: {x: 4.1633363e-17, y: 2.7755576e-17, z: -5.2041704e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandThumb2
+      parentName: PlagueDoc_Ctrl_RightHandThumb1
+      position: {x: 0.0010173988, y: -0.026278762, z: 0.004300337}
+      rotation: {x: 1.0408341e-16, y: -5.551115e-17, z: -1.3877788e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandThumb3
+      parentName: PlagueDoc_Ctrl_RightHandThumb2
+      position: {x: 0.0062873648, y: -0.0245018, z: -0.0026242493}
+      rotation: {x: 1.6653345e-16, y: -1.3877789e-16, z: -1.3877788e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandThumb4
+      parentName: PlagueDoc_Ctrl_RightHandThumb3
+      position: {x: 0.006593113, y: -0.025692595, z: -0.002751975}
+      rotation: {x: 6.938894e-18, y: -2.7755576e-17, z: -2.359224e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandIndex1
+      parentName: PlagueDoc_Ctrl_RightHand
+      position: {x: 0.033746146, y: -0.1196347, z: 0.030385746}
+      rotation: {x: 0.001519287, y: -0.009635728, z: -0.27983373, w: 0.95999897}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandIndex2
+      parentName: PlagueDoc_Ctrl_RightHandIndex1
+      position: {x: 0.00657629, y: -0.041712265, z: 0.0014719915}
+      rotation: {x: 0.0007595825, y: -0.0048185242, z: -0.13993208, w: 0.9901491}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandIndex3
+      parentName: PlagueDoc_Ctrl_RightHandIndex2
+      position: {x: 0.004130573, y: -0.026199646, z: 0.0009245586}
+      rotation: {x: 0.0007593707, y: -0.004818476, z: -0.13993075, w: 0.9901493}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandIndex4
+      parentName: PlagueDoc_Ctrl_RightHandIndex3
+      position: {x: 0.0030477713, y: -0.019331587, z: 0.0006821894}
+      rotation: {x: 0.00000029285005, y: 0.0000003549748, z: 0.000000044785715, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandMiddle1
+      parentName: PlagueDoc_Ctrl_RightHand
+      position: {x: 0.036634367, y: -0.120010294, z: 0.008715897}
+      rotation: {x: 0.0000026558077, y: -0.000015527035, z: -0.25728932, w: 0.9663344}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandMiddle2
+      parentName: PlagueDoc_Ctrl_RightHandMiddle1
+      position: {x: 0.007574005, y: -0.048039094, z: 0.0000030249357}
+      rotation: {x: 0.0000012620945, y: -0.000007671716, z: -0.12082701, w: 0.9926736}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandMiddle3
+      parentName: PlagueDoc_Ctrl_RightHandMiddle2
+      position: {x: 0.004306545, y: -0.027314987, z: 0.0000017178058}
+      rotation: {x: 0.0000011667662, y: -0.000007743258, z: -0.12082636, w: 0.99267364}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandMiddle4
+      parentName: PlagueDoc_Ctrl_RightHandMiddle3
+      position: {x: 0.0031235695, y: -0.019811554, z: 0.0000012356043}
+      rotation: {x: -0.000000050638928, y: 0.00000019711969, z: 0.00000003845708,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandRing1
+      parentName: PlagueDoc_Ctrl_RightHand
+      position: {x: 0.03566959, y: -0.119575344, z: -0.012881243}
+      rotation: {x: 0.0000002235767, y: 0.000000057069663, z: -0.20453472, w: 0.9788593}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandRing2
+      parentName: PlagueDoc_Ctrl_RightHandRing1
+      position: {x: 0.00706707, y: -0.04482391, z: 0.0000000011920929}
+      rotation: {x: -0.00000026310423, y: 0.000000048785115, z: -0.08539164, w: 0.9963475}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandRing3
+      parentName: PlagueDoc_Ctrl_RightHandRing2
+      position: {x: 0.0035890578, y: -0.022764053, z: -0.0000000011920929}
+      rotation: {x: 0.00000017237949, y: -0.00000027418042, z: -0.08539018, w: 0.9963476}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandRing4
+      parentName: PlagueDoc_Ctrl_RightHandRing3
+      position: {x: 0.0029954147, y: -0.018998794, z: -0.00000000834465}
+      rotation: {x: -0.00000013805837, y: 0.000000044156206, z: 0.00000041209304,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandPinky1
+      parentName: PlagueDoc_Ctrl_RightHand
+      position: {x: 0.02892685, y: -0.12303344, z: -0.0326374}
+      rotation: {x: 0.00000007651055, y: -0.00000011636578, z: -0.08139577, w: 0.99668187}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandPinky2
+      parentName: PlagueDoc_Ctrl_RightHandPinky1
+      position: {x: 0.004741268, y: -0.030069428, z: -8.881784e-18}
+      rotation: {x: -0.00000034517953, y: 0.00000012640488, z: -0.000000536683, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandPinky3
+      parentName: PlagueDoc_Ctrl_RightHandPinky2
+      position: {x: 0.0030753326, y: -0.019504089, z: -0.0000000023841857}
+      rotation: {x: -0.0000002858917, y: -0.00000026158347, z: -0.00000010705737,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_RightHandPinky4
+      parentName: PlagueDoc_Ctrl_RightHandPinky3
+      position: {x: 0.002595787, y: -0.016462708, z: 0.000000009536743}
+      rotation: {x: -0.000000061515635, y: -0.00000003375258, z: 0.000000057323238,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_Neck
+      parentName: PlagueDoc_Ctrl_Spine2
+      position: {x: -0, y: 0.12666671, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlagueDoc_Ctrl_Head
+      parentName: PlagueDoc_Ctrl_Neck
+      position: {x: -0, y: 0.19999999, z: 0}
+      rotation: {x: 3.0616168e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cane
+      parentName: Ani_Plaguedoc_Idle_Oct(Clone)
+      position: {x: -0, y: -0.00026866197, z: 0.34494215}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
