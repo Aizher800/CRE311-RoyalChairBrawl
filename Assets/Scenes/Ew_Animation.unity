@@ -796,7 +796,7 @@ MonoBehaviour:
   - {fileID: 0}
   inputChoices: 0000000001000000
   characterChoice:
-  - {fileID: 11400000, guid: 5d119beca11d33d48bf55103c0e51fc4, type: 2}
+  - {fileID: 11400000, guid: 75cc31306a49b034787529cd8e88256a, type: 2}
   - {fileID: 11400000, guid: e7bbfffc2b08d774b9c51c7e2c449e91, type: 2}
   characterPrefab: {fileID: 7691584872415322918, guid: c77d83caec3dc3645b5d7430f12a4079,
     type: 3}
