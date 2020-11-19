@@ -8,4 +8,20 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: MonkeyKing_Animator
   m_Controller: {fileID: 9100000, guid: 9bb418e65b7abdf4cb7425036117187e, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: -6660861945473034157, guid: 5a65dbaa4a1bf374686d0e16d2aae672,
+      type: 3}
+    m_OverrideClip: {fileID: -1385623413199345128, guid: 371aa8342c062674e90c3e3ac0772697,
+      type: 3}
+  - m_OriginalClip: {fileID: -1145676531799947523, guid: 0b9394a4ba5d67840ae1bf183415078c,
+      type: 3}
+    m_OverrideClip: {fileID: -2965003712069914463, guid: 60a6688f4d381844db2c4526901fd495,
+      type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: aecf345d7623e63409aa04744e85b4a0,
+      type: 3}
+    m_OverrideClip: {fileID: 1274417164138771074, guid: 2c0e8742d19ed9946a5d49206430da39,
+      type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 58088d7bfb2332c46861250cfd0ee58b,
+      type: 3}
+    m_OverrideClip: {fileID: -6969531216744462305, guid: 2c0e8742d19ed9946a5d49206430da39,
+      type: 3}
