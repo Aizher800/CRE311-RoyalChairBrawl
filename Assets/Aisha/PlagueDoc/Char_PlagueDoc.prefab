@@ -3715,13 +3715,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373125dee0cb4904cb73f29db269a65f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isChair: 0
   attackOpen: 1
   _thisOwner: {fileID: 0}
   openMat: {fileID: 0}
   closedMat: {fileID: 0}
   attackActive: 0
-  _weaponDamage: 0
+  _weaponDamage: 1
   _weaponName: 
+  lightAttackAnimName: mixamomelee2
+  heavyAttackAnimName: mixamomelee1
+  lightAttackAnimString: 
+  heavyAttackAnimString: 
 --- !u!114 &9046425069447278901
 MonoBehaviour:
   m_ObjectHideFlags: 0

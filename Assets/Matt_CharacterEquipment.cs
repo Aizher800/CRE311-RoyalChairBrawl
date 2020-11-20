@@ -60,13 +60,14 @@ public class Matt_CharacterEquipment : MonoBehaviour
             {
                 Debug.Log("yoyoyo oyo ooyo oy ooy oy oyoyoo used  HEAVY ITEM");
                 currentHeldItem.HeavyUse(_owner);
+               
             }
 
         }
         else
         {
 
-            defaultWeapon.Use(_owner);
+            defaultWeapon.HeavyUse(_owner);
         }
     }
     void UseHeldItem(Matt_SM_PlayerStateInfo _owner)

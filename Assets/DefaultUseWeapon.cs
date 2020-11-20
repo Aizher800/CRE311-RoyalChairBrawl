@@ -8,15 +8,38 @@ namespace Matt_ItemSystem
 {
     public class DefaultUseWeapon : Weapon
     {
-     
+
 
         // Start is called before the first frame update
+
+      //  public string lightAttackAnimString;
+        //public string heavyAttackAnimString;
         public override void Use(Matt_SM_PlayerStateInfo _owner)
         {
             _thisOwner = _owner;
             attackOpen = true;
-            _owner.PSI_animator.Play("mixamomelee2");
+            if (lightAttackAnimName == null)
+            {
+                _owner.PSI_animator.Play("mixamomelee2");
+            }
+            else { _owner.PSI_animator.Play(lightAttackAnimName); }
             Debug.Log("FIST ATTACK");
+            StartCoroutine(HitReset());
+        }
+
+        public override void HeavyUse(Matt_SM_PlayerStateInfo _owner)
+        {
+
+            _owner.PSI_Velocity = new Vector3(_owner.gameObject.transform.forward.x / 2, _owner.gameObject.transform.forward.y / 2, 0);
+            _thisOwner = _owner;
+            attackOpen = true;
+            if (heavyAttackAnimName == null)
+            {
+                _owner.PSI_animator.Play("mixamomelee1");
+            }
+            else { _owner.PSI_animator.Play(heavyAttackAnimName); }
+
+            Debug.Log("FIST  HEAVY ATTACK");
             StartCoroutine(HitReset());
         }
         private void OnTriggerEnter(Collider other)

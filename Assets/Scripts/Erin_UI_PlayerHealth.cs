@@ -11,6 +11,10 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
     public int maxHealth = 6;
     public int currentHealth = 6;
 
+
+    public int maxEnergy = 6;
+    public int currentEnergy = 6;
+
     [SerializeField] public GameObject healthPrefab;
     public HealthBarScript characterHealth;
 
@@ -22,12 +26,12 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
     // public Erin_UI_HealthBar healthBar; //Ref to HealthBar script.
     public void OnSpawn()
     {
-     
-      //  characterHealth = healthInstance.GetComponent<HealthBarScript>();
+
+        //  characterHealth = healthInstance.GetComponent<HealthBarScript>();
         //characterHealth.playerNum = inputChoices[i];
         //characterHealth.instancedCharacter = spawnedChar;
 
-
+        HitReceiver.OnEnergyChange += RemoveEnergy;
         HitReceiver.OnHealthChange += RemoveHealth;
         //if (instance != null) { Debug.Log("health instance exists"); }
 
@@ -39,6 +43,31 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
         else
         {
             Debug.Log("have a reference i do");
+        }
+    }
+
+    public void RemoveEnergy(int amount, PlayerInputNum _num)
+    {
+        if (_num == associatedPlayerNum)
+        {
+            currentEnergy = currentEnergy + amount;
+            if (currentEnergy > maxEnergy)
+            {
+                currentEnergy = maxEnergy;
+            }
+            if (characterHealth != null)
+            {
+                Debug.Log("setting char health which is not null, current health is " + currentEnergy);
+                OnHealthUpdate(_num, currentHealth, currentEnergy);
+            }
+            else
+            {
+                if (associatedUIObject == null)
+                {
+                    Debug.Log("AAAAAAAAYEEEEEEEE");
+                }
+            }
+
         }
     }
     public void AddHealth(int amount)
@@ -60,7 +89,7 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
             if (characterHealth != null)
             {
                 Debug.Log("setting char health which is not null, current health is " + currentHealth);
-                OnHealthUpdate(_num, currentHealth, 1);
+                OnHealthUpdate(_num, currentHealth, currentEnergy);
             }
             else
             {
@@ -77,7 +106,7 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
             FindObjectOfType<GameManager>().RespawnCharacter(gameObject);
             GetComponent<Matt_CharacterEquipment>().UnequipItem(GetComponent<Matt_SM_PlayerStateInfo>());
             currentHealth = maxHealth;
-            OnHealthUpdate(_num, currentHealth, 1);
+            OnHealthUpdate(_num, currentHealth, currentEnergy);
           
             //Destroy(gameObject);
         }

@@ -37,7 +37,7 @@ public class Weapon : HeldItem
         {
             startingZPos = _owner.transform.position.z;
             _owner.PSI_Velocity = new Vector3( _owner.gameObject.transform.forward.x , _owner.gameObject.transform.forward.y, 0) ;
-
+            _owner.GetComponent<Erin_UI_PlayerHealth>().RemoveEnergy(-1, _owner.PSI_inputNum);
             attackOpen = true;
             _owner.PSI_animator.Play(heavyAttackAnimName);
             Debug.Log("WEAPON ATTACK");

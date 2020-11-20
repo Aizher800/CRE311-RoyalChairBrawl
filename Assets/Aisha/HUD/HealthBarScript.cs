@@ -60,7 +60,7 @@ public class HealthBarScript : MonoBehaviour
     {
         if (_num != playerNum) { return; }
         health = _newHealth;
-
+        abilityP = _newEnergy;
         if (health <= 0)
         {
             Debug.Log(instancedCharacter + " has died");

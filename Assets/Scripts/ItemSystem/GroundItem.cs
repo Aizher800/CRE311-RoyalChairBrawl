@@ -49,6 +49,8 @@ public class GroundItem : MonoBehaviour, IInteractable
     void ItemSetGroundBehaviour()
     {
         gameObject.layer = 9;
+        transform.rotation = Quaternion.identity;
+
         rb.isKinematic = false;
         rb.useGravity = true;
 

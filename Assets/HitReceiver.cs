@@ -21,8 +21,9 @@ public class HitReceiver : MonoBehaviour
 
         public delegate void HealthBarEvent(int _amount, PlayerInputNum _num);
         public static event HealthBarEvent OnHealthChange;
-
-    Coroutine _knockbackCoroutine;
+        public delegate void EnergyBarEvent(int _amount, PlayerInputNum _num);
+        public static event EnergyBarEvent OnEnergyChange;
+        Coroutine _knockbackCoroutine;
     public bool knockedBack = false;
   [SerializeField]  Matt_SM_PlayerStateInfo thisOwner;
     // Start is called before the first frame update
