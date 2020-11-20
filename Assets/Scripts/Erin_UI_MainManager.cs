@@ -18,7 +18,7 @@ public class Erin_UI_MainManager : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Game started.");
-        SceneManager.LoadScene(3);   //Loads in the scene that has a pause menu.
+        SceneManager.LoadScene(2);   //Loads in the scene that has a pause menu.
     }
 
 

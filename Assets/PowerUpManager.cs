@@ -26,6 +26,7 @@ public class PowerUpManager : MonoBehaviour
                 break;
             case PowerUpType.ENERGY:
                 GetComponent<Erin_UI_PlayerHealth>().RemoveEnergy(powerUp._powerUpValues._energyValue, GetComponent<Matt_SM_PlayerStateInfo>().PSI_inputNum);
+
                 break;
             case PowerUpType.SPEED:
                 Debug.Log("SPEED POWERUP");

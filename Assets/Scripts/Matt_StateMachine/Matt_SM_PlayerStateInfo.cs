@@ -179,6 +179,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
             Debug.Log("Velocity NOT 0");
             PSI_Velocity = Vector3.Lerp(PSI_Velocity, Vector3.zero, 4f * Time.deltaTime);
             PSI_characterController.Move(PSI_Velocity);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, pSI_startingZ);
         }
         else
         {

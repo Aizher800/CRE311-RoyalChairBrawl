@@ -164,6 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   currentHealth: 6
+  maxEnergy: 6
+  currentEnergy: 6
   healthPrefab: {fileID: 0}
   characterHealth: {fileID: 0}
   associatedPlayerNum: 0
@@ -183,6 +185,7 @@ MonoBehaviour:
   navObjective: {x: 0, y: 0, z: 0}
   playerHealth: {fileID: 0}
   PSI_CharacterInfo: {fileID: 11400000, guid: d6e60737a8c0c194ca505a3e32146f7f, type: 2}
+  PSI_DefaultCharInfo: {fileID: 0}
   PSI_direction: 0
   PSI_inputSource: {fileID: 0}
   PSI_Velocity: {x: 0, y: 0, z: 0}
@@ -311,6 +314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   currentHealth: 6
+  maxEnergy: 6
+  currentEnergy: 6
   healthPrefab: {fileID: 8213358076436023741, guid: 033f02dd4de84b9429dbb75521ee7cc3,
     type: 3}
   characterHealth: {fileID: 0}
@@ -327,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f24815e8c76414f80a4a361d2df738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 10
+  timeRemaining: 20
   timerIsRunning: 0
   hasChair: 0
   timeText: {fileID: 0}

@@ -52,7 +52,7 @@ public class HitReceiver : MonoBehaviour
           }
          else
          {
-                    thisOwner.GetComponent<Erin_UI_PlayerHealth>().RemoveEnergy(-1, thisOwner.PSI_inputNum);
+                    _receiver.GetComponent<Erin_UI_PlayerHealth>().RemoveEnergy(-1, thisOwner.PSI_inputNum);
                     thisOwner.PSI_animator.Play("mixamo_block");
          }
        }

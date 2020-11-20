@@ -62,6 +62,7 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
             }
             else
             {
+                OnHealthUpdate(_num, currentHealth, currentEnergy);
                 if (associatedUIObject == null)
                 {
                     Debug.Log("AAAAAAAAYEEEEEEEE");
@@ -93,6 +94,7 @@ public class Erin_UI_PlayerHealth : MonoBehaviour
             }
             else
             {
+                OnHealthUpdate(_num, currentHealth, currentEnergy);
                 if (associatedUIObject == null)
                 {
                     Debug.Log("AAAAAAAAYEEEEEEEE");

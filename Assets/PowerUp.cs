@@ -39,6 +39,16 @@ public class PowerUpValues
 public class PowerUp : GroundItem
 {
    public PowerUpValues _powerUpValues;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<PowerUpManager>())
+        {
+
+            other.GetComponent<PowerUpManager>().PickUpPowerUp(this);
+            Destroy(gameObject);
+        }
+    }
     public override void Interact(Matt_SM_PlayerStateInfo _owner)
     {
         _owner.GetComponent<PowerUpManager>().PickUpPowerUp(this);
