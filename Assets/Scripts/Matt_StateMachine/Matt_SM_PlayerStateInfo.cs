@@ -277,6 +277,12 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
               
                 
                 break;
+            case PowerUpType.JUMP:
+                oldValue = PSI_CharacterInfo.jumpMultiplier;
+                PSI_CharacterInfo.jumpMultiplier = p_up._powerUpValues._jumpBoost;
+
+
+                break;
             case PowerUpType.DAMAGE:
                 oldValue = PSI_CharacterInfo.attackMultiplier;
                 PSI_CharacterInfo.attackMultiplier = p_up._powerUpValues._damageBoost;
@@ -298,8 +304,15 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
             case PowerUpType.DAMAGE:
                 PSI_CharacterInfo.attackMultiplier = oldValue;
                 break;
+            case PowerUpType.JUMP:
+             
+                PSI_CharacterInfo.jumpMultiplier = oldValue;
+
+
+                break;
             default:
                 break;
+
         }
         Debug.Log("POWERUP ENDED");
         yield return null;

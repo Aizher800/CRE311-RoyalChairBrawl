@@ -1461,6 +1461,7 @@ MonoBehaviour:
     type: 2
     _healingValue: 0
     _energyValue: 0
+    _jumpBoost: 0
     _damageBoost: 0
     _speedBoost: 3
     _boostDuration: 3
@@ -5311,6 +5312,7 @@ MonoBehaviour:
     type: 0
     _healingValue: 1
     _energyValue: 0
+    _jumpBoost: 0
     _damageBoost: 0
     _speedBoost: 2
     _boostDuration: 0
@@ -5995,12 +5997,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   held: 0
   _powerUpValues:
-    type: 0
+    type: 4
     _healingValue: 0
     _energyValue: 0
-    _damageBoost: 0
+    _jumpBoost: 2
+    _damageBoost: 3
     _speedBoost: 0
-    _boostDuration: 0
+    _boostDuration: 5
 --- !u!1001 &1770133164
 PrefabInstance:
   m_ObjectHideFlags: 0

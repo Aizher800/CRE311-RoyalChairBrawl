@@ -153,7 +153,7 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
                 if (_jumpCoroutine == null)
                 {
                     Debug.Log("Jumped!");
-              
+                        
                     _jumpCoroutine = _owner.StartCoroutine(Jump(_owner));
                     _owner.PSI_animator.SetBool("PlayerJumping", true);
 
@@ -174,11 +174,11 @@ public class PlayerMovementController : Matt_StateSystem.Command<Matt_SM_PlayerS
     {
         _owner.SetJumpingStatus(true);
        
-      while (_owner.PSI_jumpVelocity < jumpStrength * 0.9f) 
+      while (_owner.PSI_jumpVelocity < (jumpStrength * _owner.PSI_CharacterInfo.jumpMultiplier) * 0.9f) 
       {
-            _owner.PSI_jumpVelocity = Mathf.Lerp(_owner.PSI_jumpVelocity, jumpStrength, .1f);
+            _owner.PSI_jumpVelocity = Mathf.Lerp(_owner.PSI_jumpVelocity, jumpStrength * _owner.PSI_CharacterInfo.jumpMultiplier, .1f);
             yield return null;
-            _owner.PSI_characterController.Move(new Vector3(0, jumpStrength - _owner.PSI_jumpVelocity, 0));
+            _owner.PSI_characterController.Move(new Vector3(0, (jumpStrength * _owner.PSI_CharacterInfo.jumpMultiplier) - _owner.PSI_jumpVelocity, 0));
       }
 
       yield return new WaitUntil(() => (_owner.PSI_Grounded == false));

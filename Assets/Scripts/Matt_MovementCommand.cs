@@ -56,7 +56,7 @@ public class Matt_MovementCommand : Command<Matt_SM_PlayerStateInfo>
     // Update is called once per frame
     public override void RunCommand(Matt_SM_PlayerStateInfo _owner, Vector2 value)
     {
-
+        jumpStrength = jumpStrength * _owner.PSI_CharacterInfo.jumpMultiplier;
         // anim.SetFloat("InputZ", InputZ, 0.0f, Time.deltaTime);
         anim.SetFloat("InputX", InputX, 0.0f, Time.deltaTime);
         InputX = value.x;
@@ -171,7 +171,7 @@ public class Matt_MovementCommand : Command<Matt_SM_PlayerStateInfo>
 
         if (grounded == true) //Check if grounded first so the player can't just quadruple jump into space, but we could perhaps have double-jumping  characters later down the line!
         {
-            velocity = velocity + new Vector3(0, jumpStrength, 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
+            velocity = velocity + new Vector3(0, jumpStrength , 0); //simply adds the force of "JumpStrength" to the velocity, making the player "jump" upwards
         }
 
 

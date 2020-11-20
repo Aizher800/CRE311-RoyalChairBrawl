@@ -8,7 +8,8 @@ public enum PowerUpType
     HEALING,
     ENERGY,
     SPEED,
-    DAMAGE
+    DAMAGE,
+    JUMP
 
 }
 [System.Serializable]
@@ -24,6 +25,7 @@ public class PowerUpValues
     //Energy value
     [SerializeField] public int _energyValue;
 
+    [SerializeField] public float _jumpBoost;
     //damage boost
     [SerializeField] public float _damageBoost;
 
@@ -41,7 +43,7 @@ public class PowerUp : GroundItem
     {
         _owner.GetComponent<PowerUpManager>().PickUpPowerUp(this);
       //  _owner.GetComponent<Erin_UI_PlayerHealth>().RemoveHealth(_healingValue, _owner.PSI_inputNum);
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 
     // Start is called before the first frame update

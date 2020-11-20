@@ -34,6 +34,9 @@ public class PowerUpManager : MonoBehaviour
                     Debug.Log("STATEINFO WAS NOT NULLLLLLLL");
                 }
                 break;
+            case PowerUpType.JUMP:
+                GetComponent<Matt_SM_PlayerStateInfo>().Boost(powerUp);
+                break;
             case PowerUpType.DAMAGE:
                 GetComponent<Matt_SM_PlayerStateInfo>().Boost(powerUp);
                 break;
