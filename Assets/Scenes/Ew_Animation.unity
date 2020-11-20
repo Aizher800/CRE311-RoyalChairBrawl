@@ -1457,8 +1457,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   held: 0
-  _healingValue: 1
-  _energyValue: 1
+  _powerUpValues:
+    type: 2
+    _healingValue: 0
+    _energyValue: 0
+    _damageBoost: 0
+    _speedBoost: 3
+    _boostDuration: 3
 --- !u!135 &550942358
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5298,8 +5303,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   held: 0
-  _healingValue: 2
-  _energyValue: 0
+  _powerUpValues:
+    type: 0
+    _healingValue: 1
+    _energyValue: 0
+    _damageBoost: 0
+    _speedBoost: 2
+    _boostDuration: 0
 --- !u!135 &1450985964
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5980,8 +5990,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   held: 0
-  _healingValue: 3
-  _energyValue: 1
+  _powerUpValues:
+    type: 0
+    _healingValue: 0
+    _energyValue: 0
+    _damageBoost: 0
+    _speedBoost: 0
+    _boostDuration: 0
 --- !u!1001 &1770133164
 PrefabInstance:
   m_ObjectHideFlags: 0

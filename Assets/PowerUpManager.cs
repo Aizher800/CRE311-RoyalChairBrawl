@@ -27,8 +27,15 @@ public class PowerUpManager : MonoBehaviour
             case PowerUpType.ENERGY:
                 break;
             case PowerUpType.SPEED:
+                Debug.Log("SPEED POWERUP");
+                GetComponent<Matt_SM_PlayerStateInfo>().Boost(powerUp);
+                if (GetComponent<Matt_SM_PlayerStateInfo>() != null)
+                {
+                    Debug.Log("STATEINFO WAS NOT NULLLLLLLL");
+                }
                 break;
             case PowerUpType.DAMAGE:
+                GetComponent<Matt_SM_PlayerStateInfo>().Boost(powerUp);
                 break;
             default:
                 break;
