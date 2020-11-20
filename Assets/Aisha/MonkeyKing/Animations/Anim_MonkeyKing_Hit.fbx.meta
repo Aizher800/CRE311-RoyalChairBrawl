@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: bdd1bc248d2519c4596e04fb528f4873
+guid: b76449deca1a53f4bb490586fc22b2cc
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -1790286783610338093
-    second: LightAtk
+      74: -9057544579290807987
+    second: Monkey King Hit
   externalObjects: {}
   materials:
     materialImportMode: 1

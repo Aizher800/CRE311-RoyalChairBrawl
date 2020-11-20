@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: bdd1bc248d2519c4596e04fb528f4873
+guid: b72332d270129c647838ea7e34cca4c4
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -1790286783610338093
-    second: LightAtk
+      74: 9016690962782268255
+    second: Plague Doctor Hit
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -87,7 +87,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
