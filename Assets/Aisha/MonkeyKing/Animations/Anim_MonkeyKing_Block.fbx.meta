@@ -1,0 +1,959 @@
+fileFormatVersion: 2
+guid: 9ae2aaba90748ab45bee3a89870d6d2b
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -7679688571832516104
+    second: Monkey King Block
+  - first:
+      74: 4212946301747936423
+    second: Monkey King Block Hit
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Monkey King Block' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'MonkeyKing_LeftLeg' has translation animation
+      that will be discarded.\n\nClip 'Monkey King Block Hit' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'MonkeyKing_LeftLeg' has translation
+      animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Monkey King Block
+      takeName: Monkey King Block
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Monkey King Block Hit
+      takeName: Monkey King Block Hit
+      internalID: 0
+      firstFrame: 30
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: MonkeyKing_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MonkeyKing_Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Anim_MonkeyKing_Block(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Char_MonkeyKing 1
+      parentName: Anim_MonkeyKing_Block(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_Reference
+      parentName: Anim_MonkeyKing_Block(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_Hips
+      parentName: MonkeyKing_Reference
+      position: {x: 0.0057572173, y: 0.8644111, z: -0.000000014901161}
+      rotation: {x: 0.000000002910383, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_Tail_1
+      parentName: MonkeyKing_Hips
+      position: {x: 5.9604643e-10, y: -0.00000023507914, z: -0.09452756}
+      rotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: MonkeyKing_Tail_2
+      parentName: MonkeyKing_Tail_1
+      position: {x: -0.12, y: -1.4210854e-16, z: -1.3322676e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: MonkeyKing_Tail_3
+      parentName: MonkeyKing_Tail_2
+      position: {x: -0.12, y: 0, z: -1.3322676e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: MonkeyKing_Tail_4
+      parentName: MonkeyKing_Tail_3
+      position: {x: -0.12, y: 0, z: -1.3322676e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: MonkeyKing_Tail_5
+      parentName: MonkeyKing_Tail_4
+      position: {x: -0.12, y: 1.4210854e-16, z: -1.3322676e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: MonkeyKing_Tail_6
+      parentName: MonkeyKing_Tail_5
+      position: {x: -0.12, y: 0, z: -1.3322676e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: MonkeyKing_Tail_7
+      parentName: MonkeyKing_Tail_6
+      position: {x: -0.12, y: 0, z: -1.3322676e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: MonkeyKing_Tail_8
+      parentName: MonkeyKing_Tail_7
+      position: {x: -0.12, y: 0, z: -1.3322676e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: MonkeyKing_Tail_9
+      parentName: MonkeyKing_Tail_8
+      position: {x: -0.12, y: 0, z: -1.3322676e-16}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: MonkeyKing_Tail_10
+      parentName: MonkeyKing_Tail_9
+      position: {x: -0.12, y: 0, z: -1.3322676e-16}
+      rotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_LeftUpLeg
+      parentName: MonkeyKing_Hips
+      position: {x: -0.08358918, y: -0.097316556, z: 0.000000012416719}
+      rotation: {x: 0.5249231, y: 0.47170237, z: 0.48204735, w: 0.5192139}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_LeftLeg
+      parentName: MonkeyKing_LeftUpLeg
+      position: {x: -0.35767832, y: 0.00001915222, z: -0.000089658926}
+      rotation: {x: -0.45036238, y: -0.47877684, z: -0.5207378, w: 0.544774}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.99999976}
+    - name: MonkeyKing_LeftFoot
+      parentName: MonkeyKing_LeftLeg
+      position: {x: 0.04214611, y: -0.32766047, z: 0.00993471}
+      rotation: {x: -0.037289884, y: -0.064634904, z: 0.04665148, w: 0.9961203}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+    - name: MonkeyKing_LeftToeBase
+      parentName: MonkeyKing_LeftFoot
+      position: {x: -0.015999466, y: -0.058749814, z: 0.14675742}
+      rotation: {x: -0.0000000037252899, y: -0, z: 0.000000004889443, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    - name: MonkeyKing_RightUpLeg
+      parentName: MonkeyKing_Hips
+      position: {x: 0.08358918, y: -0.097316556, z: 0.000000012416719}
+      rotation: {x: 0.48204735, y: 0.51921386, z: 0.524923, w: 0.47170246}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: MonkeyKing_RightLeg
+      parentName: MonkeyKing_RightUpLeg
+      position: {x: -0.3576781, y: 0.00000016856548, z: -0.00000009842766}
+      rotation: {x: -0.47024158, y: -0.5881466, z: -0.50014865, w: 0.42756033}
+      scale: {x: 1.0000006, y: 0.99999976, z: 1.0000004}
+    - name: MonkeyKing_RightFoot
+      parentName: MonkeyKing_RightLeg
+      position: {x: 0.021927845, y: -0.3297648, z: 0.0032743625}
+      rotation: {x: -0.033337817, y: 0.06118025, z: 0.050843656, w: 0.9962734}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+    - name: MonkeyKing_RightToeBase
+      parentName: MonkeyKing_RightFoot
+      position: {x: 0.015999489, y: -0.058749937, z: 0.1467576}
+      rotation: {x: -0, y: -0, z: 9.3132246e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_Spine
+      parentName: MonkeyKing_Hips
+      position: {x: 1.110223e-18, y: 0.114460796, z: -0.000000010289387}
+      rotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+    - name: MonkeyKing_Spine1
+      parentName: MonkeyKing_Spine
+      position: {x: -0.13229696, y: -0.000000025205447, z: 1.110223e-18}
+      rotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: MonkeyKing_Spine2
+      parentName: MonkeyKing_Spine1
+      position: {x: 1.110223e-18, y: 0.13229696, z: -0.000000015926304}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_LeftShoulder
+      parentName: MonkeyKing_Spine2
+      position: {x: -0.07371577, y: 0.15556943, z: -0.027971957}
+      rotation: {x: 0.04040766, y: 0.8391932, z: -0.026083294, w: 0.54170257}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_LeftArm
+      parentName: MonkeyKing_LeftShoulder
+      position: {x: 0.039214782, y: -0.04303193, z: -0.086789794}
+      rotation: {x: 0.4045701, y: -0.5884977, z: -0.1170786, w: 0.69013494}
+      scale: {x: 0.99999976, y: 1, z: 0.9999996}
+    - name: MonkeyKing_LeftForeArm
+      parentName: MonkeyKing_LeftArm
+      position: {x: -0.120241165, y: -0.22801833, z: -0.07929888}
+      rotation: {x: -0.0022384666, y: -0.34553394, z: 0.0073723765, w: 0.93837464}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: MonkeyKing_LeftHand
+      parentName: MonkeyKing_LeftForeArm
+      position: {x: -0.15139787, y: -0.17987002, z: 0.01821865}
+      rotation: {x: -0.0021570418, y: 0.06330061, z: -0.0035755597, w: 0.99798584}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000004}
+    - name: MonkeyKing_LeftHandThumb1
+      parentName: MonkeyKing_LeftHand
+      position: {x: -0.025034653, y: -0.06519335, z: 0.043326743}
+      rotation: {x: -0.067541406, y: 0.12948783, z: -0.3279827, w: 0.9333266}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: MonkeyKing_LeftHandThumb2
+      parentName: MonkeyKing_LeftHandThumb1
+      position: {x: 0.0017442876, y: -0.028125588, z: 0.014595743}
+      rotation: {x: 0.09897653, y: -0.1744385, z: 0.34053847, w: 0.9185904}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: MonkeyKing_LeftHandThumb3
+      parentName: MonkeyKing_LeftHandThumb2
+      position: {x: -0.009088298, y: -0.0152965505, z: 0.015894787}
+      rotation: {x: -0.044828545, y: 0.065601856, z: -0.01530283, w: 0.99672097}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: MonkeyKing_LeftHandThumb4
+      parentName: MonkeyKing_LeftHandThumb3
+      position: {x: -0.011016895, y: -0.017725687, z: 0.013796135}
+      rotation: {x: -0, y: -0, z: 6.984919e-10, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: MonkeyKing_LeftHandIndex1
+      parentName: MonkeyKing_LeftHand
+      position: {x: -0.079761505, y: -0.103264876, z: 0.025323888}
+      rotation: {x: 0.005993056, y: 0.12021491, z: -0.04793741, w: 0.9915717}
+      scale: {x: 1.0000002, y: 1, z: 1.0000004}
+    - name: MonkeyKing_LeftHandIndex2
+      parentName: MonkeyKing_LeftHandIndex1
+      position: {x: -0.019616866, y: -0.04815053, z: -0.0028079196}
+      rotation: {x: -0.0014733266, y: -0.08176837, z: 0.036144223, w: 0.99599475}
+      scale: {x: 1, y: 1.0000011, z: 1.0000006}
+    - name: MonkeyKing_LeftHandIndex3
+      parentName: MonkeyKing_LeftHandIndex2
+      position: {x: -0.0092442585, y: -0.023118021, z: 0.0000150648475}
+      rotation: {x: -0.0058509354, y: 0.013040367, z: 0.0013366424, w: 0.99989706}
+      scale: {x: 1.0000004, y: 0.99999994, z: 1.0000005}
+    - name: MonkeyKing_LeftHandIndex4
+      parentName: MonkeyKing_LeftHandIndex3
+      position: {x: -0.007135445, y: -0.022484792, z: -0.0011824494}
+      rotation: {x: 0.00039715777, y: -0.052805007, z: -0.027411032, w: 0.99822855}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: MonkeyKing_LeftHandMiddle1
+      parentName: MonkeyKing_LeftHand
+      position: {x: -0.07715165, y: -0.103999116, z: -0.0029530153}
+      rotation: {x: 0.0047354554, y: 0.15654142, z: -0.0016360022, w: 0.98765874}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000005}
+    - name: MonkeyKing_LeftHandMiddle2
+      parentName: MonkeyKing_LeftHandMiddle1
+      position: {x: -0.022347206, y: -0.047437515, z: -0.010639218}
+      rotation: {x: 0.061853282, y: 0.07186131, z: -0.17558326, w: 0.9798881}
+      scale: {x: 0.9999997, y: 1.0000005, z: 0.9999997}
+    - name: MonkeyKing_LeftHandMiddle3
+      parentName: MonkeyKing_LeftHandMiddle2
+      position: {x: 0.00018400795, y: -0.03339025, z: -0.0032290819}
+      rotation: {x: 0.008286935, y: -0.13593864, z: -0.07788965, w: 0.9876159}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: MonkeyKing_LeftHandMiddle4
+      parentName: MonkeyKing_LeftHandMiddle3
+      position: {x: 0.0056789187, y: -0.027182993, z: -0.0016506738}
+      rotation: {x: -0.008056772, y: -0.06456099, z: 0.026339076, w: 0.99753356}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000004}
+    - name: MonkeyKing_LeftHandRing1
+      parentName: MonkeyKing_LeftHand
+      position: {x: -0.07559223, y: -0.09948581, z: -0.030488364}
+      rotation: {x: 0.010223808, y: 0.32483968, z: -0.03591065, w: 0.9450318}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: MonkeyKing_LeftHandRing2
+      parentName: MonkeyKing_LeftHandRing1
+      position: {x: -0.0114491135, y: -0.038247004, z: -0.014777262}
+      rotation: {x: -0.040298883, y: -0.24048994, z: -0.12448006, w: 0.96179277}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: MonkeyKing_LeftHandRing3
+      parentName: MonkeyKing_LeftHandRing2
+      position: {x: -0.0044078357, y: -0.025834631, z: -0.009916283}
+      rotation: {x: 0.10290752, y: 0.21758616, z: -0.17776565, w: 0.9541833}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_LeftHandRing4
+      parentName: MonkeyKing_LeftHandRing3
+      position: {x: 0.009405852, y: -0.024402212, z: -0.002438124}
+      rotation: {x: -0.07420385, y: -0.19385104, z: 0.0030495995, w: 0.9782159}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: MonkeyKing_LeftHandPinky1
+      parentName: MonkeyKing_LeftHand
+      position: {x: -0.065165944, y: -0.088435106, z: -0.05492855}
+      rotation: {x: -0.016601458, y: 0.42794034, z: 0.061426885, w: 0.90156436}
+      scale: {x: 1.0000005, y: 1, z: 1.0000005}
+    - name: MonkeyKing_LeftHandPinky2
+      parentName: MonkeyKing_LeftHandPinky1
+      position: {x: -0.009162366, y: -0.023014002, z: -0.016812202}
+      rotation: {x: 0.19815114, y: -0.10847395, z: -0.42906445, w: 0.8745703}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
+    - name: MonkeyKing_LeftHandPinky3
+      parentName: MonkeyKing_LeftHandPinky2
+      position: {x: 0.009993565, y: -0.019280925, z: -0.003216193}
+      rotation: {x: 0.08219225, y: 0.13282852, z: -0.17223746, w: 0.97259206}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: MonkeyKing_LeftHandPinky4
+      parentName: MonkeyKing_LeftHandPinky3
+      position: {x: 0.014130955, y: -0.011809772, z: 0.0035531558}
+      rotation: {x: -0.06629137, y: -0.20727228, z: 0.11087746, w: 0.9697164}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: MonkeyKing_RightShoulder
+      parentName: MonkeyKing_Spine2
+      position: {x: 0.07371577, y: 0.15556943, z: -0.027971957}
+      rotation: {x: 0.040407628, y: -0.8391932, z: 0.02608332, w: 0.54170257}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_RightArm
+      parentName: MonkeyKing_RightShoulder
+      position: {x: -0.039214782, y: -0.04303193, z: -0.086789794}
+      rotation: {x: 0.40457085, y: 0.58849704, z: 0.11707887, w: 0.69013494}
+      scale: {x: 0.9999995, y: 1.0000001, z: 0.99999976}
+    - name: MonkeyKing_RightForeArm
+      parentName: MonkeyKing_RightArm
+      position: {x: 0.12024093, y: -0.22801873, z: -0.079298936}
+      rotation: {x: 0.00032775104, y: 0.34554097, z: -0.00040343404, w: 0.93840355}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: MonkeyKing_RightHand
+      parentName: MonkeyKing_RightForeArm
+      position: {x: 0.14870939, y: -0.18209903, z: 0.0182186}
+      rotation: {x: -0.0026271224, y: -0.06328287, z: -0.0038369885, w: 0.99798477}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: MonkeyKing_RightHandThumb1
+      parentName: MonkeyKing_RightHand
+      position: {x: 0.0250346, y: -0.06519335, z: 0.04332676}
+      rotation: {x: 0.018503476, y: -0.14530817, z: -0.2774548, w: 0.9495063}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1.0000002}
+    - name: MonkeyKing_RightHandThumb2
+      parentName: MonkeyKing_RightHandThumb1
+      position: {x: 0.026112217, y: -0.01073703, z: 0.014491231}
+      rotation: {x: -0.10048278, y: 0.176116, z: 0.29915744, w: 0.93241155}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000001}
+    - name: MonkeyKing_RightHandThumb3
+      parentName: MonkeyKing_RightHandThumb2
+      position: {x: 0.008255854, y: -0.018359741, z: 0.01280569}
+      rotation: {x: 0.04482854, y: -0.06560183, z: -0.015302803, w: 0.99672097}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000002}
+    - name: MonkeyKing_RightHandThumb4
+      parentName: MonkeyKing_RightHandThumb3
+      position: {x: 0.011016838, y: -0.017725656, z: 0.013796139}
+      rotation: {x: -0.000000052154057, y: 0.000000029802319, z: 0.00000006053596,
+        w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000007}
+    - name: MonkeyKing_RightHandIndex1
+      parentName: MonkeyKing_RightHand
+      position: {x: 0.07976138, y: -0.10326488, z: 0.025323918}
+      rotation: {x: 0.011325183, y: -0.119732685, z: -0.011411231, w: 0.99267596}
+      scale: {x: 1.0000007, y: 1.0000002, z: 1.0000004}
+    - name: MonkeyKing_RightHandIndex2
+      parentName: MonkeyKing_RightHandIndex1
+      position: {x: 0.025201062, y: -0.0454665, z: -0.0029795903}
+      rotation: {x: 0.0013307035, y: 0.08177052, z: 0.040157214, w: 0.99584097}
+      scale: {x: 0.9999996, y: 1.0000004, z: 0.9999998}
+    - name: MonkeyKing_RightHandIndex3
+      parentName: MonkeyKing_RightHandIndex2
+      position: {x: 0.0084430175, y: -0.023421522, z: 0.00022262787}
+      rotation: {x: -0.0075365985, y: -0.012416087, z: 0.036250427, w: 0.9992372}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: MonkeyKing_RightHandIndex4
+      parentName: MonkeyKing_RightHandIndex3
+      position: {x: 0.0046369242, y: -0.023137622, z: -0.0010139686}
+      rotation: {x: -0.00039721403, y: 0.05280512, z: -0.027411016, w: 0.99822843}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: MonkeyKing_RightHandMiddle1
+      parentName: MonkeyKing_RightHand
+      position: {x: 0.077151656, y: -0.10399912, z: -0.0029530444}
+      rotation: {x: -0.010668251, y: -0.15638441, z: 0.08475653, w: 0.98399514}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000004}
+    - name: MonkeyKing_RightHandMiddle2
+      parentName: MonkeyKing_RightHandMiddle1
+      position: {x: 0.014042553, y: -0.050476827, z: -0.010853844}
+      rotation: {x: 0.016204674, y: -0.08418018, z: 0.15463126, w: 0.984246}
+      scale: {x: 0.9999996, y: 1.0000002, z: 0.9999998}
+    - name: MonkeyKing_RightHandMiddle3
+      parentName: MonkeyKing_RightHandMiddle2
+      position: {x: -0.0045830277, y: -0.03274771, z: -0.005652345}
+      rotation: {x: 0.027202753, y: 0.13436697, z: -0.031294417, w: 0.9900637}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000004}
+    - name: MonkeyKing_RightHandMiddle4
+      parentName: MonkeyKing_RightHandMiddle3
+      position: {x: -0.0028561072, y: -0.027538056, z: -0.0027179925}
+      rotation: {x: 0.008056804, y: 0.06456113, z: 0.02633911, w: 0.9975336}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999994}
+    - name: MonkeyKing_RightHandRing1
+      parentName: MonkeyKing_RightHand
+      position: {x: 0.075592205, y: -0.09948579, z: -0.030488385}
+      rotation: {x: -0.09346621, y: -0.31244034, z: 0.322916, w: 0.88846517}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: MonkeyKing_RightHandRing2
+      parentName: MonkeyKing_RightHandRing1
+      position: {x: -0.013010047, y: -0.037626613, z: -0.015075157}
+      rotation: {x: 0.04029884, y: 0.24048984, z: -0.124480106, w: 0.96179277}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000004}
+    - name: MonkeyKing_RightHandRing3
+      parentName: MonkeyKing_RightHandRing2
+      position: {x: 0.0017856084, y: -0.025915673, z: -0.010506281}
+      rotation: {x: -0.04424058, y: -0.24294072, z: 0.11441298, w: 0.96225375}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000006}
+    - name: MonkeyKing_RightHandRing4
+      parentName: MonkeyKing_RightHandRing3
+      position: {x: -0.010480396, y: -0.022201354, z: -0.009334967}
+      rotation: {x: 0.07420383, y: 0.19385086, z: 0.0030496912, w: 0.9782159}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: MonkeyKing_RightHandPinky1
+      parentName: MonkeyKing_RightHand
+      position: {x: 0.06516597, y: -0.08843507, z: -0.054928597}
+      rotation: {x: -0.26506415, y: -0.3388341, z: 0.47094795, w: 0.7701562}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1}
+    - name: MonkeyKing_RightHandPinky2
+      parentName: MonkeyKing_RightHandPinky1
+      position: {x: -0.018662464, y: -0.016095944, z: -0.016996339}
+      rotation: {x: 0.025981138, y: 0.042991836, z: -0.3163189, w: 0.947322}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: MonkeyKing_RightHandPinky3
+      parentName: MonkeyKing_RightHandPinky2
+      position: {x: -0.003503955, y: -0.018492902, z: -0.011300703}
+      rotation: {x: 0.16430716, y: -0.14069709, z: 0.09624072, w: 0.97156847}
+      scale: {x: 0.9999998, y: 1, z: 1}
+    - name: MonkeyKing_RightHandPinky4
+      parentName: MonkeyKing_RightHandPinky3
+      position: {x: -0.008621928, y: -0.016582176, z: -0.0015732383}
+      rotation: {x: 0.066291414, y: 0.20727214, z: 0.11087757, w: 0.9697164}
+      scale: {x: 1.0000005, y: 0.9999999, z: 1.0000005}
+    - name: MonkeyKing_Neck
+      parentName: MonkeyKing_Spine2
+      position: {x: -0, y: 0.1322972, z: -0.000000013089485}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MonkeyKing_Head
+      parentName: MonkeyKing_Neck
+      position: {x: -1.110223e-18, y: 0.18762967, z: -0.0000000025099711}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
