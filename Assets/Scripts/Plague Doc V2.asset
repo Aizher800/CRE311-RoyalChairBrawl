@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Plague Doc V2
   m_EditorClassIdentifier: 
   characterName: Plague Doc V2
-  speedMultiplier: 1
+  speedMultiplier: 1.1
   jumpMultiplier: 1
-  gravityMultiplier: 1
+  gravityMultiplier: 0.9
   attackMultiplier: 1
   characterVisual: {fileID: 292289648255554903, guid: b505fbeb0d09f89418954b7c0886db76,
     type: 3}
