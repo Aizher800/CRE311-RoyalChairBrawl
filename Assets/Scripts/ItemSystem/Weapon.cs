@@ -36,13 +36,19 @@ public class Weapon : HeldItem
         public override void HeavyUse(Matt_SM_PlayerStateInfo _owner)
         {
             startingZPos = _owner.transform.position.z;
-            _owner.PSI_Velocity = new Vector3( _owner.gameObject.transform.forward.x , _owner.gameObject.transform.forward.y, 0) ;
-            _owner.GetComponent<Erin_UI_PlayerHealth>().RemoveEnergy(-1, _owner.PSI_inputNum);
-            attackOpen = true;
-            _owner.PSI_animator.Play(heavyAttackAnimName);
-            Debug.Log("WEAPON ATTACK");
-            _thisOwner = _owner;
-            StartCoroutine(HitReset());
+       
+            if (_owner.GetComponent<Erin_UI_PlayerHealth>().currentEnergy > 0)
+            {
+                _owner.PSI_Velocity = new Vector3(_owner.gameObject.transform.forward.x, _owner.gameObject.transform.forward.y, 0);
+                _owner.GetComponent<Erin_UI_PlayerHealth>().RemoveEnergy(-1, _owner.PSI_inputNum);
+
+                attackOpen = true;
+                _owner.PSI_animator.Play(heavyAttackAnimName);
+                Debug.Log("WEAPON ATTACK");
+                _thisOwner = _owner;
+                StartCoroutine(HitReset());
+            }
+         
         }
         public void InvokeEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, int damage, float forceMultiplier, hitBoxType type)
         {

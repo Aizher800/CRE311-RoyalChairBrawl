@@ -38,7 +38,7 @@ public class HitReceiver : MonoBehaviour
     {
        if (_receiver == thisOwner)
         {
-          if(thisOwner.PSI_isBlocking == false) 
+          if(thisOwner.PSI_isBlocking == false || thisOwner.GetComponent<Erin_UI_PlayerHealth>().currentEnergy <= 0) 
           { 
                     if (_knockbackCoroutine == null)
                     {
@@ -52,6 +52,7 @@ public class HitReceiver : MonoBehaviour
           }
          else
          {
+                    thisOwner.GetComponent<Erin_UI_PlayerHealth>().RemoveEnergy(-1, thisOwner.PSI_inputNum);
                     thisOwner.PSI_animator.Play("mixamo_block");
          }
        }
