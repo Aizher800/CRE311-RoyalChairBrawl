@@ -20,17 +20,27 @@ public class Weapon : HeldItem
         [SerializeField]  bool attackActive = false;
    [SerializeField] protected int _weaponDamage;
     [SerializeField] string _weaponName;
-
+        public string lightAttackAnimName = "mixamomelee2";
+        public string heavyAttackAnimName = "mixamomelee1";
       
         public override void Use(Matt_SM_PlayerStateInfo _owner)
         {
             attackOpen = true;
-            _owner.PSI_animator.Play("mixamomelee2");
+            _owner.PSI_animator.Play(lightAttackAnimName);
             Debug.Log("WEAPON ATTACK");
             _thisOwner = _owner;
             StartCoroutine(HitReset());
         }
-       public void InvokeEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, int damage, float forceMultiplier, hitBoxType type)
+
+        public override void HeavyUse(Matt_SM_PlayerStateInfo _owner)
+        {
+            attackOpen = true;
+            _owner.PSI_animator.Play(heavyAttackAnimName);
+            Debug.Log("WEAPON ATTACK");
+            _thisOwner = _owner;
+            StartCoroutine(HitReset());
+        }
+        public void InvokeEvent(Matt_SM_PlayerStateInfo _deliverer, Matt_SM_PlayerStateInfo _receiver, Vector3 direction, int damage, float forceMultiplier, hitBoxType type)
         {
            OnHitDelivery?.Invoke(_deliverer, _receiver, direction,damage, forceMultiplier, type);
 
@@ -74,6 +84,11 @@ public class Weapon : HeldItem
         {
 
             Debug.Log("Used default heldItem");
+        }
+
+        public virtual void HeavyUse(Matt_SM_PlayerStateInfo _owner)
+        {
+            Debug.Log("Used heavy heldItem");
         }
 
         private void OnTriggerEnter(Collider other)

@@ -56,6 +56,7 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                     _inputSource.Player1.Interact.started += InteractConversion;
                     _inputSource.Player1.Fire.performed += FireConversion;
                     _inputSource.Player1.Block.performed += BlockHold;
+                    _inputSource.Player1.HeavyFire.performed += HeavyConversion;
                     //_inputSource.Player1.Block.performed += BlockRelease;
                     break;
 
@@ -65,7 +66,8 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
                     _inputSource.Player2.Interact.started += InteractConversion;
                     _inputSource.Player2.Fire.performed += FireConversion;
                     _inputSource.Player2.Block.performed += BlockHold;
-                  //  _inputSource.Player2.Block.performed += BlockRelease;
+                    _inputSource.Player2.HeavyFire.performed += HeavyConversion;
+                    //  _inputSource.Player2.Block.performed += BlockRelease;
                     break;
 
                 case (PlayerInputNum.Player3):
@@ -84,7 +86,12 @@ namespace _InputTest.Entity.Scripts.Input.Monobehaviours
         {
             //SetInput();
 
-           
+
+        }
+        void HeavyConversion(InputAction.CallbackContext context)
+        {
+            OnHeavyUse();
+
         }
         void FireConversion(InputAction.CallbackContext context)
         {

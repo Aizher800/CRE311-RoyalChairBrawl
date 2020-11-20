@@ -45,8 +45,30 @@ public class Matt_CharacterEquipment : MonoBehaviour
         _input.OnFireInputEvent += UseHeldItem;
         _input.OnInteractEvent += UnequipItem;
         _input.OnInteractEvent += InteractWithSomething;
+        _input.OnHeavyInputEvent += HeavyUseItem;
     }
+    void HeavyUseItem(Matt_SM_PlayerStateInfo _owner)
+    {
 
+        if (_owner.PSI_isBlocking) { return; }
+        if (_owner.CheckAttackLock()) { return; }
+        Debug.Log("use heavy item triggered");
+        if (holdingItem)
+        {
+
+            if (currentHeldItem != null)
+            {
+                Debug.Log("yoyoyo oyo ooyo oy ooy oy oyoyoo used  HEAVY ITEM");
+                currentHeldItem.HeavyUse(_owner);
+            }
+
+        }
+        else
+        {
+
+            defaultWeapon.Use(_owner);
+        }
+    }
     void UseHeldItem(Matt_SM_PlayerStateInfo _owner)
     {
         if (_owner.PSI_isBlocking) { return; }
@@ -104,7 +126,9 @@ public class Matt_CharacterEquipment : MonoBehaviour
           canEquip = false;
         currentItem = _weapon;
         currentItem.gameObject.transform.parent = handPos.gameObject.transform;
-        currentItem.gameObject.transform.localPosition = Vector3.zero;
+            currentItem.gameObject.transform.localPosition = handPos.transform.localPosition;
+            currentItem.gameObject.transform.localRotation = handPos.transform.localRotation;
+            currentItem.gameObject.transform.position = handPos.transform.position;
             currentHeldItem = currentItem.GetComponent<HeldItem>();
             if (currentHeldItem.isChair == true)
             {
