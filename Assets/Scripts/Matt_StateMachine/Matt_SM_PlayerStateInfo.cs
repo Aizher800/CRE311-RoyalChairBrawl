@@ -135,6 +135,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         }
     }
 
+    
     private void Start()
     {
 
@@ -172,6 +173,18 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         currentPos = gameObject.transform.position - lastPos;
         lastPos = currentPos;
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, pSI_startingZ);
+
+        if (PSI_Velocity != Vector3.zero)
+        {
+            Debug.Log("Velocity NOT 0");
+            PSI_Velocity = Vector3.Lerp(PSI_Velocity, Vector3.zero, 4f * Time.deltaTime);
+            PSI_characterController.Move(PSI_Velocity);
+        }
+        else
+        {
+
+            Debug.Log("VELOCITY WAS 0");
+        }
     }
 
     

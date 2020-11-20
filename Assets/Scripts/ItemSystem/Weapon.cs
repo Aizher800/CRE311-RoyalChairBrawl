@@ -19,10 +19,11 @@ public class Weapon : HeldItem
         [SerializeField] Material closedMat;
         [SerializeField]  bool attackActive = false;
    [SerializeField] protected int _weaponDamage;
+      //  [SerializeField] protected int _heavyDamage;
     [SerializeField] string _weaponName;
         public string lightAttackAnimName = "mixamomelee2";
         public string heavyAttackAnimName = "mixamomelee1";
-      
+        float startingZPos = 0f;
         public override void Use(Matt_SM_PlayerStateInfo _owner)
         {
             attackOpen = true;
@@ -34,6 +35,9 @@ public class Weapon : HeldItem
 
         public override void HeavyUse(Matt_SM_PlayerStateInfo _owner)
         {
+            startingZPos = _owner.transform.position.z;
+            _owner.PSI_Velocity = new Vector3( _owner.gameObject.transform.forward.x , _owner.gameObject.transform.forward.y, 0) ;
+
             attackOpen = true;
             _owner.PSI_animator.Play(heavyAttackAnimName);
             Debug.Log("WEAPON ATTACK");
