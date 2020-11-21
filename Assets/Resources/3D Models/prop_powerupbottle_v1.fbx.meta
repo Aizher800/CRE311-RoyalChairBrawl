@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: c100dec4c0fa31148a81951e9c2c9994
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_bottle_top
+    second: {fileID: 2100000, guid: b0aece1174574a14ca4b422273fcd2a7, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -43,6 +48,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

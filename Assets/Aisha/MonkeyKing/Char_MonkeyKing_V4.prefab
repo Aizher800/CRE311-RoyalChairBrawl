@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 8835451689336582323}
   - component: {fileID: 4421684672306359563}
   m_Layer: 0
-  m_Name: Char_MonkeyKing_V4 (1)
+  m_Name: Char_MonkeyKing_V4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2161,14 +2161,14 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2284874786549677665, guid: 4bfc9d319a652904ebaa868b6e3582cb, type: 3}
-  - {fileID: -7312781713117353096, guid: 4bfc9d319a652904ebaa868b6e3582cb, type: 3}
-  - {fileID: -4119188672937287544, guid: 4bfc9d319a652904ebaa868b6e3582cb, type: 3}
-  - {fileID: 3329285534374715476, guid: 4bfc9d319a652904ebaa868b6e3582cb, type: 3}
-  - {fileID: -4803797589836916712, guid: 4bfc9d319a652904ebaa868b6e3582cb, type: 3}
-  - {fileID: 7339999289975499789, guid: 4bfc9d319a652904ebaa868b6e3582cb, type: 3}
-  - {fileID: -6132011253713989630, guid: 4bfc9d319a652904ebaa868b6e3582cb, type: 3}
-  - {fileID: -399348676085594361, guid: 4bfc9d319a652904ebaa868b6e3582cb, type: 3}
+  - {fileID: 2100000, guid: 273bea7a8422cef45a2777c5837a5693, type: 2}
+  - {fileID: 2100000, guid: 82e23015404df954aa5f85ff60000b39, type: 2}
+  - {fileID: 2100000, guid: 2285070681eaf8d4788bded7b05d3cc3, type: 2}
+  - {fileID: 2100000, guid: 25681bab695489e478db577ca82dab3d, type: 2}
+  - {fileID: 2100000, guid: 3c86bb4d6804112438d6f0093cafaf94, type: 2}
+  - {fileID: 2100000, guid: 15324dbb6a126b4488388fb30039537e, type: 2}
+  - {fileID: 2100000, guid: 7642c2936a495b0448db9d724f1fb025, type: 2}
+  - {fileID: 2100000, guid: 83667fe17eb64314aa477394e92af18a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
