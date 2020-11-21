@@ -19,6 +19,9 @@ public class Erin_UI_MainManager : MonoBehaviour
     {
         Debug.Log("Game started.");
         SceneManager.LoadScene(2);   //Loads in the scene that has a pause menu.
+        GameManager._mainInstance.FindSpawns();
+        GameManager._mainInstance.SpawnCharacters();
+        Time.timeScale = 1f;
     }
 
 

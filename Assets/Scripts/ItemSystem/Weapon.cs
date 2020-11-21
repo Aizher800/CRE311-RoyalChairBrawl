@@ -60,9 +60,10 @@ public class Weapon : HeldItem
           
             Matt_HitBox hitbox = other.GetComponent<Matt_HitBox>();
             if (attackOpen) { 
-                if (hitbox._hitBoxOwner != _thisOwner)
+             
+                if (hitbox)
                 {
-                    if (hitbox)
+                    if (hitbox._hitBoxOwner != _thisOwner)
                     {
                         OnHitDelivery?.Invoke(_thisOwner, hitbox._hitBoxOwner, (other.gameObject.transform.position - _thisOwner.gameObject.transform.position).normalized, _weaponDamage, 1f, hitbox._hitboxType);
                         Debug.Log("Hit delivered on " + hitbox._hitBoxOwner + "from " + _thisOwner.gameObject);

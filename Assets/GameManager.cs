@@ -3,7 +3,8 @@ using _InputTest.Entity.Scripts.Input.Monobehaviours;
 using Matt_HitBoxSystem;
 public class GameManager : MonoBehaviour
 {
-
+    
+    public static GameManager _mainInstance;
     public HealthContainerPanel containerPanel;
 
     //public List<GameObject> spawnPoints = new List<GameObject>();
@@ -18,9 +19,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        if (_mainInstance == null)
+        {
+            _mainInstance = this;
+        }
         FindSpawns();
         SpawnCharacters();
-       
+        Time.timeScale = 1f;
 
     }
 
@@ -29,7 +35,7 @@ public class GameManager : MonoBehaviour
     {
 
     }
-    void FindSpawns()
+   public void FindSpawns()
     {
         spawnsArray = GameObject.FindGameObjectsWithTag("SpawnPoint");
 
@@ -48,8 +54,9 @@ public class GameManager : MonoBehaviour
       
 
     }
-    void SpawnCharacters()
+   public void SpawnCharacters()
     {
+        FindSpawns();
         for (int i = 0; i < spawnsArray.Length; i++)
         {
             if (spawnsArray[i] != null && characterChoice[i] != null)
@@ -70,6 +77,7 @@ public class GameManager : MonoBehaviour
                 health.characterHealth.playerNum = inputChoices[i];
                 health.associatedPlayerNum = inputChoices[i];
                 health.OnSpawn();
+                health.characterHealth.OnLoad();
 
             }
 

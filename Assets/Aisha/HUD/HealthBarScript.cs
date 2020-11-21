@@ -25,6 +25,15 @@ public class HealthBarScript : MonoBehaviour
 
     public GameObject instancedCharacter;
 
+    public  void OnLoad()
+    {
+        health = maxHealth;
+        UpdateHealth();
+        Erin_UI_PlayerHealth.OnHealthUpdate += SetHealth;
+
+        charName.text = charText;
+
+    }
     void Start()
     {
         health = maxHealth;
