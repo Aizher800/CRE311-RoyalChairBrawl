@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: -6520184238423656643}
   - component: {fileID: 3487660801424756922}
   - component: {fileID: -6326168790648419031}
+  - component: {fileID: -7393220557425894887}
   m_Layer: 0
   m_Name: CHARACTER
   m_TagString: Player
@@ -163,6 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   currentHealth: 6
+  maxEnergy: 6
+  currentEnergy: 6
   healthPrefab: {fileID: 0}
   characterHealth: {fileID: 0}
   associatedPlayerNum: 0
@@ -182,6 +185,7 @@ MonoBehaviour:
   navObjective: {x: 0, y: 0, z: 0}
   playerHealth: {fileID: 0}
   PSI_CharacterInfo: {fileID: 11400000, guid: d6e60737a8c0c194ca505a3e32146f7f, type: 2}
+  PSI_DefaultCharInfo: {fileID: 0}
   PSI_direction: 0
   PSI_inputSource: {fileID: 0}
   PSI_Velocity: {x: 0, y: 0, z: 0}
@@ -310,6 +314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   currentHealth: 6
+  maxEnergy: 6
+  currentEnergy: 6
   healthPrefab: {fileID: 8213358076436023741, guid: 033f02dd4de84b9429dbb75521ee7cc3,
     type: 3}
   characterHealth: {fileID: 0}
@@ -324,6 +330,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f24815e8c76414f80a4a361d2df738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 20
+  timerIsRunning: 0
+  hasChair: 0
+  timeText: {fileID: 0}
+  playerScore: 0
+--- !u!114 &-7393220557425894887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7691584872415322918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d12b1f4280eec4598108bf90134ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7691584872736927636

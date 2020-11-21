@@ -21,8 +21,9 @@ public class HitReceiver : MonoBehaviour
 
         public delegate void HealthBarEvent(int _amount, PlayerInputNum _num);
         public static event HealthBarEvent OnHealthChange;
-
-    Coroutine _knockbackCoroutine;
+        public delegate void EnergyBarEvent(int _amount, PlayerInputNum _num);
+        public static event EnergyBarEvent OnEnergyChange;
+        Coroutine _knockbackCoroutine;
     public bool knockedBack = false;
   [SerializeField]  Matt_SM_PlayerStateInfo thisOwner;
     // Start is called before the first frame update
@@ -37,7 +38,7 @@ public class HitReceiver : MonoBehaviour
     {
        if (_receiver == thisOwner)
         {
-          if(thisOwner.PSI_isBlocking == false) 
+          if(thisOwner.PSI_isBlocking == false || thisOwner.GetComponent<Erin_UI_PlayerHealth>().currentEnergy <= 0) 
           { 
                     if (_knockbackCoroutine == null)
                     {
@@ -51,6 +52,7 @@ public class HitReceiver : MonoBehaviour
           }
          else
          {
+                    _receiver.GetComponent<Erin_UI_PlayerHealth>().RemoveEnergy(-1, thisOwner.PSI_inputNum);
                     thisOwner.PSI_animator.Play("mixamo_block");
          }
        }

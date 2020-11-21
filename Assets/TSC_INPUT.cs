@@ -45,6 +45,14 @@ namespace TSC_INPUT_SYSTEM
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""HeavyFire"",
+                    ""type"": ""Button"",
+                    ""id"": ""b5afe564-b1fa-4644-9be8-b811eef398fb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""5047bd4c-1e0a-4789-9b70-c927802c783a"",
@@ -289,6 +297,61 @@ namespace TSC_INPUT_SYSTEM
                     ""action"": ""Block"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf551ab9-ae0e-44a0-93f2-41b3b95ce230"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""HeavyFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44013ffa-e9a1-446b-b77a-7231c23e492e"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""HeavyFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd724167-91dd-44d6-8c6d-916e91fc0a07"",
+                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Touch"",
+                    ""action"": ""HeavyFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""96c38872-d3f3-431f-a482-f7c9aa3389a6"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""HeavyFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""006b52ea-9958-4185-8879-007d66712960"",
+                    ""path"": ""<XRController>/{PrimaryAction}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""HeavyFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -301,6 +364,14 @@ namespace TSC_INPUT_SYSTEM
                     ""type"": ""PassThrough"",
                     ""id"": ""ac9d1914-a94b-4b0d-9bf1-ac35b8a688d5"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""HeavyFire"",
+                    ""type"": ""Button"",
+                    ""id"": ""0f0b0cef-f060-4fc3-a7c2-86ff312edfdb"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
@@ -563,6 +634,61 @@ namespace TSC_INPUT_SYSTEM
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df999cad-35ae-4582-8475-4aa7e9fbbf39"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""HeavyFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1eedf178-8fa4-4257-87f0-3a0fa13dac5a"",
+                    ""path"": ""<Keyboard>/numpad2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""HeavyFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e296bff5-c561-424b-ac34-157f18440f62"",
+                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Touch"",
+                    ""action"": ""HeavyFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5be40cde-eb82-4f09-ae1f-f40a59fce5a2"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""HeavyFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""674143f9-353b-42e4-a1b3-8cc31325a979"",
+                    ""path"": ""<XRController>/{PrimaryAction}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""HeavyFire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1707,12 +1833,14 @@ namespace TSC_INPUT_SYSTEM
             m_Player1_Move = m_Player1.FindAction("Move", throwIfNotFound: true);
             m_Player1_Look = m_Player1.FindAction("Look", throwIfNotFound: true);
             m_Player1_Fire = m_Player1.FindAction("Fire", throwIfNotFound: true);
+            m_Player1_HeavyFire = m_Player1.FindAction("HeavyFire", throwIfNotFound: true);
             m_Player1_Jump = m_Player1.FindAction("Jump", throwIfNotFound: true);
             m_Player1_Interact = m_Player1.FindAction("Interact", throwIfNotFound: true);
             m_Player1_Block = m_Player1.FindAction("Block", throwIfNotFound: true);
             // Player2
             m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
             m_Player2_Move = m_Player2.FindAction("Move", throwIfNotFound: true);
+            m_Player2_HeavyFire = m_Player2.FindAction("HeavyFire", throwIfNotFound: true);
             m_Player2_Look = m_Player2.FindAction("Look", throwIfNotFound: true);
             m_Player2_Fire = m_Player2.FindAction("Fire", throwIfNotFound: true);
             m_Player2_Jump = m_Player2.FindAction("Jump", throwIfNotFound: true);
@@ -1794,6 +1922,7 @@ namespace TSC_INPUT_SYSTEM
         private readonly InputAction m_Player1_Move;
         private readonly InputAction m_Player1_Look;
         private readonly InputAction m_Player1_Fire;
+        private readonly InputAction m_Player1_HeavyFire;
         private readonly InputAction m_Player1_Jump;
         private readonly InputAction m_Player1_Interact;
         private readonly InputAction m_Player1_Block;
@@ -1804,6 +1933,7 @@ namespace TSC_INPUT_SYSTEM
             public InputAction @Move => m_Wrapper.m_Player1_Move;
             public InputAction @Look => m_Wrapper.m_Player1_Look;
             public InputAction @Fire => m_Wrapper.m_Player1_Fire;
+            public InputAction @HeavyFire => m_Wrapper.m_Player1_HeavyFire;
             public InputAction @Jump => m_Wrapper.m_Player1_Jump;
             public InputAction @Interact => m_Wrapper.m_Player1_Interact;
             public InputAction @Block => m_Wrapper.m_Player1_Block;
@@ -1825,6 +1955,9 @@ namespace TSC_INPUT_SYSTEM
                     @Fire.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnFire;
                     @Fire.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnFire;
                     @Fire.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnFire;
+                    @HeavyFire.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnHeavyFire;
+                    @HeavyFire.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnHeavyFire;
+                    @HeavyFire.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnHeavyFire;
                     @Jump.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJump;
                     @Jump.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJump;
                     @Jump.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnJump;
@@ -1847,6 +1980,9 @@ namespace TSC_INPUT_SYSTEM
                     @Fire.started += instance.OnFire;
                     @Fire.performed += instance.OnFire;
                     @Fire.canceled += instance.OnFire;
+                    @HeavyFire.started += instance.OnHeavyFire;
+                    @HeavyFire.performed += instance.OnHeavyFire;
+                    @HeavyFire.canceled += instance.OnHeavyFire;
                     @Jump.started += instance.OnJump;
                     @Jump.performed += instance.OnJump;
                     @Jump.canceled += instance.OnJump;
@@ -1865,6 +2001,7 @@ namespace TSC_INPUT_SYSTEM
         private readonly InputActionMap m_Player2;
         private IPlayer2Actions m_Player2ActionsCallbackInterface;
         private readonly InputAction m_Player2_Move;
+        private readonly InputAction m_Player2_HeavyFire;
         private readonly InputAction m_Player2_Look;
         private readonly InputAction m_Player2_Fire;
         private readonly InputAction m_Player2_Jump;
@@ -1875,6 +2012,7 @@ namespace TSC_INPUT_SYSTEM
             private @TSC_INPUT m_Wrapper;
             public Player2Actions(@TSC_INPUT wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_Player2_Move;
+            public InputAction @HeavyFire => m_Wrapper.m_Player2_HeavyFire;
             public InputAction @Look => m_Wrapper.m_Player2_Look;
             public InputAction @Fire => m_Wrapper.m_Player2_Fire;
             public InputAction @Jump => m_Wrapper.m_Player2_Jump;
@@ -1892,6 +2030,9 @@ namespace TSC_INPUT_SYSTEM
                     @Move.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMove;
                     @Move.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMove;
                     @Move.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnMove;
+                    @HeavyFire.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnHeavyFire;
+                    @HeavyFire.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnHeavyFire;
+                    @HeavyFire.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnHeavyFire;
                     @Look.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnLook;
                     @Look.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnLook;
                     @Look.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnLook;
@@ -1914,6 +2055,9 @@ namespace TSC_INPUT_SYSTEM
                     @Move.started += instance.OnMove;
                     @Move.performed += instance.OnMove;
                     @Move.canceled += instance.OnMove;
+                    @HeavyFire.started += instance.OnHeavyFire;
+                    @HeavyFire.performed += instance.OnHeavyFire;
+                    @HeavyFire.canceled += instance.OnHeavyFire;
                     @Look.started += instance.OnLook;
                     @Look.performed += instance.OnLook;
                     @Look.canceled += instance.OnLook;
@@ -2202,6 +2346,7 @@ namespace TSC_INPUT_SYSTEM
             void OnMove(InputAction.CallbackContext context);
             void OnLook(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
+            void OnHeavyFire(InputAction.CallbackContext context);
             void OnJump(InputAction.CallbackContext context);
             void OnInteract(InputAction.CallbackContext context);
             void OnBlock(InputAction.CallbackContext context);
@@ -2209,6 +2354,7 @@ namespace TSC_INPUT_SYSTEM
         public interface IPlayer2Actions
         {
             void OnMove(InputAction.CallbackContext context);
+            void OnHeavyFire(InputAction.CallbackContext context);
             void OnLook(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
             void OnJump(InputAction.CallbackContext context);

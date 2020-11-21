@@ -14,6 +14,12 @@ public class HealthBarScript : MonoBehaviour
     public int abilityP;
     public PlayerInputNum playerNum;
 
+    public Text charName;
+    public string charText;
+
+
+    public Text winTimer;
+    public string winTimerString;
     public Image[] healthbar;
     public Image[] apBar;
 
@@ -24,8 +30,14 @@ public class HealthBarScript : MonoBehaviour
         health = maxHealth;
         UpdateHealth();
        Erin_UI_PlayerHealth.OnHealthUpdate += SetHealth;
-    }
 
+        charName.text = charText;
+    }
+    public void UpdateTimer(string newTimer)
+    {
+        Debug.Log("UPDATED TIMER");
+        winTimer.text = newTimer;
+    }
     void UpdateHealth()
     {
 
@@ -60,7 +72,7 @@ public class HealthBarScript : MonoBehaviour
     {
         if (_num != playerNum) { return; }
         health = _newHealth;
-
+        abilityP = _newEnergy;
         if (health <= 0)
         {
             Debug.Log(instancedCharacter + " has died");

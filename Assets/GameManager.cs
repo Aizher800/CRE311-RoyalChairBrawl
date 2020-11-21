@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
                 var healthInstance = Instantiate(healthPrefabBackup, containerPanel.transform);
                 Erin_UI_PlayerHealth health = spawnedChar.GetComponent<Erin_UI_PlayerHealth>();
                 health.characterHealth = healthInstance.GetComponent<HealthBarScript>();
+                healthInstance.GetComponent<HealthBarScript>().charText = characterChoice[i].characterName;
+                spawnedChar.GetComponent<PlayerScore>().associatedHealth = healthInstance.GetComponent<HealthBarScript>();
                 health.characterHealth.playerNum = inputChoices[i];
                 health.associatedPlayerNum = inputChoices[i];
                 health.OnSpawn();

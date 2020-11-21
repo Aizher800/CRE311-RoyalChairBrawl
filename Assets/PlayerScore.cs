@@ -10,10 +10,14 @@ public class PlayerScore : MonoBehaviour
     public bool hasChair = false;
     public TMP_Text timeText;
     public int playerScore;
+    Matt_SM_PlayerStateInfo _ownerr;
+   public HealthBarScript associatedHealth;
     // Start is called before the first frame update
     void Start()
     {
+        _ownerr = GetComponent<Matt_SM_PlayerStateInfo>();
         winManager = FindObjectOfType<WinManager>();
+
     }
 
     // Update is called once per frame
@@ -34,6 +38,7 @@ public class PlayerScore : MonoBehaviour
             {
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
+                associatedHealth.UpdateTimer(timeRemaining.ToString());
             }
             else
             {
@@ -51,6 +56,7 @@ public class PlayerScore : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
+        associatedHealth.UpdateTimer(timeToDisplay.ToString());
       //  timeText.text = timeToDisplay.ToString();
     }
 }

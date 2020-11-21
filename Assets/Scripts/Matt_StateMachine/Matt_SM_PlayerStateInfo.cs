@@ -1,7 +1,7 @@
 ﻿using _InputTest.Entity.Scripts.Input.Monobehaviours;
 using Matt_StateSystem;
 using UnityEngine;
-
+using System.Collections;
 public enum Direction
 {
 
@@ -18,6 +18,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
 
     public Erin_UI_PlayerHealth playerHealth;
     public Matt_CharacterInfo PSI_CharacterInfo;
+    public Matt_CharacterInfo PSI_DefaultCharInfo;
     GameObject psi_InstantiatedObject;
     public Direction PSI_direction;
     public AbstractInput PSI_inputSource;
@@ -134,7 +135,7 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
         }
     }
 
-   
+    
     private void Start()
     {
 
@@ -157,18 +158,37 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     {
         if (_charInfo != null) {
             PSI_CharacterInfo = _charInfo;
+            PSI_DefaultCharInfo = _charInfo;
             gameObject.name = _charInfo.characterName;
        psi_InstantiatedObject = Instantiate(_charInfo.characterVisual, this.transform);
         PSI_animator = psi_InstantiatedObject.GetComponent<Animator>();
         visualRotationObject = psi_InstantiatedObject.GetComponent<Matt_VisualRotation>().transform;
         }
     }
+
+  
+    
     private void FixedUpdate()
     {
         currentPos = gameObject.transform.position - lastPos;
         lastPos = currentPos;
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, pSI_startingZ);
+
+        if (PSI_Velocity != Vector3.zero)
+        {
+            Debug.Log("Velocity NOT 0");
+            PSI_Velocity = Vector3.Lerp(PSI_Velocity, Vector3.zero, 4f * Time.deltaTime);
+            PSI_characterController.Move(PSI_Velocity);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, pSI_startingZ);
+        }
+        else
+        {
+
+            Debug.Log("VELOCITY WAS 0");
+        }
     }
+
+    
     public void UpdateDirection(float xValue)
     {
         if (xValue > 0f)
@@ -234,6 +254,69 @@ public class Matt_SM_PlayerStateInfo : MonoBehaviour
     {
         stateMachine.RestoreState();
 
+    }
+    public void Boost(PowerUp p_up)
+    {
+
+        StartCoroutine(BoostReset(p_up));
+    }
+    public IEnumerator BoostReset(PowerUp p_up)
+    {
+
+        float oldValue = 1f;
+        int oldInt = 0;
+        Debug.Log("POWERUP ACTIVATED");
+        switch (p_up._powerUpValues.type)
+        {
+            case PowerUpType.HEALING:
+                break;
+            case PowerUpType.ENERGY:
+                break;
+            case PowerUpType.SPEED:
+                oldValue = PSI_CharacterInfo.speedMultiplier;
+                PSI_CharacterInfo.speedMultiplier = p_up._powerUpValues._speedBoost;
+              
+                
+                break;
+            case PowerUpType.JUMP:
+                oldValue = PSI_CharacterInfo.jumpMultiplier;
+                PSI_CharacterInfo.jumpMultiplier = p_up._powerUpValues._jumpBoost;
+
+
+                break;
+            case PowerUpType.DAMAGE:
+                oldValue = PSI_CharacterInfo.attackMultiplier;
+                PSI_CharacterInfo.attackMultiplier = p_up._powerUpValues._damageBoost;
+                break;
+            default:
+                break;
+        }
+        yield return new WaitForSeconds(p_up._powerUpValues._boostDuration);
+        switch (p_up._powerUpValues.type)
+        {
+            case PowerUpType.HEALING:
+                break;
+            case PowerUpType.ENERGY:
+                break;
+            case PowerUpType.SPEED:
+
+                PSI_CharacterInfo.speedMultiplier = oldValue;
+                break;
+            case PowerUpType.DAMAGE:
+                PSI_CharacterInfo.attackMultiplier = oldValue;
+                break;
+            case PowerUpType.JUMP:
+             
+                PSI_CharacterInfo.jumpMultiplier = oldValue;
+
+
+                break;
+            default:
+                break;
+
+        }
+        Debug.Log("POWERUP ENDED");
+        yield return null;
     }
 
 }

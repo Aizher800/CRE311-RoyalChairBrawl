@@ -1883,13 +1883,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6293085222746681042}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.22523235, y: -0.101611696, z: -0.45521873, w: 0.8554072}
+  m_LocalPosition: {x: 0.042, y: -0.137, z: -0.012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5474029829121596340}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 162.97299, y: 156.655, z: 120.41699}
 --- !u!114 &9069017646489745891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1922,6 +1922,8 @@ MonoBehaviour:
   attackActive: 0
   _weaponDamage: 0
   _weaponName: 
+  lightAttackAnimName: mixamomelee2
+  heavyAttackAnimName: mixamomelee1
 --- !u!54 &8936333554582590281
 Rigidbody:
   m_ObjectHideFlags: 0
