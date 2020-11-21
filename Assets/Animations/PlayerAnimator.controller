@@ -112,7 +112,7 @@ AnimatorStateMachine:
     m_Position: {x: 350, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -390443036891010001}
-    m_Position: {x: 130, y: 330, z: 0}
+    m_Position: {x: 130, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7696585270585753898}
     m_Position: {x: 180, y: 400, z: 0}
@@ -318,7 +318,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mixamomelee2
-  m_Speed: 2.83
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4663307858668090147}
