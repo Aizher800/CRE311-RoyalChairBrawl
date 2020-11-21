@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Monkey King
   speedMultiplier: 1
-  jumpMultiplier: 1.1
+  jumpMultiplier: 2
   gravityMultiplier: 1
   attackMultiplier: 1
-  characterVisual: {fileID: 4101288927637050504, guid: 6286ad6d63b3a6d4285afe0f716bf837,
+  characterVisual: {fileID: 2825489830287618163, guid: 19a355656268ed34dba1ec6450793f25,
     type: 3}
-  characterAvatar: {fileID: 9000000, guid: bc491cf8a09983e4495428b958622dc1, type: 3}
+  characterAvatar: {fileID: 9000000, guid: 4bfc9d319a652904ebaa868b6e3582cb, type: 3}
   testBool: 0
