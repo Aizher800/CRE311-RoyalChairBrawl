@@ -1,9 +1,24 @@
 fileFormatVersion: 2
 guid: 8bd87d635f98d56418a41860fe6989d2
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_Cane_Base
+    second: {fileID: 2100000, guid: fb63f77c0a979dc4db4e7560d0c2e96c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_Cane_Hilts
+    second: {fileID: 2100000, guid: 619af824a14a9274d822874fd19ade83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: m_Cane_Top
+    second: {fileID: 2100000, guid: b7910f2c027a09f4f9c4a4c7efaa2d7a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -43,6 +58,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
