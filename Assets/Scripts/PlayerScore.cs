@@ -12,9 +12,13 @@ public class PlayerScore : MonoBehaviour
     public int playerScore;
     Matt_SM_PlayerStateInfo _ownerr;
    public HealthBarScript associatedHealth;
+
+    Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
+       // anim = GetComponent<Animator>();
         _ownerr = GetComponent<Matt_SM_PlayerStateInfo>();
         winManager = FindObjectOfType<WinManager>();
 
@@ -44,6 +48,9 @@ public class PlayerScore : MonoBehaviour
             {
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
+                _ownerr.PSI_animator.Play("Victory");
+                //anim.Play("Victory");
+                
                 winManager.WinGame(gameObject.name);
                 timerIsRunning = false;
             }
