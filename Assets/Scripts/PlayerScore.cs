@@ -48,7 +48,8 @@ public class PlayerScore : MonoBehaviour
             {
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
-                _ownerr.PSI_animator.Play("Victory");
+                //_ownerr.PSI_animator.Play("Victory");
+                _ownerr.PSI_animator.Play("VictoryAnim");
                 //anim.Play("Victory");
                 
                 winManager.WinGame(gameObject.name);
