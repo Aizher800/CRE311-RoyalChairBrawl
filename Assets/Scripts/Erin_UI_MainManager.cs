@@ -3,16 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class Erin_UI_MainManager : MonoBehaviour
 {
-    void Start()
-    {
+    public GameObject tutorialPanel;
+    public GameObject tutorialControls;
+    public GameObject tutorialGameplay;
+    public GameObject tutorialInteractable;
 
-    }
-
-
-    void Update()
-    {
-
-    }
 
 
     public void StartGame()
@@ -28,8 +23,30 @@ public class Erin_UI_MainManager : MonoBehaviour
     public void Tutorial()
     {
         Debug.Log("Tutorial loaded.");
-        //SceneManager.LoadScene(2);   //Loads in the tutorial scene.
+        tutorialPanel.SetActive(true);
+
+        //Opens Tutorial Canvas
     }
+
+    public void CloseTutorial()
+    {
+        tutorialPanel.SetActive(false);
+        tutorialControls.SetActive(true);
+        tutorialGameplay.SetActive(false);
+        tutorialInteractable.SetActive(false);
+    }
+
+    public void ToGameplay()
+    {
+        tutorialControls.SetActive(false);
+        tutorialGameplay.SetActive(true);
+    }
+    public void ToInteractable()
+    {
+        tutorialGameplay.SetActive(false);
+        tutorialInteractable.SetActive(true);
+    }
+
 
 
     public void Settings()
