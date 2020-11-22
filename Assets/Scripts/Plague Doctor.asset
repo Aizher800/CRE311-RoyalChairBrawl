@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ec8bac89b961e4cbc8d7e348d09ff9, type: 3}
   m_Name: Plague Doctor
   m_EditorClassIdentifier: 
-  characterName: Plague Doc
+  characterName: Plague Doctor
   speedMultiplier: 1.1
   jumpMultiplier: 2
   gravityMultiplier: 0.9
