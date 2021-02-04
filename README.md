@@ -3,7 +3,12 @@
 
 ![img](https://imgur.com/ke50BoX.png)
 
+
+[Game Trailer](https://youtu.be/Qg8J8aC-q6s)
+
 ## CRE311 & CRE312
+_Creative Media Projects (s1 & s2, 2020)_
+
 Made by Aisha, Erin, Brock, Hamish, Matt and Jasmine
 
 ## Cloning
