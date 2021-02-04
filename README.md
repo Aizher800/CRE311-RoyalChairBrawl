@@ -1,3 +1,27 @@
-# CRE311-RoyalChairBrawl
-### Made by Aisha, Erin, Brock, Hamish and Matt
-Currently still a work in progress.
+# Royal Chair Brawl
+![img](https://i.imgur.com/tAqrZdJ.png)
+
+![img](https://imgur.com/ke50BoX.png)
+
+## CRE311 & CRE312
+Made by Aisha, Erin, Brock, Hamish, Matt and Jasmine
+
+## Cloning
+```
+git clone https://github.com/Aizher800/CRE311-RoyalChairBrawl.git
+```
+## Play
+
+To play our current version go to our [Releases](https://github.com/Aizher800/CRE311-RoyalChairBrawl/releases)
+and select the latest one _(AlphaV006)_
+*  Available for PC or Mac
+
+## Build
+
+To build, open the project in Unity 2019.4.1
+* File -> Build and Run
+* Build can be compiled for PC, Mac & Linux
+
+## Wikipedia
+
+Check out the [Wiki](https://github.com/Aizher800/CRE311-RoyalChairBrawl/wiki) to see how we managed our project.
