@@ -30,3 +30,8 @@ To build, open the project in Unity 2019.4.1
 ## Wikipedia
 
 Check out the [Wiki](https://github.com/Aizher800/CRE311-RoyalChairBrawl/wiki) to see how we managed our project.
+
+
+## Blog
+
+Check out the [Blog](https://lemonopoly.wixsite.com/royalchairbrawl) to follow us on our journey.
