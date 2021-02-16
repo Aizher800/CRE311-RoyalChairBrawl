@@ -23,7 +23,8 @@ and select the latest one _(AlphaV006)_
 
 ## Build
 
-To build, open the project in Unity 2019.4.1
+To build, please choose the **Merge/MattAisha** branch _first_, then open the project in Unity 2019.4.1
+
 * File -> Build and Run
 * Build can be compiled for PC, Mac & Linux
 
